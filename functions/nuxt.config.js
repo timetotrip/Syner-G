@@ -14,6 +14,8 @@ module.exports = {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    'ress',
+    '@/assets/sass/style.scss'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -30,7 +32,8 @@ module.exports = {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/vuetify'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -39,5 +42,12 @@ module.exports = {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+  },
+
+  // Sass
+  styleResources: {
+    scss: [
+      '@/assets/sass/prepends.scss'
+    ]
   }
 }

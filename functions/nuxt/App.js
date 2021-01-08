@@ -4,9 +4,16 @@ import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch,
 import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 
-import _6f6c098b from '..\\layouts\\default.vue'
+import '..\\node_modules\\ress\\dist\\ress.min.css'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b) }
+import '..\\assets\\sass\\style.scss'
+
+import _6c44e200 from '..\\layouts\\browse.vue'
+import _6df4dc72 from '..\\layouts\\create.vue'
+import _6f6c098b from '..\\layouts\\default.vue'
+import _2d297bec from '..\\layouts\\shop.vue'
+
+const layouts = { "_browse": sanitizeComponent(_6c44e200),"_create": sanitizeComponent(_6df4dc72),"_default": sanitizeComponent(_6f6c098b),"_shop": sanitizeComponent(_2d297bec) }
 
 export default {
   render (h, props) {

@@ -1,0 +1,43 @@
+*,h1,h2,h3,p,img,a,div,span{
+    font-family: "ヒラギノ角ゴ ProN", 'sans-serif','メイリオ', 'Meiryo','Source Sans Pro';
+    font-style: normal;
+}
+i{
+    font-style: normal;
+}
+a{
+    color:#000f77;
+}
+a:visited{
+    color:#b33900;
+}
+p{
+    transform: rotate(0.028deg);
+}
+html{
+    @include mq(sm){font-size: 14px;line-height: 1.5em;letter-spacing: 0.1em;*{line-height: 1.5em}}
+    @include mq(tb){font-size: 14px;line-height: 1.5em;letter-spacing: 0.1em;*{line-height: 1.5em}}
+    @include mq(pc){font-size: 16px;line-height: 1.5em;letter-spacing: 0.2em;*{line-height: 1.5em}}
+    @include mq(xl){font-size: 16px;line-height: 1.5em;letter-spacing: 0.2em;*{line-height: 1.5em}}
+    //font-weight: 100;
+    color:rgb(50,50,50);
+    font-feature-settings: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: unset;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx) {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+body{
+    p {font-size:  1em;}
+    h1{font-size:1.4em;}
+    h2{font-size:1.4em;}
+    h3{font-size:1.3em;}
+    h4{font-size:1.2em;}
+    h5{font-size:1.1em;}
+    h6{font-size:  1em;}
+//    @include mq(sm){ i { font-size:$sz-icon-sp;}}
+//    @include mq(tb){ i { font-size:$sz-icon-pc;}}
+
+}

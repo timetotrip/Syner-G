@@ -4,6 +4,11 @@ import { normalizeURL, decode } from '@nuxt/ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _788555da = () => interopDefault(import('..\\pages\\create\\index.vue' /* webpackChunkName: "pages/create/index" */))
+const _73651f93 = () => interopDefault(import('..\\pages\\create\\brand\\index.vue' /* webpackChunkName: "pages/create/brand/index" */))
+const _45d4b5a4 = () => interopDefault(import('..\\pages\\create\\shop\\index.vue' /* webpackChunkName: "pages/create/shop/index" */))
+const _72682a8a = () => interopDefault(import('..\\pages\\create\\brand\\_id.vue' /* webpackChunkName: "pages/create/brand/_id" */))
+const _0d9bd10c = () => interopDefault(import('..\\pages\\create\\shop\\_id.vue' /* webpackChunkName: "pages/create/shop/_id" */))
 const _c3851854 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
@@ -23,6 +28,26 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/create",
+    component: _788555da,
+    name: "create"
+  }, {
+    path: "/create/brand",
+    component: _73651f93,
+    name: "create-brand"
+  }, {
+    path: "/create/shop",
+    component: _45d4b5a4,
+    name: "create-shop"
+  }, {
+    path: "/create/brand/:id",
+    component: _72682a8a,
+    name: "create-brand-id"
+  }, {
+    path: "/create/shop/:id",
+    component: _0d9bd10c,
+    name: "create-shop-id"
+  }, {
     path: "/",
     component: _c3851854,
     name: "index"

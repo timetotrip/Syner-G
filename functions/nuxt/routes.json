@@ -1,5 +1,40 @@
 [
   {
+    "name": "create",
+    "path": "/create",
+    "component": "D:\\\\LocalService\\\\tsunade\\\\src\\\\pages\\\\create\\\\index.vue",
+    "chunkName": "pages/create/index",
+    "_name": "_788555da"
+  },
+  {
+    "name": "create-brand",
+    "path": "/create/brand",
+    "component": "D:\\\\LocalService\\\\tsunade\\\\src\\\\pages\\\\create\\\\brand\\\\index.vue",
+    "chunkName": "pages/create/brand/index",
+    "_name": "_73651f93"
+  },
+  {
+    "name": "create-shop",
+    "path": "/create/shop",
+    "component": "D:\\\\LocalService\\\\tsunade\\\\src\\\\pages\\\\create\\\\shop\\\\index.vue",
+    "chunkName": "pages/create/shop/index",
+    "_name": "_45d4b5a4"
+  },
+  {
+    "name": "create-brand-id",
+    "path": "/create/brand/:id",
+    "component": "D:\\\\LocalService\\\\tsunade\\\\src\\\\pages\\\\create\\\\brand\\\\_id.vue",
+    "chunkName": "pages/create/brand/_id",
+    "_name": "_72682a8a"
+  },
+  {
+    "name": "create-shop-id",
+    "path": "/create/shop/:id",
+    "component": "D:\\\\LocalService\\\\tsunade\\\\src\\\\pages\\\\create\\\\shop\\\\_id.vue",
+    "chunkName": "pages/create/shop/_id",
+    "_name": "_0d9bd10c"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "D:\\\\LocalService\\\\tsunade\\\\src\\\\pages\\\\index.vue",

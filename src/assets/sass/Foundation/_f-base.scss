@@ -1,0 +1,23 @@
+/*--------------------------------------------------------------
+## Everything
+--------------------------------------------------------------*/
+*,h1,h2,h3,p,img,a,div{
+    transition: 0;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    touch-action: manipulation;
+}
+img{
+    vertical-align:top;
+}
+/*--------------------------------------------------------------
+## Rayout
+--------------------------------------------------------------*/
+
+html,body{
+    width:100%;
+    height:auto;
+    -webkit-text-size-adjust: 100%;
+    -webkit-appearance: none;
+}

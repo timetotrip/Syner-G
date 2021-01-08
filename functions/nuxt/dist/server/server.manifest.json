@@ -1,10 +1,20 @@
 {
   "entry": "server.js",
   "files": {
+    "pages/create/brand/_id.js": "pages/create/brand/_id.js",
+    "pages/create/brand/index.js": "pages/create/brand/index.js",
+    "pages/create/index.js": "pages/create/index.js",
+    "pages/create/shop/_id.js": "pages/create/shop/_id.js",
+    "pages/create/shop/index.js": "pages/create/shop/index.js",
     "pages/index.js": "pages/index.js",
     "server.js": "server.js"
   },
   "maps": {
+    "pages/create/brand/_id.js": "pages/create/brand/_id.js.map",
+    "pages/create/brand/index.js": "pages/create/brand/index.js.map",
+    "pages/create/index.js": "pages/create/index.js.map",
+    "pages/create/shop/_id.js": "pages/create/shop/_id.js.map",
+    "pages/create/shop/index.js": "pages/create/shop/index.js.map",
     "pages/index.js": "pages/index.js.map",
     "server.js": "server.js.map"
   }
