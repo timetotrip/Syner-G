@@ -13,6 +13,10 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_plugin_8ed80f16 from 'nuxt_plugin_plugin_8ed80f16' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_fontawesome_d2eb1280 from 'nuxt_plugin_fontawesome_d2eb1280' // Source: ..\\plugins\\fontawesome (mode: 'all')
+import nuxt_plugin_firebase_362e73fb from 'nuxt_plugin_firebase_362e73fb' // Source: ..\\plugins\\firebase (mode: 'client')
+import nuxt_plugin_routerOption_9325cddc from 'nuxt_plugin_routerOption_9325cddc' // Source: ..\\plugins\\routerOption (mode: 'all')
+import nuxt_plugin_infiniteloading_70384798 from 'nuxt_plugin_infiniteloading_70384798' // Source: ..\\plugins\\infiniteloading (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -174,6 +178,22 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_plugin_8ed80f16 === 'function') {
     await nuxt_plugin_plugin_8ed80f16(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_fontawesome_d2eb1280 === 'function') {
+    await nuxt_plugin_fontawesome_d2eb1280(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_firebase_362e73fb === 'function') {
+    await nuxt_plugin_firebase_362e73fb(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_routerOption_9325cddc === 'function') {
+    await nuxt_plugin_routerOption_9325cddc(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_infiniteloading_70384798 === 'function') {
+    await nuxt_plugin_infiniteloading_70384798(app.context, inject)
   }
 
   // Lock enablePreview in context
