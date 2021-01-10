@@ -22,8 +22,8 @@ module.exports = {
   plugins: [
     { src: '@/plugins/fontawesome', ssr: true },
     { src: '@/plugins/firebase', ssr: false },
-    { src: '@/plugins/routerOption', ssr: true },
-    { src: '@/plugins/infiniteloading', ssr: false }
+    { src: '@/plugins/routerOption', ssr: true }
+    // { src: '@/plugins/infiniteloading', ssr: false }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

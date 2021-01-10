@@ -79,7 +79,61 @@ class CProduct {
     // 仕入れ 連想配列
     this.purchase = {}
     // クリエイティブ 連想配列
-    this.criatives = {}
+    this.creatives = {}
+  }
+
+  isEqualAttention (atn) {
+    for (const key in this.attention) {
+      if (typeof atn[key] === 'undefined') {
+        return false
+      } else if (atn[key] !== this.attention[key]) {
+        return false
+      }
+    }
+    for (const key in atn) {
+      if (typeof this.attention[key] === 'undefined') {
+        return false
+      } else if (atn[key] !== this.attention[key]) {
+        return false
+      }
+    }
+    return true
+  }
+
+  isEqualPurchase (pch) {
+    for (const key in this.purchase) {
+      if (typeof pch[key] === 'undefined') {
+        return false
+      } else if (pch[key] !== this.purchase[key]) {
+        return false
+      }
+    }
+    for (const key in pch) {
+      if (typeof this.purchase[key] === 'undefined') {
+        return false
+      } else if (pch[key] !== this.purchase[key]) {
+        return false
+      }
+    }
+    return true
+  }
+
+  isEqualCreatives (ctv) {
+    for (const key in this.creatives) {
+      if (typeof ctv[key] === 'undefined') {
+        return false
+      } else if (ctv[key] !== this.creatives[key]) {
+        return false
+      }
+    }
+    for (const key in ctv) {
+      if (typeof this.creatives[key] === 'undefined') {
+        return false
+      } else if (ctv[key] !== this.creatives[key]) {
+        return false
+      }
+    }
+    return true
   }
 }
 const ConvCProduct = {
@@ -98,7 +152,7 @@ const ConvCProduct = {
       brand: product.brand,
       attention: product.attention,
       purchase: product.purchase,
-      criatives: product.criatives
+      creatives: product.creatives
     }
   },
   fromFirestore (snapshot, options) {
@@ -116,9 +170,9 @@ const ConvCProduct = {
     product.dateRelease = data.dateRelease
     product.dateEnd = data.dateEnd
     product.brand = data.brand
-    product.attention = data.attention
-    product.purchase = data.purchase
-    product.criatives = data.criatives
+    product.attention = Object.assign({}, data.attention)
+    product.purchase = Object.assign({}, data.purchase)
+    product.creatives = Object.assign({}, data.creatives)
     return product
   }
 }

@@ -14,5 +14,9 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'no-console': 'off',
+    'vue/component-definition-name-casing': 'off',
+    'no-unused-vars': 'warn'
+  }
 }

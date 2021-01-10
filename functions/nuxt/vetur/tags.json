@@ -59,6 +59,12 @@
   "LazyCcoShopCreate": {
     "description": "Auto imported from components/create/organisms/CcoShopCreate.vue"
   },
+  "CcoProductEdit": {
+    "description": "Auto imported from components/create/organisms/CcoProductEdit.vue"
+  },
+  "LazyCcoProductEdit": {
+    "description": "Auto imported from components/create/organisms/CcoProductEdit.vue"
+  },
   "CctBrandId": {
     "description": "Auto imported from components/create/templates/CctBrandId.vue"
   },

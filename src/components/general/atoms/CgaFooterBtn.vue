@@ -62,7 +62,7 @@ export default {
     }
   },
   mounted () {
-    console.log('CGA FtrBtn mounted ' + this.$route.path)
+    // console.log('CGA FtrBtn mounted ' + this.$route.path)
   },
   methods: {
     iconClick () {

@@ -26,7 +26,6 @@
     <p>プロダクトを創ってして販売しちゃおう</p>
     <v-btn
       :disabled="!isAllVali"
-      depressed
       @click="addBrand()"
     >
       追加

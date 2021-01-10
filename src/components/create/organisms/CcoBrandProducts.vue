@@ -1,46 +1,62 @@
 <template>
   <div v-if="brand!==null">
     <h2>{{ brand.name }} ブランド プロダクト</h2>
-    <p>詳細準備中</p>
     <CcoProductCreate />
+    <CcoProductEdit
+      v-for="(product, pid) in pList"
+      :key="pid"
+      :product="product"
+      :isopen="openProduct===pid"
+      :openfunc="productOpen"
+      :closefunc="productClose"
+    />
   </div>
 </template>
 <script>
 import CcoProductCreate from '@/components/create/organisms/CcoProductCreate.vue'
+import CcoProductEdit from '@/components/create/organisms/CcoProductEdit.vue'
 const { mapGetters } = require('vuex')
 export default {
   name: 'CcoBrandProducts',
   components: {
-    CcoProductCreate
+    CcoProductCreate,
+    CcoProductEdit
   },
   props: {
     brand: {
       type: Object,
       default: null
-    },
-    ppp: { // products per page
-      type: Number,
-      default: 5
     }
   },
   data () {
     return {
-      pPerPage: 5,
-      page: 0
+      openProduct: ''
     }
   },
   computed: {
-    ...mapGetters('xd/create/xdcproducts', ['cProduct', 'pList'])
+    ...mapGetters('xd/create/xdcproducts', ['pList'])
   },
   mounted () {
-    this.page = 0
-    this.pPerPage = this.$props.ppp
     console.log('Cct brand products mounted')
-    this.$store.dispatch('xd/create/xdcproducts/setPList', this.page, this.pPerPage)
+    if (typeof this.$props.brand === 'undefined') {
+      //
+    } else if (this.$props.brand === null) {
+      //
+    } else {
+      this.$store.dispatch('xd/create/xdcproducts/setPList', this.$props.brand.id)
+    }
   },
   beforeDestroy () {
     console.log('Cct brand products beforeDestroy')
     this.$store.dispatch('xd/create/xdcproducts/resetPList')
+  },
+  methods: {
+    productOpen (pid) {
+      this.openProduct = pid
+    },
+    productClose () {
+      this.openProduct = ''
+    }
   }
 }
 </script>

@@ -53,6 +53,9 @@ export const actions = {
 export const getters = {
   refBrandById: () => (bid) => {
     return firestore.collection('xbrands').doc(bid)
+  },
+  refBrandProducts: () => (bid) => {
+    return firestore.collection('xbrands').doc(bid).collection('products')
   }
   /*
   ownBrandsRef: () => (uid) => {

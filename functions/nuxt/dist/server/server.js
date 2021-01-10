@@ -1839,7 +1839,7 @@ module.exports = require("@nuxt/ufo");
 "use strict";
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _directives_ripple__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(28);
+/* harmony import */ var _directives_ripple__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(29);
 /* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
  // Directives
 
@@ -3997,6 +3997,16 @@ let all = factory().extend({
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var _VSheet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
+
+
+/* harmony default export */ __webpack_exports__["a"] = (_VSheet__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"]);
+
+/***/ }),
+/* 29 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* unused harmony export Ripple */
 /* harmony import */ var _src_directives_ripple_VRipple_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(103);
 /* harmony import */ var _src_directives_ripple_VRipple_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_directives_ripple_VRipple_sass__WEBPACK_IMPORTED_MODULE_0__);
@@ -4322,7 +4332,7 @@ const Ripple = {
 /* harmony default export */ __webpack_exports__["a"] = (Ripple);
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4375,16 +4385,6 @@ function factory(prop = 'value', event = 'change') {
 
 const Proxyable = factory();
 /* harmony default export */ __webpack_exports__["a"] = (Proxyable);
-
-/***/ }),
-/* 30 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _VSheet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
-
-
-/* harmony default export */ __webpack_exports__["a"] = (_VSheet__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"]);
 
 /***/ }),
 /* 31 */
@@ -4519,7 +4519,7 @@ const ClickOutside = {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return factory; });
-/* harmony import */ var _registrable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(52);
+/* harmony import */ var _registrable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(53);
 // Mixins
 
 function factory(namespace, child, parent) {
@@ -4661,7 +4661,7 @@ function searchChildren(children) {
 var VImg = __webpack_require__(97);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/directives/intersect/index.js
-var intersect = __webpack_require__(53);
+var intersect = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VResponsive/VResponsive.sass
 var VResponsive = __webpack_require__(99);
@@ -4733,7 +4733,7 @@ var mixins = __webpack_require__(3);
 var themeable = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/util/mergeData.js
-var mergeData = __webpack_require__(51);
+var mergeData = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/util/console.js
 var console = __webpack_require__(2);
@@ -5165,6 +5165,2081 @@ exports.ConvCProduct = ConvCProduct;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/molecules/CgmNaviBase.vue?vue&type=template&id=69aca67d&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-navigation-drawer',{attrs:{"absolute":"","temporary":""},model:{value:(_vm.drawer),callback:function ($$v) {_vm.drawer=$$v},expression:"drawer"}},[_c('v-list',{attrs:{"nav":""}},[_c('v-list-item',[_c('p',[_vm._v("popop")])]),_vm._v(" "),_c('v-list-item',[_c('p',[_vm._v("popop")])]),_vm._v(" "),_c('v-list-item',[_c('p',[_vm._v("popop")])])],1)],1)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./components/general/molecules/CgmNaviBase.vue?vue&type=template&id=69aca67d&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/molecules/CgmNaviBase.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var CgmNaviBasevue_type_script_lang_js_ = ({
+  name: 'CgmNaviBase',
+  data: () => ({
+    drawer: false
+  }),
+
+  created() {
+    this.$nuxt.$on('navigation-toggle', () => {
+      this.drawer = !this.drawer;
+    });
+  }
+
+});
+// CONCATENATED MODULE: ./components/general/molecules/CgmNaviBase.vue?vue&type=script&lang=js&
+ /* harmony default export */ var molecules_CgmNaviBasevue_type_script_lang_js_ = (CgmNaviBasevue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./node_modules/vuetify-loader/lib/runtime/installComponents.js
+var installComponents = __webpack_require__(8);
+var installComponents_default = /*#__PURE__*/__webpack_require__.n(installComponents);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VList/VList.sass
+var VList = __webpack_require__(109);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/VSheet.js + 1 modules
+var VSheet = __webpack_require__(11);
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VList/VList.js
+// Styles
+ // Components
+
+
+/* @vue/component */
+
+/* harmony default export */ var VList_VList = (VSheet["a" /* default */].extend().extend({
+  name: 'v-list',
+
+  provide() {
+    return {
+      isInList: true,
+      list: this
+    };
+  },
+
+  inject: {
+    isInMenu: {
+      default: false
+    },
+    isInNav: {
+      default: false
+    }
+  },
+  props: {
+    dense: Boolean,
+    disabled: Boolean,
+    expand: Boolean,
+    flat: Boolean,
+    nav: Boolean,
+    rounded: Boolean,
+    subheader: Boolean,
+    threeLine: Boolean,
+    twoLine: Boolean
+  },
+  data: () => ({
+    groups: []
+  }),
+  computed: {
+    classes() {
+      return { ...VSheet["a" /* default */].options.computed.classes.call(this),
+        'v-list--dense': this.dense,
+        'v-list--disabled': this.disabled,
+        'v-list--flat': this.flat,
+        'v-list--nav': this.nav,
+        'v-list--rounded': this.rounded,
+        'v-list--subheader': this.subheader,
+        'v-list--two-line': this.twoLine,
+        'v-list--three-line': this.threeLine
+      };
+    }
+
+  },
+  methods: {
+    register(content) {
+      this.groups.push(content);
+    },
+
+    unregister(content) {
+      const index = this.groups.findIndex(g => g._uid === content._uid);
+      if (index > -1) this.groups.splice(index, 1);
+    },
+
+    listClick(uid) {
+      if (this.expand) return;
+
+      for (const group of this.groups) {
+        group.toggle(uid);
+      }
+    }
+
+  },
+
+  render(h) {
+    const data = {
+      staticClass: 'v-list',
+      class: this.classes,
+      style: this.styles,
+      attrs: {
+        role: this.isInNav || this.isInMenu ? undefined : 'list',
+        ...this.attrs$
+      }
+    };
+    return h(this.tag, this.setBackgroundColor(this.color, data), [this.$slots.default]);
+  }
+
+}));
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VList/VListItem.sass
+var VListItem = __webpack_require__(111);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/colorable/index.js
+var colorable = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/routable/index.js
+var routable = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/groupable/index.js
+var groupable = __webpack_require__(34);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/themeable/index.js
+var themeable = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/toggleable/index.js
+var toggleable = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/directives/ripple/index.js
+var ripple = __webpack_require__(29);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/helpers.js
+var helpers = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/console.js
+var console = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/mixins.js
+var mixins = __webpack_require__(3);
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VList/VListItem.js
+// Styles
+ // Mixins
+
+
+
+
+
+ // Directives
+
+ // Utilities
+
+
+ // Types
+
+
+const baseMixins = Object(mixins["a" /* default */])(colorable["a" /* default */], routable["a" /* default */], themeable["a" /* default */], Object(groupable["a" /* factory */])('listItemGroup'), Object(toggleable["b" /* factory */])('inputValue'));
+/* @vue/component */
+
+/* harmony default export */ var VList_VListItem = (baseMixins.extend().extend({
+  name: 'v-list-item',
+  directives: {
+    Ripple: ripple["a" /* default */]
+  },
+  inject: {
+    isInGroup: {
+      default: false
+    },
+    isInList: {
+      default: false
+    },
+    isInMenu: {
+      default: false
+    },
+    isInNav: {
+      default: false
+    }
+  },
+  inheritAttrs: false,
+  props: {
+    activeClass: {
+      type: String,
+
+      default() {
+        if (!this.listItemGroup) return '';
+        return this.listItemGroup.activeClass;
+      }
+
+    },
+    dense: Boolean,
+    inactive: Boolean,
+    link: Boolean,
+    selectable: {
+      type: Boolean
+    },
+    tag: {
+      type: String,
+      default: 'div'
+    },
+    threeLine: Boolean,
+    twoLine: Boolean,
+    value: null
+  },
+  data: () => ({
+    proxyClass: 'v-list-item--active'
+  }),
+  computed: {
+    classes() {
+      return {
+        'v-list-item': true,
+        ...routable["a" /* default */].options.computed.classes.call(this),
+        'v-list-item--dense': this.dense,
+        'v-list-item--disabled': this.disabled,
+        'v-list-item--link': this.isClickable && !this.inactive,
+        'v-list-item--selectable': this.selectable,
+        'v-list-item--three-line': this.threeLine,
+        'v-list-item--two-line': this.twoLine,
+        ...this.themeClasses
+      };
+    },
+
+    isClickable() {
+      return Boolean(routable["a" /* default */].options.computed.isClickable.call(this) || this.listItemGroup);
+    }
+
+  },
+
+  created() {
+    /* istanbul ignore next */
+    if (this.$attrs.hasOwnProperty('avatar')) {
+      Object(console["e" /* removed */])('avatar', this);
+    }
+  },
+
+  methods: {
+    click(e) {
+      if (e.detail) this.$el.blur();
+      this.$emit('click', e);
+      this.to || this.toggle();
+    },
+
+    genAttrs() {
+      const attrs = {
+        'aria-disabled': this.disabled ? true : undefined,
+        tabindex: this.isClickable && !this.disabled ? 0 : -1,
+        ...this.$attrs
+      };
+
+      if (this.$attrs.hasOwnProperty('role')) {// do nothing, role already provided
+      } else if (this.isInNav) {// do nothing, role is inherit
+      } else if (this.isInGroup) {
+        attrs.role = 'listitem';
+        attrs['aria-selected'] = String(this.isActive);
+      } else if (this.isInMenu) {
+        attrs.role = this.isClickable ? 'menuitem' : undefined;
+        attrs.id = attrs.id || `list-item-${this._uid}`;
+      } else if (this.isInList) {
+        attrs.role = 'listitem';
+      }
+
+      return attrs;
+    }
+
+  },
+
+  render(h) {
+    let {
+      tag,
+      data
+    } = this.generateRouteLink();
+    data.attrs = { ...data.attrs,
+      ...this.genAttrs()
+    };
+    data[this.to ? 'nativeOn' : 'on'] = { ...data[this.to ? 'nativeOn' : 'on'],
+      keydown: e => {
+        /* istanbul ignore else */
+        if (e.keyCode === helpers["p" /* keyCodes */].enter) this.click(e);
+        this.$emit('keydown', e);
+      }
+    };
+    if (this.inactive) tag = 'div';
+
+    if (this.inactive && this.to) {
+      data.on = data.nativeOn;
+      delete data.nativeOn;
+    }
+
+    const children = this.$scopedSlots.default ? this.$scopedSlots.default({
+      active: this.isActive,
+      toggle: this.toggle
+    }) : this.$slots.default;
+    return h(tag, this.setTextColor(this.color, data), children);
+  }
+
+}));
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VNavigationDrawer/VNavigationDrawer.sass
+var VNavigationDrawer = __webpack_require__(113);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VImg/VImg.js + 2 modules
+var VImg = __webpack_require__(36);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/applicationable/index.js
+var applicationable = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/dependent/index.js
+var dependent = __webpack_require__(35);
+
+// EXTERNAL MODULE: external "vue"
+var external_vue_ = __webpack_require__(0);
+var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/mobile/index.js
+
+
+/* @vue/component */
+
+/* harmony default export */ var mobile = (external_vue_default.a.extend({
+  name: 'mobile',
+  props: {
+    mobileBreakpoint: {
+      type: [Number, String],
+
+      default() {
+        // Avoid destroying unit
+        // tests for users
+        return this.$vuetify ? this.$vuetify.breakpoint.mobileBreakpoint : undefined;
+      },
+
+      validator: v => !isNaN(Number(v)) || ['xs', 'sm', 'md', 'lg', 'xl'].includes(String(v))
+    }
+  },
+  computed: {
+    isMobile() {
+      const {
+        mobile,
+        width,
+        name,
+        mobileBreakpoint
+      } = this.$vuetify.breakpoint; // Check if local mobileBreakpoint matches
+      // the application's mobileBreakpoint
+
+      if (mobileBreakpoint === this.mobileBreakpoint) return mobile;
+      const mobileWidth = parseInt(this.mobileBreakpoint, 10);
+      const isNumber = !isNaN(mobileWidth);
+      return isNumber ? width < mobileWidth : name === this.mobileBreakpoint;
+    }
+
+  },
+
+  created() {
+    /* istanbul ignore next */
+    if (this.$attrs.hasOwnProperty('mobile-break-point')) {
+      Object(console["d" /* deprecate */])('mobile-break-point', 'mobile-breakpoint', this);
+    }
+  }
+
+}));
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/overlayable/index.js + 2 modules
+var overlayable = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/ssr-bootable/index.js
+var ssr_bootable = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/directives/click-outside/index.js
+var click_outside = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/directives/resize/index.js
+var resize = __webpack_require__(55);
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/directives/touch/index.js
+
+
+const handleGesture = wrapper => {
+  const {
+    touchstartX,
+    touchendX,
+    touchstartY,
+    touchendY
+  } = wrapper;
+  const dirRatio = 0.5;
+  const minDistance = 16;
+  wrapper.offsetX = touchendX - touchstartX;
+  wrapper.offsetY = touchendY - touchstartY;
+
+  if (Math.abs(wrapper.offsetY) < dirRatio * Math.abs(wrapper.offsetX)) {
+    wrapper.left && touchendX < touchstartX - minDistance && wrapper.left(wrapper);
+    wrapper.right && touchendX > touchstartX + minDistance && wrapper.right(wrapper);
+  }
+
+  if (Math.abs(wrapper.offsetX) < dirRatio * Math.abs(wrapper.offsetY)) {
+    wrapper.up && touchendY < touchstartY - minDistance && wrapper.up(wrapper);
+    wrapper.down && touchendY > touchstartY + minDistance && wrapper.down(wrapper);
+  }
+};
+
+function touchstart(event, wrapper) {
+  const touch = event.changedTouches[0];
+  wrapper.touchstartX = touch.clientX;
+  wrapper.touchstartY = touch.clientY;
+  wrapper.start && wrapper.start(Object.assign(event, wrapper));
+}
+
+function touchend(event, wrapper) {
+  const touch = event.changedTouches[0];
+  wrapper.touchendX = touch.clientX;
+  wrapper.touchendY = touch.clientY;
+  wrapper.end && wrapper.end(Object.assign(event, wrapper));
+  handleGesture(wrapper);
+}
+
+function touchmove(event, wrapper) {
+  const touch = event.changedTouches[0];
+  wrapper.touchmoveX = touch.clientX;
+  wrapper.touchmoveY = touch.clientY;
+  wrapper.move && wrapper.move(Object.assign(event, wrapper));
+}
+
+function createHandlers(value) {
+  const wrapper = {
+    touchstartX: 0,
+    touchstartY: 0,
+    touchendX: 0,
+    touchendY: 0,
+    touchmoveX: 0,
+    touchmoveY: 0,
+    offsetX: 0,
+    offsetY: 0,
+    left: value.left,
+    right: value.right,
+    up: value.up,
+    down: value.down,
+    start: value.start,
+    move: value.move,
+    end: value.end
+  };
+  return {
+    touchstart: e => touchstart(e, wrapper),
+    touchend: e => touchend(e, wrapper),
+    touchmove: e => touchmove(e, wrapper)
+  };
+}
+
+function inserted(el, binding, vnode) {
+  const value = binding.value;
+  const target = value.parent ? el.parentElement : el;
+  const options = value.options || {
+    passive: true
+  }; // Needed to pass unit tests
+
+  if (!target) return;
+  const handlers = createHandlers(binding.value);
+  target._touchHandlers = Object(target._touchHandlers);
+  target._touchHandlers[vnode.context._uid] = handlers;
+  Object(helpers["q" /* keys */])(handlers).forEach(eventName => {
+    target.addEventListener(eventName, handlers[eventName], options);
+  });
+}
+
+function unbind(el, binding, vnode) {
+  const target = binding.value.parent ? el.parentElement : el;
+  if (!target || !target._touchHandlers) return;
+  const handlers = target._touchHandlers[vnode.context._uid];
+  Object(helpers["q" /* keys */])(handlers).forEach(eventName => {
+    target.removeEventListener(eventName, handlers[eventName]);
+  });
+  delete target._touchHandlers[vnode.context._uid];
+}
+
+const Touch = {
+  inserted,
+  unbind
+};
+/* harmony default export */ var touch = (Touch);
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VNavigationDrawer/VNavigationDrawer.js
+// Styles
+ // Components
+
+ // Mixins
+
+
+
+
+
+
+
+ // Directives
+
+
+
+ // Utilities
+
+
+
+const VNavigationDrawer_baseMixins = Object(mixins["a" /* default */])(Object(applicationable["a" /* default */])('left', ['isActive', 'isMobile', 'miniVariant', 'expandOnHover', 'permanent', 'right', 'temporary', 'width']), colorable["a" /* default */], dependent["a" /* default */], mobile, overlayable["a" /* default */], ssr_bootable["a" /* default */], themeable["a" /* default */]);
+/* @vue/component */
+
+/* harmony default export */ var VNavigationDrawer_VNavigationDrawer = (VNavigationDrawer_baseMixins.extend({
+  name: 'v-navigation-drawer',
+  directives: {
+    ClickOutside: click_outside["a" /* default */],
+    Resize: resize["a" /* default */],
+    Touch: touch
+  },
+
+  provide() {
+    return {
+      isInNav: this.tag === 'nav'
+    };
+  },
+
+  props: {
+    bottom: Boolean,
+    clipped: Boolean,
+    disableResizeWatcher: Boolean,
+    disableRouteWatcher: Boolean,
+    expandOnHover: Boolean,
+    floating: Boolean,
+    height: {
+      type: [Number, String],
+
+      default() {
+        return this.app ? '100vh' : '100%';
+      }
+
+    },
+    miniVariant: Boolean,
+    miniVariantWidth: {
+      type: [Number, String],
+      default: 56
+    },
+    permanent: Boolean,
+    right: Boolean,
+    src: {
+      type: [String, Object],
+      default: ''
+    },
+    stateless: Boolean,
+    tag: {
+      type: String,
+
+      default() {
+        return this.app ? 'nav' : 'aside';
+      }
+
+    },
+    temporary: Boolean,
+    touchless: Boolean,
+    width: {
+      type: [Number, String],
+      default: 256
+    },
+    value: null
+  },
+  data: () => ({
+    isMouseover: false,
+    touchArea: {
+      left: 0,
+      right: 0
+    },
+    stackMinZIndex: 6
+  }),
+  computed: {
+    /**
+     * Used for setting an app value from a dynamic
+     * property. Called from applicationable.js
+     */
+    applicationProperty() {
+      return this.right ? 'right' : 'left';
+    },
+
+    classes() {
+      return {
+        'v-navigation-drawer': true,
+        'v-navigation-drawer--absolute': this.absolute,
+        'v-navigation-drawer--bottom': this.bottom,
+        'v-navigation-drawer--clipped': this.clipped,
+        'v-navigation-drawer--close': !this.isActive,
+        'v-navigation-drawer--fixed': !this.absolute && (this.app || this.fixed),
+        'v-navigation-drawer--floating': this.floating,
+        'v-navigation-drawer--is-mobile': this.isMobile,
+        'v-navigation-drawer--is-mouseover': this.isMouseover,
+        'v-navigation-drawer--mini-variant': this.isMiniVariant,
+        'v-navigation-drawer--custom-mini-variant': Number(this.miniVariantWidth) !== 56,
+        'v-navigation-drawer--open': this.isActive,
+        'v-navigation-drawer--open-on-hover': this.expandOnHover,
+        'v-navigation-drawer--right': this.right,
+        'v-navigation-drawer--temporary': this.temporary,
+        ...this.themeClasses
+      };
+    },
+
+    computedMaxHeight() {
+      if (!this.hasApp) return null;
+      const computedMaxHeight = this.$vuetify.application.bottom + this.$vuetify.application.footer + this.$vuetify.application.bar;
+      if (!this.clipped) return computedMaxHeight;
+      return computedMaxHeight + this.$vuetify.application.top;
+    },
+
+    computedTop() {
+      if (!this.hasApp) return 0;
+      let computedTop = this.$vuetify.application.bar;
+      computedTop += this.clipped ? this.$vuetify.application.top : 0;
+      return computedTop;
+    },
+
+    computedTransform() {
+      if (this.isActive) return 0;
+      if (this.isBottom) return 100;
+      return this.right ? 100 : -100;
+    },
+
+    computedWidth() {
+      return this.isMiniVariant ? this.miniVariantWidth : this.width;
+    },
+
+    hasApp() {
+      return this.app && !this.isMobile && !this.temporary;
+    },
+
+    isBottom() {
+      return this.bottom && this.isMobile;
+    },
+
+    isMiniVariant() {
+      return !this.expandOnHover && this.miniVariant || this.expandOnHover && !this.isMouseover;
+    },
+
+    isMobile() {
+      return !this.stateless && !this.permanent && mobile.options.computed.isMobile.call(this);
+    },
+
+    reactsToClick() {
+      return !this.stateless && !this.permanent && (this.isMobile || this.temporary);
+    },
+
+    reactsToMobile() {
+      return this.app && !this.disableResizeWatcher && !this.permanent && !this.stateless && !this.temporary;
+    },
+
+    reactsToResize() {
+      return !this.disableResizeWatcher && !this.stateless;
+    },
+
+    reactsToRoute() {
+      return !this.disableRouteWatcher && !this.stateless && (this.temporary || this.isMobile);
+    },
+
+    showOverlay() {
+      return !this.hideOverlay && this.isActive && (this.isMobile || this.temporary);
+    },
+
+    styles() {
+      const translate = this.isBottom ? 'translateY' : 'translateX';
+      return {
+        height: Object(helpers["f" /* convertToUnit */])(this.height),
+        top: !this.isBottom ? Object(helpers["f" /* convertToUnit */])(this.computedTop) : 'auto',
+        maxHeight: this.computedMaxHeight != null ? `calc(100% - ${Object(helpers["f" /* convertToUnit */])(this.computedMaxHeight)})` : undefined,
+        transform: `${translate}(${Object(helpers["f" /* convertToUnit */])(this.computedTransform, '%')})`,
+        width: Object(helpers["f" /* convertToUnit */])(this.computedWidth)
+      };
+    }
+
+  },
+  watch: {
+    $route: 'onRouteChange',
+
+    isActive(val) {
+      this.$emit('input', val);
+    },
+
+    /**
+     * When mobile changes, adjust the active state
+     * only when there has been a previous value
+     */
+    isMobile(val, prev) {
+      !val && this.isActive && !this.temporary && this.removeOverlay();
+      if (prev == null || !this.reactsToResize || !this.reactsToMobile) return;
+      this.isActive = !val;
+    },
+
+    permanent(val) {
+      // If enabling prop enable the drawer
+      if (val) this.isActive = true;
+    },
+
+    showOverlay(val) {
+      if (val) this.genOverlay();else this.removeOverlay();
+    },
+
+    value(val) {
+      if (this.permanent) return;
+
+      if (val == null) {
+        this.init();
+        return;
+      }
+
+      if (val !== this.isActive) this.isActive = val;
+    },
+
+    expandOnHover: 'updateMiniVariant',
+
+    isMouseover(val) {
+      this.updateMiniVariant(!val);
+    }
+
+  },
+
+  beforeMount() {
+    this.init();
+  },
+
+  methods: {
+    calculateTouchArea() {
+      const parent = this.$el.parentNode;
+      if (!parent) return;
+      const parentRect = parent.getBoundingClientRect();
+      this.touchArea = {
+        left: parentRect.left + 50,
+        right: parentRect.right - 50
+      };
+    },
+
+    closeConditional() {
+      return this.isActive && !this._isDestroyed && this.reactsToClick;
+    },
+
+    genAppend() {
+      return this.genPosition('append');
+    },
+
+    genBackground() {
+      const props = {
+        height: '100%',
+        width: '100%',
+        src: this.src
+      };
+      const image = this.$scopedSlots.img ? this.$scopedSlots.img(props) : this.$createElement(VImg["a" /* default */], {
+        props
+      });
+      return this.$createElement('div', {
+        staticClass: 'v-navigation-drawer__image'
+      }, [image]);
+    },
+
+    genDirectives() {
+      const directives = [{
+        name: 'click-outside',
+        value: {
+          handler: () => {
+            this.isActive = false;
+          },
+          closeConditional: this.closeConditional,
+          include: this.getOpenDependentElements
+        }
+      }];
+
+      if (!this.touchless && !this.stateless) {
+        directives.push({
+          name: 'touch',
+          value: {
+            parent: true,
+            left: this.swipeLeft,
+            right: this.swipeRight
+          }
+        });
+      }
+
+      return directives;
+    },
+
+    genListeners() {
+      const on = {
+        transitionend: e => {
+          if (e.target !== e.currentTarget) return;
+          this.$emit('transitionend', e); // IE11 does not support new Event('resize')
+
+          const resizeEvent = document.createEvent('UIEvents');
+          resizeEvent.initUIEvent('resize', true, false, window, 0);
+          window.dispatchEvent(resizeEvent);
+        }
+      };
+
+      if (this.miniVariant) {
+        on.click = () => this.$emit('update:mini-variant', false);
+      }
+
+      if (this.expandOnHover) {
+        on.mouseenter = () => this.isMouseover = true;
+
+        on.mouseleave = () => this.isMouseover = false;
+      }
+
+      return on;
+    },
+
+    genPosition(name) {
+      const slot = Object(helpers["l" /* getSlot */])(this, name);
+      if (!slot) return slot;
+      return this.$createElement('div', {
+        staticClass: `v-navigation-drawer__${name}`
+      }, slot);
+    },
+
+    genPrepend() {
+      return this.genPosition('prepend');
+    },
+
+    genContent() {
+      return this.$createElement('div', {
+        staticClass: 'v-navigation-drawer__content'
+      }, this.$slots.default);
+    },
+
+    genBorder() {
+      return this.$createElement('div', {
+        staticClass: 'v-navigation-drawer__border'
+      });
+    },
+
+    init() {
+      if (this.permanent) {
+        this.isActive = true;
+      } else if (this.stateless || this.value != null) {
+        this.isActive = this.value;
+      } else if (!this.temporary) {
+        this.isActive = !this.isMobile;
+      }
+    },
+
+    onRouteChange() {
+      if (this.reactsToRoute && this.closeConditional()) {
+        this.isActive = false;
+      }
+    },
+
+    swipeLeft(e) {
+      if (this.isActive && this.right) return;
+      this.calculateTouchArea();
+      if (Math.abs(e.touchendX - e.touchstartX) < 100) return;
+      if (this.right && e.touchstartX >= this.touchArea.right) this.isActive = true;else if (!this.right && this.isActive) this.isActive = false;
+    },
+
+    swipeRight(e) {
+      if (this.isActive && !this.right) return;
+      this.calculateTouchArea();
+      if (Math.abs(e.touchendX - e.touchstartX) < 100) return;
+      if (!this.right && e.touchstartX <= this.touchArea.left) this.isActive = true;else if (this.right && this.isActive) this.isActive = false;
+    },
+
+    /**
+     * Update the application layout
+     */
+    updateApplication() {
+      if (!this.isActive || this.isMobile || this.temporary || !this.$el) return 0;
+      const width = Number(this.computedWidth);
+      return isNaN(width) ? this.$el.clientWidth : width;
+    },
+
+    updateMiniVariant(val) {
+      if (this.miniVariant !== val) this.$emit('update:mini-variant', val);
+    }
+
+  },
+
+  render(h) {
+    const children = [this.genPrepend(), this.genContent(), this.genAppend(), this.genBorder()];
+    if (this.src || Object(helpers["l" /* getSlot */])(this, 'img')) children.unshift(this.genBackground());
+    return h(this.tag, this.setBackgroundColor(this.color, {
+      class: this.classes,
+      style: this.styles,
+      directives: this.genDirectives(),
+      on: this.genListeners()
+    }), children);
+  }
+
+}));
+// CONCATENATED MODULE: ./components/general/molecules/CgmNaviBase.vue
+
+
+
+function injectStyles (context) {
+  
+  
+}
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  molecules_CgmNaviBasevue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  "69aca67d",
+  "4c46c4d2"
+  
+)
+
+/* harmony default export */ var CgmNaviBase = __webpack_exports__["default"] = (component.exports);
+
+/* vuetify-loader */
+
+
+
+
+installComponents_default()(component, {VList: VList_VList,VListItem: VList_VListItem,VNavigationDrawer: VNavigationDrawer_VNavigationDrawer})
+
+
+/***/ }),
+/* 40 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/molecules/CgmHeaderBase.vue?vue&type=template&id=37e3ee9c&scoped=true&
+var CgmHeaderBasevue_type_template_id_37e3ee9c_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-app-bar',{staticClass:"d-flex justify-space-between elevation-0"},[_c('v-app-bar-nav-icon',{on:{"click":function($event){$event.stopPropagation();return _vm.$nuxt.$emit('navigation-toggle')}}}),_vm._v(" "),_c('v-toolbar-title',[_vm._v("Syner-G α版")])],1)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./components/general/molecules/CgmHeaderBase.vue?vue&type=template&id=37e3ee9c&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/molecules/CgmHeaderBase.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var CgmHeaderBasevue_type_script_lang_js_ = ({
+  name: 'CgmHeaderBase',
+  data: () => ({
+    drawer: false,
+    group: null
+  }),
+  watch: {
+    group() {
+      this.drawer = false;
+    }
+
+  }
+});
+// CONCATENATED MODULE: ./components/general/molecules/CgmHeaderBase.vue?vue&type=script&lang=js&
+ /* harmony default export */ var molecules_CgmHeaderBasevue_type_script_lang_js_ = (CgmHeaderBasevue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./node_modules/vuetify-loader/lib/runtime/installComponents.js
+var installComponents = __webpack_require__(8);
+var installComponents_default = /*#__PURE__*/__webpack_require__.n(installComponents);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VAppBar/VAppBar.sass
+var VAppBar = __webpack_require__(89);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VToolbar/VToolbar.sass
+var VToolbar = __webpack_require__(91);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/VSheet.js + 1 modules
+var VSheet = __webpack_require__(11);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VImg/VImg.js + 2 modules
+var VImg = __webpack_require__(36);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/helpers.js
+var helpers = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/console.js
+var console = __webpack_require__(2);
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VToolbar/VToolbar.js
+// Styles
+ // Extensions
+
+ // Components
+
+ // Utilities
+
+
+
+/* @vue/component */
+
+/* harmony default export */ var VToolbar_VToolbar = (VSheet["a" /* default */].extend({
+  name: 'v-toolbar',
+  props: {
+    absolute: Boolean,
+    bottom: Boolean,
+    collapse: Boolean,
+    dense: Boolean,
+    extended: Boolean,
+    extensionHeight: {
+      default: 48,
+      type: [Number, String]
+    },
+    flat: Boolean,
+    floating: Boolean,
+    prominent: Boolean,
+    short: Boolean,
+    src: {
+      type: [String, Object],
+      default: ''
+    },
+    tag: {
+      type: String,
+      default: 'header'
+    }
+  },
+  data: () => ({
+    isExtended: false
+  }),
+  computed: {
+    computedHeight() {
+      const height = this.computedContentHeight;
+      if (!this.isExtended) return height;
+      const extensionHeight = parseInt(this.extensionHeight);
+      return this.isCollapsed ? height : height + (!isNaN(extensionHeight) ? extensionHeight : 0);
+    },
+
+    computedContentHeight() {
+      if (this.height) return parseInt(this.height);
+      if (this.isProminent && this.dense) return 96;
+      if (this.isProminent && this.short) return 112;
+      if (this.isProminent) return 128;
+      if (this.dense) return 48;
+      if (this.short || this.$vuetify.breakpoint.smAndDown) return 56;
+      return 64;
+    },
+
+    classes() {
+      return { ...VSheet["a" /* default */].options.computed.classes.call(this),
+        'v-toolbar': true,
+        'v-toolbar--absolute': this.absolute,
+        'v-toolbar--bottom': this.bottom,
+        'v-toolbar--collapse': this.collapse,
+        'v-toolbar--collapsed': this.isCollapsed,
+        'v-toolbar--dense': this.dense,
+        'v-toolbar--extended': this.isExtended,
+        'v-toolbar--flat': this.flat,
+        'v-toolbar--floating': this.floating,
+        'v-toolbar--prominent': this.isProminent
+      };
+    },
+
+    isCollapsed() {
+      return this.collapse;
+    },
+
+    isProminent() {
+      return this.prominent;
+    },
+
+    styles() {
+      return { ...this.measurableStyles,
+        height: Object(helpers["f" /* convertToUnit */])(this.computedHeight)
+      };
+    }
+
+  },
+
+  created() {
+    const breakingProps = [['app', '<v-app-bar app>'], ['manual-scroll', '<v-app-bar :value="false">'], ['clipped-left', '<v-app-bar clipped-left>'], ['clipped-right', '<v-app-bar clipped-right>'], ['inverted-scroll', '<v-app-bar inverted-scroll>'], ['scroll-off-screen', '<v-app-bar scroll-off-screen>'], ['scroll-target', '<v-app-bar scroll-target>'], ['scroll-threshold', '<v-app-bar scroll-threshold>'], ['card', '<v-app-bar flat>']];
+    /* istanbul ignore next */
+
+    breakingProps.forEach(([original, replacement]) => {
+      if (this.$attrs.hasOwnProperty(original)) Object(console["a" /* breaking */])(original, replacement, this);
+    });
+  },
+
+  methods: {
+    genBackground() {
+      const props = {
+        height: Object(helpers["f" /* convertToUnit */])(this.computedHeight),
+        src: this.src
+      };
+      const image = this.$scopedSlots.img ? this.$scopedSlots.img({
+        props
+      }) : this.$createElement(VImg["a" /* default */], {
+        props
+      });
+      return this.$createElement('div', {
+        staticClass: 'v-toolbar__image'
+      }, [image]);
+    },
+
+    genContent() {
+      return this.$createElement('div', {
+        staticClass: 'v-toolbar__content',
+        style: {
+          height: Object(helpers["f" /* convertToUnit */])(this.computedContentHeight)
+        }
+      }, Object(helpers["l" /* getSlot */])(this));
+    },
+
+    genExtension() {
+      return this.$createElement('div', {
+        staticClass: 'v-toolbar__extension',
+        style: {
+          height: Object(helpers["f" /* convertToUnit */])(this.extensionHeight)
+        }
+      }, Object(helpers["l" /* getSlot */])(this, 'extension'));
+    }
+
+  },
+
+  render(h) {
+    this.isExtended = this.extended || !!this.$scopedSlots.extension;
+    const children = [this.genContent()];
+    const data = this.setBackgroundColor(this.color, {
+      class: this.classes,
+      style: this.styles,
+      on: this.$listeners
+    });
+    if (this.isExtended) children.push(this.genExtension());
+    if (this.src || this.$scopedSlots.img) children.unshift(this.genBackground());
+    return h(this.tag, data, children);
+  }
+
+}));
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/directives/scroll/index.js
+var directives_scroll = __webpack_require__(50);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/applicationable/index.js
+var applicationable = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/scrollable/index.js
+var scrollable = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/ssr-bootable/index.js
+var ssr_bootable = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/toggleable/index.js
+var toggleable = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/mixins.js
+var mixins = __webpack_require__(3);
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VAppBar/VAppBar.js
+// Styles
+ // Extensions
+
+ // Directives
+
+ // Mixins
+
+
+
+
+ // Utilities
+
+
+
+const baseMixins = Object(mixins["a" /* default */])(VToolbar_VToolbar, scrollable["a" /* default */], ssr_bootable["a" /* default */], toggleable["a" /* default */], Object(applicationable["a" /* default */])('top', ['clippedLeft', 'clippedRight', 'computedHeight', 'invertedScroll', 'isExtended', 'isProminent', 'value']));
+/* @vue/component */
+
+/* harmony default export */ var VAppBar_VAppBar = (baseMixins.extend({
+  name: 'v-app-bar',
+  directives: {
+    Scroll: directives_scroll["b" /* default */]
+  },
+
+  provide() {
+    return {
+      VAppBar: this
+    };
+  },
+
+  props: {
+    clippedLeft: Boolean,
+    clippedRight: Boolean,
+    collapseOnScroll: Boolean,
+    elevateOnScroll: Boolean,
+    fadeImgOnScroll: Boolean,
+    hideOnScroll: Boolean,
+    invertedScroll: Boolean,
+    scrollOffScreen: Boolean,
+    shrinkOnScroll: Boolean,
+    value: {
+      type: Boolean,
+      default: true
+    }
+  },
+
+  data() {
+    return {
+      isActive: this.value
+    };
+  },
+
+  computed: {
+    applicationProperty() {
+      return !this.bottom ? 'top' : 'bottom';
+    },
+
+    canScroll() {
+      return scrollable["a" /* default */].options.computed.canScroll.call(this) && (this.invertedScroll || this.elevateOnScroll || this.hideOnScroll || this.collapseOnScroll || this.isBooted || // If falsy, user has provided an
+      // explicit value which should
+      // overwrite anything we do
+      !this.value);
+    },
+
+    classes() {
+      return { ...VToolbar_VToolbar.options.computed.classes.call(this),
+        'v-toolbar--collapse': this.collapse || this.collapseOnScroll,
+        'v-app-bar': true,
+        'v-app-bar--clipped': this.clippedLeft || this.clippedRight,
+        'v-app-bar--fade-img-on-scroll': this.fadeImgOnScroll,
+        'v-app-bar--elevate-on-scroll': this.elevateOnScroll,
+        'v-app-bar--fixed': !this.absolute && (this.app || this.fixed),
+        'v-app-bar--hide-shadow': this.hideShadow,
+        'v-app-bar--is-scrolled': this.currentScroll > 0,
+        'v-app-bar--shrink-on-scroll': this.shrinkOnScroll
+      };
+    },
+
+    scrollRatio() {
+      const threshold = this.computedScrollThreshold;
+      return Math.max((threshold - this.currentScroll) / threshold, 0);
+    },
+
+    computedContentHeight() {
+      if (!this.shrinkOnScroll) return VToolbar_VToolbar.options.computed.computedContentHeight.call(this);
+      const min = this.dense ? 48 : 56;
+      const max = this.computedOriginalHeight;
+      return min + (max - min) * this.scrollRatio;
+    },
+
+    computedFontSize() {
+      if (!this.isProminent) return undefined;
+      const min = 1.25;
+      const max = 1.5;
+      return min + (max - min) * this.scrollRatio;
+    },
+
+    computedLeft() {
+      if (!this.app || this.clippedLeft) return 0;
+      return this.$vuetify.application.left;
+    },
+
+    computedMarginTop() {
+      if (!this.app) return 0;
+      return this.$vuetify.application.bar;
+    },
+
+    computedOpacity() {
+      if (!this.fadeImgOnScroll) return undefined;
+      return this.scrollRatio;
+    },
+
+    computedOriginalHeight() {
+      let height = VToolbar_VToolbar.options.computed.computedContentHeight.call(this);
+      if (this.isExtended) height += parseInt(this.extensionHeight);
+      return height;
+    },
+
+    computedRight() {
+      if (!this.app || this.clippedRight) return 0;
+      return this.$vuetify.application.right;
+    },
+
+    computedScrollThreshold() {
+      if (this.scrollThreshold) return Number(this.scrollThreshold);
+      return this.computedOriginalHeight - (this.dense ? 48 : 56);
+    },
+
+    computedTransform() {
+      if (!this.canScroll || this.elevateOnScroll && this.currentScroll === 0 && this.isActive) return 0;
+      if (this.isActive) return 0;
+      const scrollOffScreen = this.scrollOffScreen ? this.computedHeight : this.computedContentHeight;
+      return this.bottom ? scrollOffScreen : -scrollOffScreen;
+    },
+
+    hideShadow() {
+      if (this.elevateOnScroll && this.isExtended) {
+        return this.currentScroll < this.computedScrollThreshold;
+      }
+
+      if (this.elevateOnScroll) {
+        return this.currentScroll === 0 || this.computedTransform < 0;
+      }
+
+      return (!this.isExtended || this.scrollOffScreen) && this.computedTransform !== 0;
+    },
+
+    isCollapsed() {
+      if (!this.collapseOnScroll) {
+        return VToolbar_VToolbar.options.computed.isCollapsed.call(this);
+      }
+
+      return this.currentScroll > 0;
+    },
+
+    isProminent() {
+      return VToolbar_VToolbar.options.computed.isProminent.call(this) || this.shrinkOnScroll;
+    },
+
+    styles() {
+      return { ...VToolbar_VToolbar.options.computed.styles.call(this),
+        fontSize: Object(helpers["f" /* convertToUnit */])(this.computedFontSize, 'rem'),
+        marginTop: Object(helpers["f" /* convertToUnit */])(this.computedMarginTop),
+        transform: `translateY(${Object(helpers["f" /* convertToUnit */])(this.computedTransform)})`,
+        left: Object(helpers["f" /* convertToUnit */])(this.computedLeft),
+        right: Object(helpers["f" /* convertToUnit */])(this.computedRight)
+      };
+    }
+
+  },
+  watch: {
+    canScroll: 'onScroll',
+
+    computedTransform() {
+      // Normally we do not want the v-app-bar
+      // to update the application top value
+      // to avoid screen jump. However, in
+      // this situation, we must so that
+      // the clipped drawer can update
+      // its top value when scrolled
+      if (!this.canScroll || !this.clippedLeft && !this.clippedRight) return;
+      this.callUpdate();
+    },
+
+    invertedScroll(val) {
+      this.isActive = !val || this.currentScroll !== 0;
+    }
+
+  },
+
+  created() {
+    if (this.invertedScroll) this.isActive = false;
+  },
+
+  methods: {
+    genBackground() {
+      const render = VToolbar_VToolbar.options.methods.genBackground.call(this);
+      render.data = this._b(render.data || {}, render.tag, {
+        style: {
+          opacity: this.computedOpacity
+        }
+      });
+      return render;
+    },
+
+    updateApplication() {
+      return this.invertedScroll ? 0 : this.computedHeight + this.computedTransform;
+    },
+
+    thresholdMet() {
+      if (this.invertedScroll) {
+        this.isActive = this.currentScroll > this.computedScrollThreshold;
+        return;
+      }
+
+      if (this.hideOnScroll) {
+        this.isActive = this.isScrollingUp || this.currentScroll < this.computedScrollThreshold;
+      }
+
+      if (this.currentThreshold < this.computedScrollThreshold) return;
+      this.savedScroll = this.currentScroll;
+    }
+
+  },
+
+  render(h) {
+    const render = VToolbar_VToolbar.options.render.call(this, h);
+    render.data = render.data || {};
+
+    if (this.canScroll) {
+      render.data.directives = render.data.directives || [];
+      render.data.directives.push({
+        arg: this.scrollTarget,
+        name: 'scroll',
+        value: this.onScroll
+      });
+    }
+
+    return render;
+  }
+
+}));
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VIcon/index.js + 1 modules
+var VIcon = __webpack_require__(56);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VBtn/VBtn.js + 2 modules
+var VBtn = __webpack_require__(74);
+
+// EXTERNAL MODULE: external "vue"
+var external_vue_ = __webpack_require__(0);
+var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VAppBar/VAppBarNavIcon.js
+// Components
+
+ // Types
+
+
+/* @vue/component */
+
+/* harmony default export */ var VAppBarNavIcon = (external_vue_default.a.extend({
+  name: 'v-app-bar-nav-icon',
+  functional: true,
+
+  render(h, {
+    slots,
+    listeners,
+    props,
+    data
+  }) {
+    const d = Object.assign(data, {
+      staticClass: `v-app-bar__nav-icon ${data.staticClass || ''}`.trim(),
+      props: { ...props,
+        icon: true
+      },
+      on: listeners
+    });
+    const defaultSlot = slots().default;
+    return h(VBtn["a" /* default */], d, defaultSlot || [h(VIcon["a" /* default */], '$menu')]);
+  }
+
+}));
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VToolbar/index.js
+// Components
+ // Utilities
+
+
+const VToolbarTitle = Object(helpers["g" /* createSimpleFunctional */])('v-toolbar__title');
+const VToolbarItems = Object(helpers["g" /* createSimpleFunctional */])('v-toolbar__items');
+
+/* harmony default export */ var components_VToolbar = ({
+  $_vuetify_subcomponents: {
+    VToolbar: VToolbar_VToolbar,
+    VToolbarItems,
+    VToolbarTitle
+  }
+});
+// CONCATENATED MODULE: ./components/general/molecules/CgmHeaderBase.vue
+
+
+
+function injectStyles (context) {
+  
+  
+}
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  molecules_CgmHeaderBasevue_type_script_lang_js_,
+  CgmHeaderBasevue_type_template_id_37e3ee9c_scoped_true_render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  "37e3ee9c",
+  "380a57f9"
+  
+)
+
+/* harmony default export */ var CgmHeaderBase = __webpack_exports__["default"] = (component.exports);
+
+/* vuetify-loader */
+
+
+
+
+installComponents_default()(component, {VAppBar: VAppBar_VAppBar,VAppBarNavIcon: VAppBarNavIcon,VToolbarTitle: VToolbarTitle})
+
+
+/***/ }),
+/* 41 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/molecules/CgmFooterBase.vue?vue&type=template&id=7647d462&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-footer',{staticClass:"CgmFtrBase"},[_c('v-bottom-navigation',{staticClass:"d-flex justify-space-around align-center elevation-0 CgmFtrBase--navi",attrs:{"height":"auto"}},[_vm._t("default")],2)],1)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./components/general/molecules/CgmFooterBase.vue?vue&type=template&id=7647d462&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/molecules/CgmFooterBase.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var CgmFooterBasevue_type_script_lang_js_ = ({
+  name: 'CgmFooterBase'
+});
+// CONCATENATED MODULE: ./components/general/molecules/CgmFooterBase.vue?vue&type=script&lang=js&
+ /* harmony default export */ var molecules_CgmFooterBasevue_type_script_lang_js_ = (CgmFooterBasevue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./node_modules/vuetify-loader/lib/runtime/installComponents.js
+var installComponents = __webpack_require__(8);
+var installComponents_default = /*#__PURE__*/__webpack_require__.n(installComponents);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VBottomNavigation/VBottomNavigation.sass
+var VBottomNavigation = __webpack_require__(119);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/applicationable/index.js
+var applicationable = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VItemGroup/VItemGroup.sass
+var VItemGroup = __webpack_require__(121);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/proxyable/index.js
+var proxyable = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/themeable/index.js
+var themeable = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/mixins.js
+var mixins = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/console.js
+var console = __webpack_require__(2);
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VItemGroup/VItemGroup.js
+// Styles
+
+
+ // Utilities
+
+
+
+const BaseItemGroup = Object(mixins["a" /* default */])(proxyable["a" /* default */], themeable["a" /* default */]).extend({
+  name: 'base-item-group',
+  props: {
+    activeClass: {
+      type: String,
+      default: 'v-item--active'
+    },
+    mandatory: Boolean,
+    max: {
+      type: [Number, String],
+      default: null
+    },
+    multiple: Boolean,
+    tag: {
+      type: String,
+      default: 'div'
+    }
+  },
+
+  data() {
+    return {
+      // As long as a value is defined, show it
+      // Otherwise, check if multiple
+      // to determine which default to provide
+      internalLazyValue: this.value !== undefined ? this.value : this.multiple ? [] : undefined,
+      items: []
+    };
+  },
+
+  computed: {
+    classes() {
+      return {
+        'v-item-group': true,
+        ...this.themeClasses
+      };
+    },
+
+    selectedIndex() {
+      return this.selectedItem && this.items.indexOf(this.selectedItem) || -1;
+    },
+
+    selectedItem() {
+      if (this.multiple) return undefined;
+      return this.selectedItems[0];
+    },
+
+    selectedItems() {
+      return this.items.filter((item, index) => {
+        return this.toggleMethod(this.getValue(item, index));
+      });
+    },
+
+    selectedValues() {
+      if (this.internalValue == null) return [];
+      return Array.isArray(this.internalValue) ? this.internalValue : [this.internalValue];
+    },
+
+    toggleMethod() {
+      if (!this.multiple) {
+        return v => this.internalValue === v;
+      }
+
+      const internalValue = this.internalValue;
+
+      if (Array.isArray(internalValue)) {
+        return v => internalValue.includes(v);
+      }
+
+      return () => false;
+    }
+
+  },
+  watch: {
+    internalValue: 'updateItemsState',
+    items: 'updateItemsState'
+  },
+
+  created() {
+    if (this.multiple && !Array.isArray(this.internalValue)) {
+      Object(console["c" /* consoleWarn */])('Model must be bound to an array if the multiple property is true.', this);
+    }
+  },
+
+  methods: {
+    genData() {
+      return {
+        class: this.classes
+      };
+    },
+
+    getValue(item, i) {
+      return item.value == null || item.value === '' ? i : item.value;
+    },
+
+    onClick(item) {
+      this.updateInternalValue(this.getValue(item, this.items.indexOf(item)));
+    },
+
+    register(item) {
+      const index = this.items.push(item) - 1;
+      item.$on('change', () => this.onClick(item)); // If no value provided and mandatory,
+      // assign first registered item
+
+      if (this.mandatory && !this.selectedValues.length) {
+        this.updateMandatory();
+      }
+
+      this.updateItem(item, index);
+    },
+
+    unregister(item) {
+      if (this._isDestroyed) return;
+      const index = this.items.indexOf(item);
+      const value = this.getValue(item, index);
+      this.items.splice(index, 1);
+      const valueIndex = this.selectedValues.indexOf(value); // Items is not selected, do nothing
+
+      if (valueIndex < 0) return; // If not mandatory, use regular update process
+
+      if (!this.mandatory) {
+        return this.updateInternalValue(value);
+      } // Remove the value
+
+
+      if (this.multiple && Array.isArray(this.internalValue)) {
+        this.internalValue = this.internalValue.filter(v => v !== value);
+      } else {
+        this.internalValue = undefined;
+      } // If mandatory and we have no selection
+      // add the last item as value
+
+      /* istanbul ignore else */
+
+
+      if (!this.selectedItems.length) {
+        this.updateMandatory(true);
+      }
+    },
+
+    updateItem(item, index) {
+      const value = this.getValue(item, index);
+      item.isActive = this.toggleMethod(value);
+    },
+
+    // https://github.com/vuetifyjs/vuetify/issues/5352
+    updateItemsState() {
+      this.$nextTick(() => {
+        if (this.mandatory && !this.selectedItems.length) {
+          return this.updateMandatory();
+        } // TODO: Make this smarter so it
+        // doesn't have to iterate every
+        // child in an update
+
+
+        this.items.forEach(this.updateItem);
+      });
+    },
+
+    updateInternalValue(value) {
+      this.multiple ? this.updateMultiple(value) : this.updateSingle(value);
+    },
+
+    updateMandatory(last) {
+      if (!this.items.length) return;
+      const items = this.items.slice();
+      if (last) items.reverse();
+      const item = items.find(item => !item.disabled); // If no tabs are available
+      // aborts mandatory value
+
+      if (!item) return;
+      const index = this.items.indexOf(item);
+      this.updateInternalValue(this.getValue(item, index));
+    },
+
+    updateMultiple(value) {
+      const defaultValue = Array.isArray(this.internalValue) ? this.internalValue : [];
+      const internalValue = defaultValue.slice();
+      const index = internalValue.findIndex(val => val === value);
+      if (this.mandatory && // Item already exists
+      index > -1 && // value would be reduced below min
+      internalValue.length - 1 < 1) return;
+      if ( // Max is set
+      this.max != null && // Item doesn't exist
+      index < 0 && // value would be increased above max
+      internalValue.length + 1 > this.max) return;
+      index > -1 ? internalValue.splice(index, 1) : internalValue.push(value);
+      this.internalValue = internalValue;
+    },
+
+    updateSingle(value) {
+      const isSame = value === this.internalValue;
+      if (this.mandatory && isSame) return;
+      this.internalValue = isSame ? undefined : value;
+    }
+
+  },
+
+  render(h) {
+    return h(this.tag, this.genData(), this.$slots.default);
+  }
+
+});
+/* harmony default export */ var VItemGroup_VItemGroup = (BaseItemGroup.extend({
+  name: 'v-item-group',
+
+  provide() {
+    return {
+      itemGroup: this
+    };
+  }
+
+}));
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/button-group/index.js
+// Extensions
+
+/* @vue/component */
+
+/* harmony default export */ var button_group = (BaseItemGroup.extend({
+  name: 'button-group',
+
+  provide() {
+    return {
+      btnToggle: this
+    };
+  },
+
+  computed: {
+    classes() {
+      return BaseItemGroup.options.computed.classes.call(this);
+    }
+
+  },
+  methods: {
+    // Isn't being passed down through types
+    genData: BaseItemGroup.options.methods.genData
+  }
+}));
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/colorable/index.js
+var colorable = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/measurable/index.js
+var measurable = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/scrollable/index.js
+var scrollable = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/toggleable/index.js
+var toggleable = __webpack_require__(10);
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VBottomNavigation/VBottomNavigation.js
+// Styles
+ // Mixins
+
+
+
+
+
+
+
+
+ // Utilities
+
+
+
+/* harmony default export */ var VBottomNavigation_VBottomNavigation = (Object(mixins["a" /* default */])(Object(applicationable["a" /* default */])('bottom', ['height', 'inputValue']), colorable["a" /* default */], measurable["a" /* default */], Object(toggleable["b" /* factory */])('inputValue'), proxyable["a" /* default */], scrollable["a" /* default */], themeable["a" /* default */]
+/* @vue/component */
+).extend({
+  name: 'v-bottom-navigation',
+  props: {
+    activeClass: {
+      type: String,
+      default: 'v-btn--active'
+    },
+    backgroundColor: String,
+    grow: Boolean,
+    height: {
+      type: [Number, String],
+      default: 56
+    },
+    hideOnScroll: Boolean,
+    horizontal: Boolean,
+    inputValue: {
+      type: Boolean,
+      default: true
+    },
+    mandatory: Boolean,
+    shift: Boolean
+  },
+
+  data() {
+    return {
+      isActive: this.inputValue
+    };
+  },
+
+  computed: {
+    canScroll() {
+      return scrollable["a" /* default */].options.computed.canScroll.call(this) && (this.hideOnScroll || !this.inputValue);
+    },
+
+    classes() {
+      return {
+        'v-bottom-navigation--absolute': this.absolute,
+        'v-bottom-navigation--grow': this.grow,
+        'v-bottom-navigation--fixed': !this.absolute && (this.app || this.fixed),
+        'v-bottom-navigation--horizontal': this.horizontal,
+        'v-bottom-navigation--shift': this.shift
+      };
+    },
+
+    styles() {
+      return { ...this.measurableStyles,
+        transform: this.isActive ? 'none' : 'translateY(100%)'
+      };
+    }
+
+  },
+
+  created() {
+    /* istanbul ignore next */
+    if (this.$attrs.hasOwnProperty('active')) {
+      Object(console["a" /* breaking */])('active.sync', 'value or v-model', this);
+    }
+  },
+
+  methods: {
+    thresholdMet() {
+      this.isActive = !this.isScrollingUp;
+      this.$emit('update:input-value', this.isActive);
+    },
+
+    updateApplication() {
+      return this.$el ? this.$el.clientHeight : 0;
+    },
+
+    updateValue(val) {
+      this.$emit('change', val);
+    }
+
+  },
+
+  render(h) {
+    const data = this.setBackgroundColor(this.backgroundColor, {
+      staticClass: 'v-bottom-navigation',
+      class: this.classes,
+      style: this.styles,
+      props: {
+        activeClass: this.activeClass,
+        mandatory: Boolean(this.mandatory || this.value !== undefined),
+        value: this.internalValue
+      },
+      on: {
+        change: this.updateValue
+      }
+    });
+
+    if (this.canScroll) {
+      data.directives = data.directives || [];
+      data.directives.push({
+        arg: this.scrollTarget,
+        name: 'scroll',
+        value: this.onScroll
+      });
+    }
+
+    return h(button_group, this.setTextColor(this.color, data), this.$slots.default);
+  }
+
+}));
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VFooter/VFooter.sass
+var VFooter = __webpack_require__(123);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/VSheet.js + 1 modules
+var VSheet = __webpack_require__(11);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/ssr-bootable/index.js
+var ssr_bootable = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/helpers.js
+var helpers = __webpack_require__(1);
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VFooter/VFooter.js
+// Styles
+ // Components
+
+ // Mixins
+
+
+ // Utilities
+
+
+
+/* @vue/component */
+
+/* harmony default export */ var VFooter_VFooter = (Object(mixins["a" /* default */])(VSheet["a" /* default */], Object(applicationable["a" /* default */])('footer', ['height', 'inset']), ssr_bootable["a" /* default */]).extend({
+  name: 'v-footer',
+  props: {
+    height: {
+      default: 'auto',
+      type: [Number, String]
+    },
+    inset: Boolean,
+    padless: Boolean,
+    tag: {
+      type: String,
+      default: 'footer'
+    }
+  },
+  computed: {
+    applicationProperty() {
+      return this.inset ? 'insetFooter' : 'footer';
+    },
+
+    classes() {
+      return { ...VSheet["a" /* default */].options.computed.classes.call(this),
+        'v-footer--absolute': this.absolute,
+        'v-footer--fixed': !this.absolute && (this.app || this.fixed),
+        'v-footer--padless': this.padless,
+        'v-footer--inset': this.inset
+      };
+    },
+
+    computedBottom() {
+      if (!this.isPositioned) return undefined;
+      return this.app ? this.$vuetify.application.bottom : 0;
+    },
+
+    computedLeft() {
+      if (!this.isPositioned) return undefined;
+      return this.app && this.inset ? this.$vuetify.application.left : 0;
+    },
+
+    computedRight() {
+      if (!this.isPositioned) return undefined;
+      return this.app && this.inset ? this.$vuetify.application.right : 0;
+    },
+
+    isPositioned() {
+      return Boolean(this.absolute || this.fixed || this.app);
+    },
+
+    styles() {
+      const height = parseInt(this.height);
+      return { ...VSheet["a" /* default */].options.computed.styles.call(this),
+        height: isNaN(height) ? height : Object(helpers["f" /* convertToUnit */])(height),
+        left: Object(helpers["f" /* convertToUnit */])(this.computedLeft),
+        right: Object(helpers["f" /* convertToUnit */])(this.computedRight),
+        bottom: Object(helpers["f" /* convertToUnit */])(this.computedBottom)
+      };
+    }
+
+  },
+  methods: {
+    updateApplication() {
+      const height = parseInt(this.height);
+      return isNaN(height) ? this.$el ? this.$el.clientHeight : 0 : height;
+    }
+
+  },
+
+  render(h) {
+    const data = this.setBackgroundColor(this.color, {
+      staticClass: 'v-footer',
+      class: this.classes,
+      style: this.styles
+    });
+    return h(this.tag, data, this.$slots.default);
+  }
+
+}));
+// CONCATENATED MODULE: ./components/general/molecules/CgmFooterBase.vue
+
+
+
+function injectStyles (context) {
+  
+  var style0 = __webpack_require__(117)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  molecules_CgmFooterBasevue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  "7647d462",
+  "7f6f3d07"
+  
+)
+
+/* harmony default export */ var CgmFooterBase = __webpack_exports__["default"] = (component.exports);
+
+/* vuetify-loader */
+
+
+
+installComponents_default()(component, {VBottomNavigation: VBottomNavigation_VBottomNavigation,VFooter: VFooter_VFooter})
+
+
+/***/ }),
+/* 42 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
 // CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/atoms/CgaFooterSheet.vue?vue&type=template&id=358acc68&scoped=true&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-bottom-sheet',{staticClass:"CgaFtrSheet--bottom",model:{value:(_vm.sheet),callback:function ($$v) {_vm.sheet=$$v},expression:"sheet"}},[_c('v-sheet',{staticClass:"CgaFtrSheet--sheet"},[_vm._t("default",[_vm._v("\n      default sheets\n    ")])],2)],1)}
 var staticRenderFns = []
@@ -5225,6 +7300,711 @@ var installComponents_default = /*#__PURE__*/__webpack_require__.n(installCompon
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VBottomSheet/VBottomSheet.sass
 var VBottomSheet = __webpack_require__(129);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VDialog/VDialog.js + 7 modules
+var VDialog = __webpack_require__(51);
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VBottomSheet/VBottomSheet.js
+ // Extensions
+
+
+/* @vue/component */
+
+/* harmony default export */ var VBottomSheet_VBottomSheet = (VDialog["a" /* default */].extend({
+  name: 'v-bottom-sheet',
+  props: {
+    inset: Boolean,
+    maxWidth: {
+      type: [String, Number],
+      default: 'auto'
+    },
+    transition: {
+      type: String,
+      default: 'bottom-sheet-transition'
+    }
+  },
+  computed: {
+    classes() {
+      return { ...VDialog["a" /* default */].options.computed.classes.call(this),
+        'v-bottom-sheet': true,
+        'v-bottom-sheet--inset': this.inset
+      };
+    }
+
+  }
+}));
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/VSheet.js + 1 modules
+var VSheet = __webpack_require__(11);
+
+// CONCATENATED MODULE: ./components/general/atoms/CgaFooterSheet.vue
+
+
+
+function injectStyles (context) {
+  
+  var style0 = __webpack_require__(127)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  atoms_CgaFooterSheetvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  "358acc68",
+  "f03eff20"
+  
+)
+
+/* harmony default export */ var CgaFooterSheet = __webpack_exports__["default"] = (component.exports);
+
+/* vuetify-loader */
+
+
+
+installComponents_default()(component, {VBottomSheet: VBottomSheet_VBottomSheet,VSheet: VSheet["a" /* default */]})
+
+
+/***/ }),
+/* 43 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoHeader.vue?vue&type=template&id=90ba8d96&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('CgmHeaderBase')}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./components/create/organisms/CcoHeader.vue?vue&type=template&id=90ba8d96&scoped=true&
+
+// EXTERNAL MODULE: ./components/general/molecules/CgmHeaderBase.vue + 8 modules
+var CgmHeaderBase = __webpack_require__(40);
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoHeader.vue?vue&type=script&lang=js&
+//
+//
+//
+
+/* harmony default export */ var CcoHeadervue_type_script_lang_js_ = ({
+  name: 'CooHeader',
+  components: {
+    CgmHeaderBase: CgmHeaderBase["default"]
+  }
+});
+// CONCATENATED MODULE: ./components/create/organisms/CcoHeader.vue?vue&type=script&lang=js&
+ /* harmony default export */ var organisms_CcoHeadervue_type_script_lang_js_ = (CcoHeadervue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(4);
+
+// CONCATENATED MODULE: ./components/create/organisms/CcoHeader.vue
+
+
+
+function injectStyles (context) {
+  
+  
+}
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  organisms_CcoHeadervue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  "90ba8d96",
+  "5cd6b188"
+  
+)
+
+/* harmony default export */ var CcoHeader = __webpack_exports__["default"] = (component.exports);
+
+/* nuxt-component-imports */
+installComponents(component, {CgmHeaderBase: __webpack_require__(40).default})
+
+
+/***/ }),
+/* 44 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoNavi.vue?vue&type=template&id=7b24b8d5&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('CgmNaviBase')}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./components/create/organisms/CcoNavi.vue?vue&type=template&id=7b24b8d5&scoped=true&
+
+// EXTERNAL MODULE: ./components/general/molecules/CgmNaviBase.vue + 9 modules
+var CgmNaviBase = __webpack_require__(39);
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoNavi.vue?vue&type=script&lang=js&
+//
+//
+//
+
+/* harmony default export */ var CcoNavivue_type_script_lang_js_ = ({
+  name: 'CooNavi',
+  components: {
+    CgmNaviBase: CgmNaviBase["default"]
+  }
+});
+// CONCATENATED MODULE: ./components/create/organisms/CcoNavi.vue?vue&type=script&lang=js&
+ /* harmony default export */ var organisms_CcoNavivue_type_script_lang_js_ = (CcoNavivue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(4);
+
+// CONCATENATED MODULE: ./components/create/organisms/CcoNavi.vue
+
+
+
+function injectStyles (context) {
+  
+  
+}
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  organisms_CcoNavivue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  "7b24b8d5",
+  "36a774d6"
+  
+)
+
+/* harmony default export */ var CcoNavi = __webpack_exports__["default"] = (component.exports);
+
+/* nuxt-component-imports */
+installComponents(component, {CgmNaviBase: __webpack_require__(39).default})
+
+
+/***/ }),
+/* 45 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoFooter.vue?vue&type=template&id=3cf6c91a&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('CgmFooterBase',{staticClass:"CooFtrBase"},[_c('CgaFooterBtn',{attrs:{"label":'TOP',"icon":['fas', 'table'],"activechecker":{ dist: 'current', dir: '/create' },"clickfunc":_vm.gotoNextTab}}),_vm._v(" "),_c('CgaFooterBtn',{attrs:{"label":'CRIATIVE',"icon":['fas', 'images'],"activechecker":{ dist: 'lowwer', dir: '/create/criative' },"clickfunc":_vm.changeActiveSheet}}),_vm._v(" "),_c('CgaFooterSheet',{attrs:{"active":_vm.activeSheet==='CRIATIVE',"disablefunc":_vm.changeActiveSheet}},[_vm._v("\n    クリエイティブ準備中\n  ")]),_vm._v(" "),_c('CgaFooterBtn',{attrs:{"label":'MYBRAND',"icon":['fas', 'tags'],"activechecker":{ dist: 'lowwer', dir: '/create/brand' },"clickfunc":_vm.changeActiveSheet}}),_vm._v(" "),_c('CgaFooterSheet',{attrs:{"active":_vm.activeSheet==='MYBRAND',"disablefunc":_vm.changeActiveSheet}},[_c('CcoBrandsList',{attrs:{"clickfunc":_vm.gotoNextBrand}})],1),_vm._v(" "),_c('CgaFooterBtn',{attrs:{"label":'MYSHOP',"icon":['fas', 'store'],"activechecker":{ dist: 'lowwer', dir: '/create/shop' },"clickfunc":_vm.changeActiveSheet}}),_vm._v(" "),_c('CgaFooterSheet',{attrs:{"active":_vm.activeSheet==='MYSHOP',"disablefunc":_vm.changeActiveSheet}},[_vm._v("\n    マイショップ準備中\n  ")]),_vm._v(" "),_c('CgaFooterBtn',{attrs:{"label":'SHOPING',"icon":['fas', 'shopping-bag'],"clickfunc":_vm.changeActiveSheet}}),_vm._v(" "),_c('CgaFooterSheet',{attrs:{"active":_vm.activeSheet==='SHOPING',"disablefunc":_vm.changeActiveSheet}},[_vm._v("\n    マイショップ準備中\n  ")])],1)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./components/create/organisms/CcoFooter.vue?vue&type=template&id=3cf6c91a&scoped=true&
+
+// EXTERNAL MODULE: ./components/general/molecules/CgmFooterBase.vue + 8 modules
+var CgmFooterBase = __webpack_require__(41);
+
+// EXTERNAL MODULE: ./components/general/atoms/CgaFooterBtn.vue + 4 modules
+var CgaFooterBtn = __webpack_require__(47);
+
+// EXTERNAL MODULE: ./components/general/atoms/CgaFooterSheet.vue + 5 modules
+var CgaFooterSheet = __webpack_require__(42);
+
+// EXTERNAL MODULE: ./components/create/organisms/CcoBrandsList.vue + 4 modules
+var CcoBrandsList = __webpack_require__(48);
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoFooter.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ var CcoFootervue_type_script_lang_js_ = ({
+  name: 'CooFooter',
+  components: {
+    CgmFooterBase: CgmFooterBase["default"],
+    CgaFooterBtn: CgaFooterBtn["default"],
+    CgaFooterSheet: CgaFooterSheet["default"],
+    CcoBrandsList: CcoBrandsList["default"]
+  },
+  data: () => ({
+    activeSheet: ''
+  }),
+  methods: {
+    changeActiveSheet(key) {
+      this.activeSheet = key;
+    },
+
+    gotoNextTab(key) {
+      this.activeSheet = '';
+      let next = '';
+
+      switch (key) {
+        case 'TOP':
+          next = '/create';
+      }
+
+      this.$router.push(next);
+    },
+
+    gotoNextBrand(bid) {
+      console.log('goto next');
+      this.activeSheet = '';
+      this.$router.push(`/create/brand/${bid}`);
+    }
+
+  }
+});
+// CONCATENATED MODULE: ./components/create/organisms/CcoFooter.vue?vue&type=script&lang=js&
+ /* harmony default export */ var organisms_CcoFootervue_type_script_lang_js_ = (CcoFootervue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(4);
+
+// CONCATENATED MODULE: ./components/create/organisms/CcoFooter.vue
+
+
+
+function injectStyles (context) {
+  
+  var style0 = __webpack_require__(135)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  organisms_CcoFootervue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  "3cf6c91a",
+  "9f3b796c"
+  
+)
+
+/* harmony default export */ var CcoFooter = __webpack_exports__["default"] = (component.exports);
+
+/* nuxt-component-imports */
+installComponents(component, {CgaFooterBtn: __webpack_require__(47).default,CgaFooterSheet: __webpack_require__(42).default,CcoBrandsList: __webpack_require__(48).default,CgmFooterBase: __webpack_require__(41).default})
+
+
+/***/ }),
+/* 46 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/organisms/CgoUserOnly.vue?vue&type=template&id=1c0a76ca&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.cUser !== null)?_vm._t("default"):_c('div',[_c('h2',[_vm._v("ログインしてください")])])],2)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./components/general/organisms/CgoUserOnly.vue?vue&type=template&id=1c0a76ca&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/organisms/CgoUserOnly.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+const {
+  mapGetters
+} = __webpack_require__(16);
+
+/* harmony default export */ var CgoUserOnlyvue_type_script_lang_js_ = ({
+  name: 'CgoUserOnly',
+  computed: { ...mapGetters('xd/general/xdgcuser', ['cUser'])
+  },
+
+  /* ログインユーザー状態に起因する処理 */
+  created() {
+    console.log('CGO userOnly create'); // ログイン強制 CURRENT USER が決まる **LATER
+
+    this.$store.dispatch('xd/general/xdgcuser/forceLogin');
+  },
+
+  beforeDestroy() {
+    console.log('CGO userOnly beforeDestroy');
+  }
+
+});
+// CONCATENATED MODULE: ./components/general/organisms/CgoUserOnly.vue?vue&type=script&lang=js&
+ /* harmony default export */ var organisms_CgoUserOnlyvue_type_script_lang_js_ = (CgoUserOnlyvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(4);
+
+// CONCATENATED MODULE: ./components/general/organisms/CgoUserOnly.vue
+
+
+
+function injectStyles (context) {
+  
+  
+}
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  organisms_CgoUserOnlyvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  "1c0a76ca",
+  "bad1c8f0"
+  
+)
+
+/* harmony default export */ var CgoUserOnly = __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+/* 47 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/atoms/CgaFooterBtn.vue?vue&type=template&id=37291480&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:['CgaFtrBtn', { 'CgaFtrBtn--active': _vm.isActive }],on:{"click":function($event){return _vm.iconClick()}}},[_c('font-awesome-icon',{staticClass:"CgaFtrBtn--icon",attrs:{"icon":_vm.icon}}),_vm._ssrNode(" <p class=\"CgaFtrBtn--label\" data-v-37291480>"+_vm._ssrEscape("\n    "+_vm._s(_vm.label)+"\n  ")+"</p>")],2)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./components/general/atoms/CgaFooterBtn.vue?vue&type=template&id=37291480&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/atoms/CgaFooterBtn.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var CgaFooterBtnvue_type_script_lang_js_ = ({
+  name: 'CgaFooterBtn',
+  props: {
+    label: {
+      type: String,
+      default: 'ラベル'
+    },
+    icon: {
+      type: Array,
+      default: () => {
+        return ['fas', 'location-arrow'];
+      }
+    },
+    activechecker: {
+      type: Object,
+      default: null
+    },
+    clickfunc: {
+      type: Function,
+      default: null
+    }
+  },
+  computed: {
+    isActive() {
+      if (this.$props.activechecker === null) {
+        // NTD
+        return false;
+      } else if (typeof this.$props.activechecker.dist !== 'undefined' && typeof this.$props.activechecker.dir !== 'undefined') {
+        //
+        const dist = this.$props.activechecker.dist;
+        const dir = this.$props.activechecker.dir;
+        const path = this.$route.path;
+
+        switch (dist) {
+          case 'lowwer':
+            if (path.indexOf(dir) === 0) {
+              return true;
+            }
+
+            break;
+
+          case 'current':
+            if (path === dir || path === dir + '/') {
+              return true;
+            }
+
+            break;
+
+          default:
+            return false;
+        }
+      }
+
+      return false;
+    }
+
+  },
+
+  mounted() {// console.log('CGA FtrBtn mounted ' + this.$route.path)
+  },
+
+  methods: {
+    iconClick() {
+      if (this.$props.clickFunc !== null) {
+        this.$props.clickfunc(this.$props.label);
+      }
+    }
+
+  }
+});
+// CONCATENATED MODULE: ./components/general/atoms/CgaFooterBtn.vue?vue&type=script&lang=js&
+ /* harmony default export */ var atoms_CgaFooterBtnvue_type_script_lang_js_ = (CgaFooterBtnvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(4);
+
+// CONCATENATED MODULE: ./components/general/atoms/CgaFooterBtn.vue
+
+
+
+function injectStyles (context) {
+  
+  var style0 = __webpack_require__(125)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  atoms_CgaFooterBtnvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  "37291480",
+  "deacf5a6"
+  
+)
+
+/* harmony default export */ var CgaFooterBtn = __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+/* 48 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoBrandsList.vue?vue&type=template&id=5d164bde&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-sheet',{staticClass:"CcoBrandsList",attrs:{"outlined":"","v-if":_vm.myBrands!==null}},[_vm._l((_vm.myBrands),function(bname,bid){return _c('p',{key:bid,staticClass:"CcoBrandsList--item",on:{"click":function($event){return _vm.onClick(bid)}}},[_vm._v("\n    "+_vm._s(bid)+" 編集\n  ")])}),_vm._v(" "),_c('p',{staticClass:"CcoBrandsList--item",on:{"click":function($event){return _vm.onClick('')}}},[_vm._v("\n    ＋ ブランド新規作成\n  ")])],2)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./components/create/organisms/CcoBrandsList.vue?vue&type=template&id=5d164bde&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoBrandsList.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+const {
+  mapGetters
+} = __webpack_require__(16);
+
+/* harmony default export */ var CcoBrandsListvue_type_script_lang_js_ = ({
+  name: 'CcoBrandsList',
+  props: {
+    clickfunc: {
+      type: Function,
+      default: null
+    }
+  },
+  computed: { ...mapGetters('xd/general/xdgcuser', ['myBrands'])
+  },
+  methods: {
+    onClick(bid) {
+      if (this.$props.clickFunc !== null) {
+        this.$props.clickfunc(bid);
+      }
+    }
+
+  }
+});
+// CONCATENATED MODULE: ./components/create/organisms/CcoBrandsList.vue?vue&type=script&lang=js&
+ /* harmony default export */ var organisms_CcoBrandsListvue_type_script_lang_js_ = (CcoBrandsListvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./node_modules/vuetify-loader/lib/runtime/installComponents.js
+var installComponents = __webpack_require__(8);
+var installComponents_default = /*#__PURE__*/__webpack_require__.n(installComponents);
+
+// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/VSheet.js + 1 modules
+var VSheet = __webpack_require__(11);
+
+// CONCATENATED MODULE: ./components/create/organisms/CcoBrandsList.vue
+
+
+
+function injectStyles (context) {
+  
+  var style0 = __webpack_require__(133)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  organisms_CcoBrandsListvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  "5d164bde",
+  "4e70418e"
+  
+)
+
+/* harmony default export */ var CcoBrandsList = __webpack_exports__["default"] = (component.exports);
+
+/* vuetify-loader */
+
+
+installComponents_default()(component, {VSheet: VSheet["a" /* default */]})
+
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports) {
+
+module.exports = require("vue-client-only");
+
+/***/ }),
+/* 50 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Scroll; });
+function inserted(el, binding) {
+  const {
+    self = false
+  } = binding.modifiers || {};
+  const value = binding.value;
+  const options = typeof value === 'object' && value.options || {
+    passive: true
+  };
+  const handler = typeof value === 'function' || 'handleEvent' in value ? value : value.handler;
+  const target = self ? el : binding.arg ? document.querySelector(binding.arg) : window;
+  if (!target) return;
+  target.addEventListener('scroll', handler, options);
+  el._onScroll = {
+    handler,
+    options,
+    // Don't reference self
+    target: self ? undefined : target
+  };
+}
+
+function unbind(el) {
+  if (!el._onScroll) return;
+  const {
+    handler,
+    options,
+    target = el
+  } = el._onScroll;
+  target.removeEventListener('scroll', handler, options);
+  delete el._onScroll;
+}
+
+const Scroll = {
+  inserted,
+  unbind
+};
+/* harmony default export */ __webpack_exports__["b"] = (Scroll);
+
+/***/ }),
+/* 51 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VDialog/VDialog.sass
 var VDialog = __webpack_require__(131);
@@ -5804,7 +8584,7 @@ var click_outside = __webpack_require__(31);
 const VDialog_baseMixins = Object(mixins["a" /* default */])(activatable, dependent["a" /* default */], detachable, overlayable["a" /* default */], returnable, stackable, toggleable["a" /* default */]);
 /* @vue/component */
 
-/* harmony default export */ var VDialog_VDialog = (VDialog_baseMixins.extend({
+/* harmony default export */ var VDialog_VDialog = __webpack_exports__["a"] = (VDialog_baseMixins.extend({
   name: 'v-dialog',
   directives: {
     ClickOutside: click_outside["a" /* default */]
@@ -6093,2780 +8873,9 @@ const VDialog_baseMixins = Object(mixins["a" /* default */])(activatable, depend
   }
 
 }));
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VBottomSheet/VBottomSheet.js
- // Extensions
-
-
-/* @vue/component */
-
-/* harmony default export */ var VBottomSheet_VBottomSheet = (VDialog_VDialog.extend({
-  name: 'v-bottom-sheet',
-  props: {
-    inset: Boolean,
-    maxWidth: {
-      type: [String, Number],
-      default: 'auto'
-    },
-    transition: {
-      type: String,
-      default: 'bottom-sheet-transition'
-    }
-  },
-  computed: {
-    classes() {
-      return { ...VDialog_VDialog.options.computed.classes.call(this),
-        'v-bottom-sheet': true,
-        'v-bottom-sheet--inset': this.inset
-      };
-    }
-
-  }
-}));
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/VSheet.js + 1 modules
-var VSheet = __webpack_require__(11);
-
-// CONCATENATED MODULE: ./components/general/atoms/CgaFooterSheet.vue
-
-
-
-function injectStyles (context) {
-  
-  var style0 = __webpack_require__(127)
-if (style0.__inject__) style0.__inject__(context)
-
-}
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  atoms_CgaFooterSheetvue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "358acc68",
-  "f03eff20"
-  
-)
-
-/* harmony default export */ var CgaFooterSheet = __webpack_exports__["default"] = (component.exports);
-
-/* vuetify-loader */
-
-
-
-installComponents_default()(component, {VBottomSheet: VBottomSheet_VBottomSheet,VSheet: VSheet["a" /* default */]})
-
 
 /***/ }),
-/* 40 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/molecules/CgmNaviBase.vue?vue&type=template&id=69aca67d&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-navigation-drawer',{attrs:{"absolute":"","temporary":""},model:{value:(_vm.drawer),callback:function ($$v) {_vm.drawer=$$v},expression:"drawer"}},[_c('v-list',{attrs:{"nav":""}},[_c('v-list-item',[_c('p',[_vm._v("popop")])]),_vm._v(" "),_c('v-list-item',[_c('p',[_vm._v("popop")])]),_vm._v(" "),_c('v-list-item',[_c('p',[_vm._v("popop")])])],1)],1)}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./components/general/molecules/CgmNaviBase.vue?vue&type=template&id=69aca67d&scoped=true&
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/molecules/CgmNaviBase.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ var CgmNaviBasevue_type_script_lang_js_ = ({
-  name: 'CgmNaviBase',
-  data: () => ({
-    drawer: false
-  }),
-
-  created() {
-    this.$nuxt.$on('navigation-toggle', () => {
-      this.drawer = !this.drawer;
-    });
-  }
-
-});
-// CONCATENATED MODULE: ./components/general/molecules/CgmNaviBase.vue?vue&type=script&lang=js&
- /* harmony default export */ var molecules_CgmNaviBasevue_type_script_lang_js_ = (CgmNaviBasevue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(4);
-
-// EXTERNAL MODULE: ./node_modules/vuetify-loader/lib/runtime/installComponents.js
-var installComponents = __webpack_require__(8);
-var installComponents_default = /*#__PURE__*/__webpack_require__.n(installComponents);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VList/VList.sass
-var VList = __webpack_require__(109);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/VSheet.js + 1 modules
-var VSheet = __webpack_require__(11);
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VList/VList.js
-// Styles
- // Components
-
-
-/* @vue/component */
-
-/* harmony default export */ var VList_VList = (VSheet["a" /* default */].extend().extend({
-  name: 'v-list',
-
-  provide() {
-    return {
-      isInList: true,
-      list: this
-    };
-  },
-
-  inject: {
-    isInMenu: {
-      default: false
-    },
-    isInNav: {
-      default: false
-    }
-  },
-  props: {
-    dense: Boolean,
-    disabled: Boolean,
-    expand: Boolean,
-    flat: Boolean,
-    nav: Boolean,
-    rounded: Boolean,
-    subheader: Boolean,
-    threeLine: Boolean,
-    twoLine: Boolean
-  },
-  data: () => ({
-    groups: []
-  }),
-  computed: {
-    classes() {
-      return { ...VSheet["a" /* default */].options.computed.classes.call(this),
-        'v-list--dense': this.dense,
-        'v-list--disabled': this.disabled,
-        'v-list--flat': this.flat,
-        'v-list--nav': this.nav,
-        'v-list--rounded': this.rounded,
-        'v-list--subheader': this.subheader,
-        'v-list--two-line': this.twoLine,
-        'v-list--three-line': this.threeLine
-      };
-    }
-
-  },
-  methods: {
-    register(content) {
-      this.groups.push(content);
-    },
-
-    unregister(content) {
-      const index = this.groups.findIndex(g => g._uid === content._uid);
-      if (index > -1) this.groups.splice(index, 1);
-    },
-
-    listClick(uid) {
-      if (this.expand) return;
-
-      for (const group of this.groups) {
-        group.toggle(uid);
-      }
-    }
-
-  },
-
-  render(h) {
-    const data = {
-      staticClass: 'v-list',
-      class: this.classes,
-      style: this.styles,
-      attrs: {
-        role: this.isInNav || this.isInMenu ? undefined : 'list',
-        ...this.attrs$
-      }
-    };
-    return h(this.tag, this.setBackgroundColor(this.color, data), [this.$slots.default]);
-  }
-
-}));
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VList/VListItem.sass
-var VListItem = __webpack_require__(111);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/colorable/index.js
-var colorable = __webpack_require__(9);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/routable/index.js
-var routable = __webpack_require__(18);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/groupable/index.js
-var groupable = __webpack_require__(34);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/themeable/index.js
-var themeable = __webpack_require__(7);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/toggleable/index.js
-var toggleable = __webpack_require__(10);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/directives/ripple/index.js
-var ripple = __webpack_require__(28);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/helpers.js
-var helpers = __webpack_require__(1);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/console.js
-var console = __webpack_require__(2);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/mixins.js
-var mixins = __webpack_require__(3);
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VList/VListItem.js
-// Styles
- // Mixins
-
-
-
-
-
- // Directives
-
- // Utilities
-
-
- // Types
-
-
-const baseMixins = Object(mixins["a" /* default */])(colorable["a" /* default */], routable["a" /* default */], themeable["a" /* default */], Object(groupable["a" /* factory */])('listItemGroup'), Object(toggleable["b" /* factory */])('inputValue'));
-/* @vue/component */
-
-/* harmony default export */ var VList_VListItem = (baseMixins.extend().extend({
-  name: 'v-list-item',
-  directives: {
-    Ripple: ripple["a" /* default */]
-  },
-  inject: {
-    isInGroup: {
-      default: false
-    },
-    isInList: {
-      default: false
-    },
-    isInMenu: {
-      default: false
-    },
-    isInNav: {
-      default: false
-    }
-  },
-  inheritAttrs: false,
-  props: {
-    activeClass: {
-      type: String,
-
-      default() {
-        if (!this.listItemGroup) return '';
-        return this.listItemGroup.activeClass;
-      }
-
-    },
-    dense: Boolean,
-    inactive: Boolean,
-    link: Boolean,
-    selectable: {
-      type: Boolean
-    },
-    tag: {
-      type: String,
-      default: 'div'
-    },
-    threeLine: Boolean,
-    twoLine: Boolean,
-    value: null
-  },
-  data: () => ({
-    proxyClass: 'v-list-item--active'
-  }),
-  computed: {
-    classes() {
-      return {
-        'v-list-item': true,
-        ...routable["a" /* default */].options.computed.classes.call(this),
-        'v-list-item--dense': this.dense,
-        'v-list-item--disabled': this.disabled,
-        'v-list-item--link': this.isClickable && !this.inactive,
-        'v-list-item--selectable': this.selectable,
-        'v-list-item--three-line': this.threeLine,
-        'v-list-item--two-line': this.twoLine,
-        ...this.themeClasses
-      };
-    },
-
-    isClickable() {
-      return Boolean(routable["a" /* default */].options.computed.isClickable.call(this) || this.listItemGroup);
-    }
-
-  },
-
-  created() {
-    /* istanbul ignore next */
-    if (this.$attrs.hasOwnProperty('avatar')) {
-      Object(console["e" /* removed */])('avatar', this);
-    }
-  },
-
-  methods: {
-    click(e) {
-      if (e.detail) this.$el.blur();
-      this.$emit('click', e);
-      this.to || this.toggle();
-    },
-
-    genAttrs() {
-      const attrs = {
-        'aria-disabled': this.disabled ? true : undefined,
-        tabindex: this.isClickable && !this.disabled ? 0 : -1,
-        ...this.$attrs
-      };
-
-      if (this.$attrs.hasOwnProperty('role')) {// do nothing, role already provided
-      } else if (this.isInNav) {// do nothing, role is inherit
-      } else if (this.isInGroup) {
-        attrs.role = 'listitem';
-        attrs['aria-selected'] = String(this.isActive);
-      } else if (this.isInMenu) {
-        attrs.role = this.isClickable ? 'menuitem' : undefined;
-        attrs.id = attrs.id || `list-item-${this._uid}`;
-      } else if (this.isInList) {
-        attrs.role = 'listitem';
-      }
-
-      return attrs;
-    }
-
-  },
-
-  render(h) {
-    let {
-      tag,
-      data
-    } = this.generateRouteLink();
-    data.attrs = { ...data.attrs,
-      ...this.genAttrs()
-    };
-    data[this.to ? 'nativeOn' : 'on'] = { ...data[this.to ? 'nativeOn' : 'on'],
-      keydown: e => {
-        /* istanbul ignore else */
-        if (e.keyCode === helpers["p" /* keyCodes */].enter) this.click(e);
-        this.$emit('keydown', e);
-      }
-    };
-    if (this.inactive) tag = 'div';
-
-    if (this.inactive && this.to) {
-      data.on = data.nativeOn;
-      delete data.nativeOn;
-    }
-
-    const children = this.$scopedSlots.default ? this.$scopedSlots.default({
-      active: this.isActive,
-      toggle: this.toggle
-    }) : this.$slots.default;
-    return h(tag, this.setTextColor(this.color, data), children);
-  }
-
-}));
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VNavigationDrawer/VNavigationDrawer.sass
-var VNavigationDrawer = __webpack_require__(113);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VImg/VImg.js + 2 modules
-var VImg = __webpack_require__(36);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/applicationable/index.js
-var applicationable = __webpack_require__(14);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/dependent/index.js
-var dependent = __webpack_require__(35);
-
-// EXTERNAL MODULE: external "vue"
-var external_vue_ = __webpack_require__(0);
-var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/mobile/index.js
-
-
-/* @vue/component */
-
-/* harmony default export */ var mobile = (external_vue_default.a.extend({
-  name: 'mobile',
-  props: {
-    mobileBreakpoint: {
-      type: [Number, String],
-
-      default() {
-        // Avoid destroying unit
-        // tests for users
-        return this.$vuetify ? this.$vuetify.breakpoint.mobileBreakpoint : undefined;
-      },
-
-      validator: v => !isNaN(Number(v)) || ['xs', 'sm', 'md', 'lg', 'xl'].includes(String(v))
-    }
-  },
-  computed: {
-    isMobile() {
-      const {
-        mobile,
-        width,
-        name,
-        mobileBreakpoint
-      } = this.$vuetify.breakpoint; // Check if local mobileBreakpoint matches
-      // the application's mobileBreakpoint
-
-      if (mobileBreakpoint === this.mobileBreakpoint) return mobile;
-      const mobileWidth = parseInt(this.mobileBreakpoint, 10);
-      const isNumber = !isNaN(mobileWidth);
-      return isNumber ? width < mobileWidth : name === this.mobileBreakpoint;
-    }
-
-  },
-
-  created() {
-    /* istanbul ignore next */
-    if (this.$attrs.hasOwnProperty('mobile-break-point')) {
-      Object(console["d" /* deprecate */])('mobile-break-point', 'mobile-breakpoint', this);
-    }
-  }
-
-}));
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/overlayable/index.js + 2 modules
-var overlayable = __webpack_require__(24);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/ssr-bootable/index.js
-var ssr_bootable = __webpack_require__(20);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/directives/click-outside/index.js
-var click_outside = __webpack_require__(31);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/directives/resize/index.js
-var resize = __webpack_require__(54);
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/directives/touch/index.js
-
-
-const handleGesture = wrapper => {
-  const {
-    touchstartX,
-    touchendX,
-    touchstartY,
-    touchendY
-  } = wrapper;
-  const dirRatio = 0.5;
-  const minDistance = 16;
-  wrapper.offsetX = touchendX - touchstartX;
-  wrapper.offsetY = touchendY - touchstartY;
-
-  if (Math.abs(wrapper.offsetY) < dirRatio * Math.abs(wrapper.offsetX)) {
-    wrapper.left && touchendX < touchstartX - minDistance && wrapper.left(wrapper);
-    wrapper.right && touchendX > touchstartX + minDistance && wrapper.right(wrapper);
-  }
-
-  if (Math.abs(wrapper.offsetX) < dirRatio * Math.abs(wrapper.offsetY)) {
-    wrapper.up && touchendY < touchstartY - minDistance && wrapper.up(wrapper);
-    wrapper.down && touchendY > touchstartY + minDistance && wrapper.down(wrapper);
-  }
-};
-
-function touchstart(event, wrapper) {
-  const touch = event.changedTouches[0];
-  wrapper.touchstartX = touch.clientX;
-  wrapper.touchstartY = touch.clientY;
-  wrapper.start && wrapper.start(Object.assign(event, wrapper));
-}
-
-function touchend(event, wrapper) {
-  const touch = event.changedTouches[0];
-  wrapper.touchendX = touch.clientX;
-  wrapper.touchendY = touch.clientY;
-  wrapper.end && wrapper.end(Object.assign(event, wrapper));
-  handleGesture(wrapper);
-}
-
-function touchmove(event, wrapper) {
-  const touch = event.changedTouches[0];
-  wrapper.touchmoveX = touch.clientX;
-  wrapper.touchmoveY = touch.clientY;
-  wrapper.move && wrapper.move(Object.assign(event, wrapper));
-}
-
-function createHandlers(value) {
-  const wrapper = {
-    touchstartX: 0,
-    touchstartY: 0,
-    touchendX: 0,
-    touchendY: 0,
-    touchmoveX: 0,
-    touchmoveY: 0,
-    offsetX: 0,
-    offsetY: 0,
-    left: value.left,
-    right: value.right,
-    up: value.up,
-    down: value.down,
-    start: value.start,
-    move: value.move,
-    end: value.end
-  };
-  return {
-    touchstart: e => touchstart(e, wrapper),
-    touchend: e => touchend(e, wrapper),
-    touchmove: e => touchmove(e, wrapper)
-  };
-}
-
-function inserted(el, binding, vnode) {
-  const value = binding.value;
-  const target = value.parent ? el.parentElement : el;
-  const options = value.options || {
-    passive: true
-  }; // Needed to pass unit tests
-
-  if (!target) return;
-  const handlers = createHandlers(binding.value);
-  target._touchHandlers = Object(target._touchHandlers);
-  target._touchHandlers[vnode.context._uid] = handlers;
-  Object(helpers["q" /* keys */])(handlers).forEach(eventName => {
-    target.addEventListener(eventName, handlers[eventName], options);
-  });
-}
-
-function unbind(el, binding, vnode) {
-  const target = binding.value.parent ? el.parentElement : el;
-  if (!target || !target._touchHandlers) return;
-  const handlers = target._touchHandlers[vnode.context._uid];
-  Object(helpers["q" /* keys */])(handlers).forEach(eventName => {
-    target.removeEventListener(eventName, handlers[eventName]);
-  });
-  delete target._touchHandlers[vnode.context._uid];
-}
-
-const Touch = {
-  inserted,
-  unbind
-};
-/* harmony default export */ var touch = (Touch);
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VNavigationDrawer/VNavigationDrawer.js
-// Styles
- // Components
-
- // Mixins
-
-
-
-
-
-
-
- // Directives
-
-
-
- // Utilities
-
-
-
-const VNavigationDrawer_baseMixins = Object(mixins["a" /* default */])(Object(applicationable["a" /* default */])('left', ['isActive', 'isMobile', 'miniVariant', 'expandOnHover', 'permanent', 'right', 'temporary', 'width']), colorable["a" /* default */], dependent["a" /* default */], mobile, overlayable["a" /* default */], ssr_bootable["a" /* default */], themeable["a" /* default */]);
-/* @vue/component */
-
-/* harmony default export */ var VNavigationDrawer_VNavigationDrawer = (VNavigationDrawer_baseMixins.extend({
-  name: 'v-navigation-drawer',
-  directives: {
-    ClickOutside: click_outside["a" /* default */],
-    Resize: resize["a" /* default */],
-    Touch: touch
-  },
-
-  provide() {
-    return {
-      isInNav: this.tag === 'nav'
-    };
-  },
-
-  props: {
-    bottom: Boolean,
-    clipped: Boolean,
-    disableResizeWatcher: Boolean,
-    disableRouteWatcher: Boolean,
-    expandOnHover: Boolean,
-    floating: Boolean,
-    height: {
-      type: [Number, String],
-
-      default() {
-        return this.app ? '100vh' : '100%';
-      }
-
-    },
-    miniVariant: Boolean,
-    miniVariantWidth: {
-      type: [Number, String],
-      default: 56
-    },
-    permanent: Boolean,
-    right: Boolean,
-    src: {
-      type: [String, Object],
-      default: ''
-    },
-    stateless: Boolean,
-    tag: {
-      type: String,
-
-      default() {
-        return this.app ? 'nav' : 'aside';
-      }
-
-    },
-    temporary: Boolean,
-    touchless: Boolean,
-    width: {
-      type: [Number, String],
-      default: 256
-    },
-    value: null
-  },
-  data: () => ({
-    isMouseover: false,
-    touchArea: {
-      left: 0,
-      right: 0
-    },
-    stackMinZIndex: 6
-  }),
-  computed: {
-    /**
-     * Used for setting an app value from a dynamic
-     * property. Called from applicationable.js
-     */
-    applicationProperty() {
-      return this.right ? 'right' : 'left';
-    },
-
-    classes() {
-      return {
-        'v-navigation-drawer': true,
-        'v-navigation-drawer--absolute': this.absolute,
-        'v-navigation-drawer--bottom': this.bottom,
-        'v-navigation-drawer--clipped': this.clipped,
-        'v-navigation-drawer--close': !this.isActive,
-        'v-navigation-drawer--fixed': !this.absolute && (this.app || this.fixed),
-        'v-navigation-drawer--floating': this.floating,
-        'v-navigation-drawer--is-mobile': this.isMobile,
-        'v-navigation-drawer--is-mouseover': this.isMouseover,
-        'v-navigation-drawer--mini-variant': this.isMiniVariant,
-        'v-navigation-drawer--custom-mini-variant': Number(this.miniVariantWidth) !== 56,
-        'v-navigation-drawer--open': this.isActive,
-        'v-navigation-drawer--open-on-hover': this.expandOnHover,
-        'v-navigation-drawer--right': this.right,
-        'v-navigation-drawer--temporary': this.temporary,
-        ...this.themeClasses
-      };
-    },
-
-    computedMaxHeight() {
-      if (!this.hasApp) return null;
-      const computedMaxHeight = this.$vuetify.application.bottom + this.$vuetify.application.footer + this.$vuetify.application.bar;
-      if (!this.clipped) return computedMaxHeight;
-      return computedMaxHeight + this.$vuetify.application.top;
-    },
-
-    computedTop() {
-      if (!this.hasApp) return 0;
-      let computedTop = this.$vuetify.application.bar;
-      computedTop += this.clipped ? this.$vuetify.application.top : 0;
-      return computedTop;
-    },
-
-    computedTransform() {
-      if (this.isActive) return 0;
-      if (this.isBottom) return 100;
-      return this.right ? 100 : -100;
-    },
-
-    computedWidth() {
-      return this.isMiniVariant ? this.miniVariantWidth : this.width;
-    },
-
-    hasApp() {
-      return this.app && !this.isMobile && !this.temporary;
-    },
-
-    isBottom() {
-      return this.bottom && this.isMobile;
-    },
-
-    isMiniVariant() {
-      return !this.expandOnHover && this.miniVariant || this.expandOnHover && !this.isMouseover;
-    },
-
-    isMobile() {
-      return !this.stateless && !this.permanent && mobile.options.computed.isMobile.call(this);
-    },
-
-    reactsToClick() {
-      return !this.stateless && !this.permanent && (this.isMobile || this.temporary);
-    },
-
-    reactsToMobile() {
-      return this.app && !this.disableResizeWatcher && !this.permanent && !this.stateless && !this.temporary;
-    },
-
-    reactsToResize() {
-      return !this.disableResizeWatcher && !this.stateless;
-    },
-
-    reactsToRoute() {
-      return !this.disableRouteWatcher && !this.stateless && (this.temporary || this.isMobile);
-    },
-
-    showOverlay() {
-      return !this.hideOverlay && this.isActive && (this.isMobile || this.temporary);
-    },
-
-    styles() {
-      const translate = this.isBottom ? 'translateY' : 'translateX';
-      return {
-        height: Object(helpers["f" /* convertToUnit */])(this.height),
-        top: !this.isBottom ? Object(helpers["f" /* convertToUnit */])(this.computedTop) : 'auto',
-        maxHeight: this.computedMaxHeight != null ? `calc(100% - ${Object(helpers["f" /* convertToUnit */])(this.computedMaxHeight)})` : undefined,
-        transform: `${translate}(${Object(helpers["f" /* convertToUnit */])(this.computedTransform, '%')})`,
-        width: Object(helpers["f" /* convertToUnit */])(this.computedWidth)
-      };
-    }
-
-  },
-  watch: {
-    $route: 'onRouteChange',
-
-    isActive(val) {
-      this.$emit('input', val);
-    },
-
-    /**
-     * When mobile changes, adjust the active state
-     * only when there has been a previous value
-     */
-    isMobile(val, prev) {
-      !val && this.isActive && !this.temporary && this.removeOverlay();
-      if (prev == null || !this.reactsToResize || !this.reactsToMobile) return;
-      this.isActive = !val;
-    },
-
-    permanent(val) {
-      // If enabling prop enable the drawer
-      if (val) this.isActive = true;
-    },
-
-    showOverlay(val) {
-      if (val) this.genOverlay();else this.removeOverlay();
-    },
-
-    value(val) {
-      if (this.permanent) return;
-
-      if (val == null) {
-        this.init();
-        return;
-      }
-
-      if (val !== this.isActive) this.isActive = val;
-    },
-
-    expandOnHover: 'updateMiniVariant',
-
-    isMouseover(val) {
-      this.updateMiniVariant(!val);
-    }
-
-  },
-
-  beforeMount() {
-    this.init();
-  },
-
-  methods: {
-    calculateTouchArea() {
-      const parent = this.$el.parentNode;
-      if (!parent) return;
-      const parentRect = parent.getBoundingClientRect();
-      this.touchArea = {
-        left: parentRect.left + 50,
-        right: parentRect.right - 50
-      };
-    },
-
-    closeConditional() {
-      return this.isActive && !this._isDestroyed && this.reactsToClick;
-    },
-
-    genAppend() {
-      return this.genPosition('append');
-    },
-
-    genBackground() {
-      const props = {
-        height: '100%',
-        width: '100%',
-        src: this.src
-      };
-      const image = this.$scopedSlots.img ? this.$scopedSlots.img(props) : this.$createElement(VImg["a" /* default */], {
-        props
-      });
-      return this.$createElement('div', {
-        staticClass: 'v-navigation-drawer__image'
-      }, [image]);
-    },
-
-    genDirectives() {
-      const directives = [{
-        name: 'click-outside',
-        value: {
-          handler: () => {
-            this.isActive = false;
-          },
-          closeConditional: this.closeConditional,
-          include: this.getOpenDependentElements
-        }
-      }];
-
-      if (!this.touchless && !this.stateless) {
-        directives.push({
-          name: 'touch',
-          value: {
-            parent: true,
-            left: this.swipeLeft,
-            right: this.swipeRight
-          }
-        });
-      }
-
-      return directives;
-    },
-
-    genListeners() {
-      const on = {
-        transitionend: e => {
-          if (e.target !== e.currentTarget) return;
-          this.$emit('transitionend', e); // IE11 does not support new Event('resize')
-
-          const resizeEvent = document.createEvent('UIEvents');
-          resizeEvent.initUIEvent('resize', true, false, window, 0);
-          window.dispatchEvent(resizeEvent);
-        }
-      };
-
-      if (this.miniVariant) {
-        on.click = () => this.$emit('update:mini-variant', false);
-      }
-
-      if (this.expandOnHover) {
-        on.mouseenter = () => this.isMouseover = true;
-
-        on.mouseleave = () => this.isMouseover = false;
-      }
-
-      return on;
-    },
-
-    genPosition(name) {
-      const slot = Object(helpers["l" /* getSlot */])(this, name);
-      if (!slot) return slot;
-      return this.$createElement('div', {
-        staticClass: `v-navigation-drawer__${name}`
-      }, slot);
-    },
-
-    genPrepend() {
-      return this.genPosition('prepend');
-    },
-
-    genContent() {
-      return this.$createElement('div', {
-        staticClass: 'v-navigation-drawer__content'
-      }, this.$slots.default);
-    },
-
-    genBorder() {
-      return this.$createElement('div', {
-        staticClass: 'v-navigation-drawer__border'
-      });
-    },
-
-    init() {
-      if (this.permanent) {
-        this.isActive = true;
-      } else if (this.stateless || this.value != null) {
-        this.isActive = this.value;
-      } else if (!this.temporary) {
-        this.isActive = !this.isMobile;
-      }
-    },
-
-    onRouteChange() {
-      if (this.reactsToRoute && this.closeConditional()) {
-        this.isActive = false;
-      }
-    },
-
-    swipeLeft(e) {
-      if (this.isActive && this.right) return;
-      this.calculateTouchArea();
-      if (Math.abs(e.touchendX - e.touchstartX) < 100) return;
-      if (this.right && e.touchstartX >= this.touchArea.right) this.isActive = true;else if (!this.right && this.isActive) this.isActive = false;
-    },
-
-    swipeRight(e) {
-      if (this.isActive && !this.right) return;
-      this.calculateTouchArea();
-      if (Math.abs(e.touchendX - e.touchstartX) < 100) return;
-      if (!this.right && e.touchstartX <= this.touchArea.left) this.isActive = true;else if (this.right && this.isActive) this.isActive = false;
-    },
-
-    /**
-     * Update the application layout
-     */
-    updateApplication() {
-      if (!this.isActive || this.isMobile || this.temporary || !this.$el) return 0;
-      const width = Number(this.computedWidth);
-      return isNaN(width) ? this.$el.clientWidth : width;
-    },
-
-    updateMiniVariant(val) {
-      if (this.miniVariant !== val) this.$emit('update:mini-variant', val);
-    }
-
-  },
-
-  render(h) {
-    const children = [this.genPrepend(), this.genContent(), this.genAppend(), this.genBorder()];
-    if (this.src || Object(helpers["l" /* getSlot */])(this, 'img')) children.unshift(this.genBackground());
-    return h(this.tag, this.setBackgroundColor(this.color, {
-      class: this.classes,
-      style: this.styles,
-      directives: this.genDirectives(),
-      on: this.genListeners()
-    }), children);
-  }
-
-}));
-// CONCATENATED MODULE: ./components/general/molecules/CgmNaviBase.vue
-
-
-
-function injectStyles (context) {
-  
-  
-}
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  molecules_CgmNaviBasevue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "69aca67d",
-  "4c46c4d2"
-  
-)
-
-/* harmony default export */ var CgmNaviBase = __webpack_exports__["default"] = (component.exports);
-
-/* vuetify-loader */
-
-
-
-
-installComponents_default()(component, {VList: VList_VList,VListItem: VList_VListItem,VNavigationDrawer: VNavigationDrawer_VNavigationDrawer})
-
-
-/***/ }),
-/* 41 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/molecules/CgmHeaderBase.vue?vue&type=template&id=37e3ee9c&scoped=true&
-var CgmHeaderBasevue_type_template_id_37e3ee9c_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-app-bar',{staticClass:"d-flex justify-space-between elevation-0"},[_c('v-app-bar-nav-icon',{on:{"click":function($event){$event.stopPropagation();return _vm.$nuxt.$emit('navigation-toggle')}}}),_vm._v(" "),_c('v-toolbar-title',[_vm._v("Syner-G α版")])],1)}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./components/general/molecules/CgmHeaderBase.vue?vue&type=template&id=37e3ee9c&scoped=true&
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/molecules/CgmHeaderBase.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ var CgmHeaderBasevue_type_script_lang_js_ = ({
-  name: 'CgmHeaderBase',
-  data: () => ({
-    drawer: false,
-    group: null
-  }),
-  watch: {
-    group() {
-      this.drawer = false;
-    }
-
-  }
-});
-// CONCATENATED MODULE: ./components/general/molecules/CgmHeaderBase.vue?vue&type=script&lang=js&
- /* harmony default export */ var molecules_CgmHeaderBasevue_type_script_lang_js_ = (CgmHeaderBasevue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(4);
-
-// EXTERNAL MODULE: ./node_modules/vuetify-loader/lib/runtime/installComponents.js
-var installComponents = __webpack_require__(8);
-var installComponents_default = /*#__PURE__*/__webpack_require__.n(installComponents);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VAppBar/VAppBar.sass
-var VAppBar = __webpack_require__(89);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VToolbar/VToolbar.sass
-var VToolbar = __webpack_require__(91);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/VSheet.js + 1 modules
-var VSheet = __webpack_require__(11);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VImg/VImg.js + 2 modules
-var VImg = __webpack_require__(36);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/helpers.js
-var helpers = __webpack_require__(1);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/console.js
-var console = __webpack_require__(2);
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VToolbar/VToolbar.js
-// Styles
- // Extensions
-
- // Components
-
- // Utilities
-
-
-
-/* @vue/component */
-
-/* harmony default export */ var VToolbar_VToolbar = (VSheet["a" /* default */].extend({
-  name: 'v-toolbar',
-  props: {
-    absolute: Boolean,
-    bottom: Boolean,
-    collapse: Boolean,
-    dense: Boolean,
-    extended: Boolean,
-    extensionHeight: {
-      default: 48,
-      type: [Number, String]
-    },
-    flat: Boolean,
-    floating: Boolean,
-    prominent: Boolean,
-    short: Boolean,
-    src: {
-      type: [String, Object],
-      default: ''
-    },
-    tag: {
-      type: String,
-      default: 'header'
-    }
-  },
-  data: () => ({
-    isExtended: false
-  }),
-  computed: {
-    computedHeight() {
-      const height = this.computedContentHeight;
-      if (!this.isExtended) return height;
-      const extensionHeight = parseInt(this.extensionHeight);
-      return this.isCollapsed ? height : height + (!isNaN(extensionHeight) ? extensionHeight : 0);
-    },
-
-    computedContentHeight() {
-      if (this.height) return parseInt(this.height);
-      if (this.isProminent && this.dense) return 96;
-      if (this.isProminent && this.short) return 112;
-      if (this.isProminent) return 128;
-      if (this.dense) return 48;
-      if (this.short || this.$vuetify.breakpoint.smAndDown) return 56;
-      return 64;
-    },
-
-    classes() {
-      return { ...VSheet["a" /* default */].options.computed.classes.call(this),
-        'v-toolbar': true,
-        'v-toolbar--absolute': this.absolute,
-        'v-toolbar--bottom': this.bottom,
-        'v-toolbar--collapse': this.collapse,
-        'v-toolbar--collapsed': this.isCollapsed,
-        'v-toolbar--dense': this.dense,
-        'v-toolbar--extended': this.isExtended,
-        'v-toolbar--flat': this.flat,
-        'v-toolbar--floating': this.floating,
-        'v-toolbar--prominent': this.isProminent
-      };
-    },
-
-    isCollapsed() {
-      return this.collapse;
-    },
-
-    isProminent() {
-      return this.prominent;
-    },
-
-    styles() {
-      return { ...this.measurableStyles,
-        height: Object(helpers["f" /* convertToUnit */])(this.computedHeight)
-      };
-    }
-
-  },
-
-  created() {
-    const breakingProps = [['app', '<v-app-bar app>'], ['manual-scroll', '<v-app-bar :value="false">'], ['clipped-left', '<v-app-bar clipped-left>'], ['clipped-right', '<v-app-bar clipped-right>'], ['inverted-scroll', '<v-app-bar inverted-scroll>'], ['scroll-off-screen', '<v-app-bar scroll-off-screen>'], ['scroll-target', '<v-app-bar scroll-target>'], ['scroll-threshold', '<v-app-bar scroll-threshold>'], ['card', '<v-app-bar flat>']];
-    /* istanbul ignore next */
-
-    breakingProps.forEach(([original, replacement]) => {
-      if (this.$attrs.hasOwnProperty(original)) Object(console["a" /* breaking */])(original, replacement, this);
-    });
-  },
-
-  methods: {
-    genBackground() {
-      const props = {
-        height: Object(helpers["f" /* convertToUnit */])(this.computedHeight),
-        src: this.src
-      };
-      const image = this.$scopedSlots.img ? this.$scopedSlots.img({
-        props
-      }) : this.$createElement(VImg["a" /* default */], {
-        props
-      });
-      return this.$createElement('div', {
-        staticClass: 'v-toolbar__image'
-      }, [image]);
-    },
-
-    genContent() {
-      return this.$createElement('div', {
-        staticClass: 'v-toolbar__content',
-        style: {
-          height: Object(helpers["f" /* convertToUnit */])(this.computedContentHeight)
-        }
-      }, Object(helpers["l" /* getSlot */])(this));
-    },
-
-    genExtension() {
-      return this.$createElement('div', {
-        staticClass: 'v-toolbar__extension',
-        style: {
-          height: Object(helpers["f" /* convertToUnit */])(this.extensionHeight)
-        }
-      }, Object(helpers["l" /* getSlot */])(this, 'extension'));
-    }
-
-  },
-
-  render(h) {
-    this.isExtended = this.extended || !!this.$scopedSlots.extension;
-    const children = [this.genContent()];
-    const data = this.setBackgroundColor(this.color, {
-      class: this.classes,
-      style: this.styles,
-      on: this.$listeners
-    });
-    if (this.isExtended) children.push(this.genExtension());
-    if (this.src || this.$scopedSlots.img) children.unshift(this.genBackground());
-    return h(this.tag, data, children);
-  }
-
-}));
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/directives/scroll/index.js
-var directives_scroll = __webpack_require__(50);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/applicationable/index.js
-var applicationable = __webpack_require__(14);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/scrollable/index.js
-var scrollable = __webpack_require__(21);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/ssr-bootable/index.js
-var ssr_bootable = __webpack_require__(20);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/toggleable/index.js
-var toggleable = __webpack_require__(10);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/mixins.js
-var mixins = __webpack_require__(3);
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VAppBar/VAppBar.js
-// Styles
- // Extensions
-
- // Directives
-
- // Mixins
-
-
-
-
- // Utilities
-
-
-
-const baseMixins = Object(mixins["a" /* default */])(VToolbar_VToolbar, scrollable["a" /* default */], ssr_bootable["a" /* default */], toggleable["a" /* default */], Object(applicationable["a" /* default */])('top', ['clippedLeft', 'clippedRight', 'computedHeight', 'invertedScroll', 'isExtended', 'isProminent', 'value']));
-/* @vue/component */
-
-/* harmony default export */ var VAppBar_VAppBar = (baseMixins.extend({
-  name: 'v-app-bar',
-  directives: {
-    Scroll: directives_scroll["b" /* default */]
-  },
-
-  provide() {
-    return {
-      VAppBar: this
-    };
-  },
-
-  props: {
-    clippedLeft: Boolean,
-    clippedRight: Boolean,
-    collapseOnScroll: Boolean,
-    elevateOnScroll: Boolean,
-    fadeImgOnScroll: Boolean,
-    hideOnScroll: Boolean,
-    invertedScroll: Boolean,
-    scrollOffScreen: Boolean,
-    shrinkOnScroll: Boolean,
-    value: {
-      type: Boolean,
-      default: true
-    }
-  },
-
-  data() {
-    return {
-      isActive: this.value
-    };
-  },
-
-  computed: {
-    applicationProperty() {
-      return !this.bottom ? 'top' : 'bottom';
-    },
-
-    canScroll() {
-      return scrollable["a" /* default */].options.computed.canScroll.call(this) && (this.invertedScroll || this.elevateOnScroll || this.hideOnScroll || this.collapseOnScroll || this.isBooted || // If falsy, user has provided an
-      // explicit value which should
-      // overwrite anything we do
-      !this.value);
-    },
-
-    classes() {
-      return { ...VToolbar_VToolbar.options.computed.classes.call(this),
-        'v-toolbar--collapse': this.collapse || this.collapseOnScroll,
-        'v-app-bar': true,
-        'v-app-bar--clipped': this.clippedLeft || this.clippedRight,
-        'v-app-bar--fade-img-on-scroll': this.fadeImgOnScroll,
-        'v-app-bar--elevate-on-scroll': this.elevateOnScroll,
-        'v-app-bar--fixed': !this.absolute && (this.app || this.fixed),
-        'v-app-bar--hide-shadow': this.hideShadow,
-        'v-app-bar--is-scrolled': this.currentScroll > 0,
-        'v-app-bar--shrink-on-scroll': this.shrinkOnScroll
-      };
-    },
-
-    scrollRatio() {
-      const threshold = this.computedScrollThreshold;
-      return Math.max((threshold - this.currentScroll) / threshold, 0);
-    },
-
-    computedContentHeight() {
-      if (!this.shrinkOnScroll) return VToolbar_VToolbar.options.computed.computedContentHeight.call(this);
-      const min = this.dense ? 48 : 56;
-      const max = this.computedOriginalHeight;
-      return min + (max - min) * this.scrollRatio;
-    },
-
-    computedFontSize() {
-      if (!this.isProminent) return undefined;
-      const min = 1.25;
-      const max = 1.5;
-      return min + (max - min) * this.scrollRatio;
-    },
-
-    computedLeft() {
-      if (!this.app || this.clippedLeft) return 0;
-      return this.$vuetify.application.left;
-    },
-
-    computedMarginTop() {
-      if (!this.app) return 0;
-      return this.$vuetify.application.bar;
-    },
-
-    computedOpacity() {
-      if (!this.fadeImgOnScroll) return undefined;
-      return this.scrollRatio;
-    },
-
-    computedOriginalHeight() {
-      let height = VToolbar_VToolbar.options.computed.computedContentHeight.call(this);
-      if (this.isExtended) height += parseInt(this.extensionHeight);
-      return height;
-    },
-
-    computedRight() {
-      if (!this.app || this.clippedRight) return 0;
-      return this.$vuetify.application.right;
-    },
-
-    computedScrollThreshold() {
-      if (this.scrollThreshold) return Number(this.scrollThreshold);
-      return this.computedOriginalHeight - (this.dense ? 48 : 56);
-    },
-
-    computedTransform() {
-      if (!this.canScroll || this.elevateOnScroll && this.currentScroll === 0 && this.isActive) return 0;
-      if (this.isActive) return 0;
-      const scrollOffScreen = this.scrollOffScreen ? this.computedHeight : this.computedContentHeight;
-      return this.bottom ? scrollOffScreen : -scrollOffScreen;
-    },
-
-    hideShadow() {
-      if (this.elevateOnScroll && this.isExtended) {
-        return this.currentScroll < this.computedScrollThreshold;
-      }
-
-      if (this.elevateOnScroll) {
-        return this.currentScroll === 0 || this.computedTransform < 0;
-      }
-
-      return (!this.isExtended || this.scrollOffScreen) && this.computedTransform !== 0;
-    },
-
-    isCollapsed() {
-      if (!this.collapseOnScroll) {
-        return VToolbar_VToolbar.options.computed.isCollapsed.call(this);
-      }
-
-      return this.currentScroll > 0;
-    },
-
-    isProminent() {
-      return VToolbar_VToolbar.options.computed.isProminent.call(this) || this.shrinkOnScroll;
-    },
-
-    styles() {
-      return { ...VToolbar_VToolbar.options.computed.styles.call(this),
-        fontSize: Object(helpers["f" /* convertToUnit */])(this.computedFontSize, 'rem'),
-        marginTop: Object(helpers["f" /* convertToUnit */])(this.computedMarginTop),
-        transform: `translateY(${Object(helpers["f" /* convertToUnit */])(this.computedTransform)})`,
-        left: Object(helpers["f" /* convertToUnit */])(this.computedLeft),
-        right: Object(helpers["f" /* convertToUnit */])(this.computedRight)
-      };
-    }
-
-  },
-  watch: {
-    canScroll: 'onScroll',
-
-    computedTransform() {
-      // Normally we do not want the v-app-bar
-      // to update the application top value
-      // to avoid screen jump. However, in
-      // this situation, we must so that
-      // the clipped drawer can update
-      // its top value when scrolled
-      if (!this.canScroll || !this.clippedLeft && !this.clippedRight) return;
-      this.callUpdate();
-    },
-
-    invertedScroll(val) {
-      this.isActive = !val || this.currentScroll !== 0;
-    }
-
-  },
-
-  created() {
-    if (this.invertedScroll) this.isActive = false;
-  },
-
-  methods: {
-    genBackground() {
-      const render = VToolbar_VToolbar.options.methods.genBackground.call(this);
-      render.data = this._b(render.data || {}, render.tag, {
-        style: {
-          opacity: this.computedOpacity
-        }
-      });
-      return render;
-    },
-
-    updateApplication() {
-      return this.invertedScroll ? 0 : this.computedHeight + this.computedTransform;
-    },
-
-    thresholdMet() {
-      if (this.invertedScroll) {
-        this.isActive = this.currentScroll > this.computedScrollThreshold;
-        return;
-      }
-
-      if (this.hideOnScroll) {
-        this.isActive = this.isScrollingUp || this.currentScroll < this.computedScrollThreshold;
-      }
-
-      if (this.currentThreshold < this.computedScrollThreshold) return;
-      this.savedScroll = this.currentScroll;
-    }
-
-  },
-
-  render(h) {
-    const render = VToolbar_VToolbar.options.render.call(this, h);
-    render.data = render.data || {};
-
-    if (this.canScroll) {
-      render.data.directives = render.data.directives || [];
-      render.data.directives.push({
-        arg: this.scrollTarget,
-        name: 'scroll',
-        value: this.onScroll
-      });
-    }
-
-    return render;
-  }
-
-}));
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VIcon/index.js + 1 modules
-var VIcon = __webpack_require__(55);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VBtn/VBtn.js + 2 modules
-var VBtn = __webpack_require__(74);
-
-// EXTERNAL MODULE: external "vue"
-var external_vue_ = __webpack_require__(0);
-var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VAppBar/VAppBarNavIcon.js
-// Components
-
- // Types
-
-
-/* @vue/component */
-
-/* harmony default export */ var VAppBarNavIcon = (external_vue_default.a.extend({
-  name: 'v-app-bar-nav-icon',
-  functional: true,
-
-  render(h, {
-    slots,
-    listeners,
-    props,
-    data
-  }) {
-    const d = Object.assign(data, {
-      staticClass: `v-app-bar__nav-icon ${data.staticClass || ''}`.trim(),
-      props: { ...props,
-        icon: true
-      },
-      on: listeners
-    });
-    const defaultSlot = slots().default;
-    return h(VBtn["a" /* default */], d, defaultSlot || [h(VIcon["a" /* default */], '$menu')]);
-  }
-
-}));
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VToolbar/index.js
-// Components
- // Utilities
-
-
-const VToolbarTitle = Object(helpers["g" /* createSimpleFunctional */])('v-toolbar__title');
-const VToolbarItems = Object(helpers["g" /* createSimpleFunctional */])('v-toolbar__items');
-
-/* harmony default export */ var components_VToolbar = ({
-  $_vuetify_subcomponents: {
-    VToolbar: VToolbar_VToolbar,
-    VToolbarItems,
-    VToolbarTitle
-  }
-});
-// CONCATENATED MODULE: ./components/general/molecules/CgmHeaderBase.vue
-
-
-
-function injectStyles (context) {
-  
-  
-}
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  molecules_CgmHeaderBasevue_type_script_lang_js_,
-  CgmHeaderBasevue_type_template_id_37e3ee9c_scoped_true_render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "37e3ee9c",
-  "380a57f9"
-  
-)
-
-/* harmony default export */ var CgmHeaderBase = __webpack_exports__["default"] = (component.exports);
-
-/* vuetify-loader */
-
-
-
-
-installComponents_default()(component, {VAppBar: VAppBar_VAppBar,VAppBarNavIcon: VAppBarNavIcon,VToolbarTitle: VToolbarTitle})
-
-
-/***/ }),
-/* 42 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/molecules/CgmFooterBase.vue?vue&type=template&id=7647d462&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-footer',{staticClass:"CgmFtrBase"},[_c('v-bottom-navigation',{staticClass:"d-flex justify-space-around align-center elevation-0 CgmFtrBase--navi",attrs:{"height":"auto"}},[_vm._t("default")],2)],1)}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./components/general/molecules/CgmFooterBase.vue?vue&type=template&id=7647d462&scoped=true&
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/molecules/CgmFooterBase.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ var CgmFooterBasevue_type_script_lang_js_ = ({
-  name: 'CgmFooterBase'
-});
-// CONCATENATED MODULE: ./components/general/molecules/CgmFooterBase.vue?vue&type=script&lang=js&
- /* harmony default export */ var molecules_CgmFooterBasevue_type_script_lang_js_ = (CgmFooterBasevue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(4);
-
-// EXTERNAL MODULE: ./node_modules/vuetify-loader/lib/runtime/installComponents.js
-var installComponents = __webpack_require__(8);
-var installComponents_default = /*#__PURE__*/__webpack_require__.n(installComponents);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VBottomNavigation/VBottomNavigation.sass
-var VBottomNavigation = __webpack_require__(119);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/applicationable/index.js
-var applicationable = __webpack_require__(14);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VItemGroup/VItemGroup.sass
-var VItemGroup = __webpack_require__(121);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/proxyable/index.js
-var proxyable = __webpack_require__(29);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/themeable/index.js
-var themeable = __webpack_require__(7);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/mixins.js
-var mixins = __webpack_require__(3);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/console.js
-var console = __webpack_require__(2);
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VItemGroup/VItemGroup.js
-// Styles
-
-
- // Utilities
-
-
-
-const BaseItemGroup = Object(mixins["a" /* default */])(proxyable["a" /* default */], themeable["a" /* default */]).extend({
-  name: 'base-item-group',
-  props: {
-    activeClass: {
-      type: String,
-      default: 'v-item--active'
-    },
-    mandatory: Boolean,
-    max: {
-      type: [Number, String],
-      default: null
-    },
-    multiple: Boolean,
-    tag: {
-      type: String,
-      default: 'div'
-    }
-  },
-
-  data() {
-    return {
-      // As long as a value is defined, show it
-      // Otherwise, check if multiple
-      // to determine which default to provide
-      internalLazyValue: this.value !== undefined ? this.value : this.multiple ? [] : undefined,
-      items: []
-    };
-  },
-
-  computed: {
-    classes() {
-      return {
-        'v-item-group': true,
-        ...this.themeClasses
-      };
-    },
-
-    selectedIndex() {
-      return this.selectedItem && this.items.indexOf(this.selectedItem) || -1;
-    },
-
-    selectedItem() {
-      if (this.multiple) return undefined;
-      return this.selectedItems[0];
-    },
-
-    selectedItems() {
-      return this.items.filter((item, index) => {
-        return this.toggleMethod(this.getValue(item, index));
-      });
-    },
-
-    selectedValues() {
-      if (this.internalValue == null) return [];
-      return Array.isArray(this.internalValue) ? this.internalValue : [this.internalValue];
-    },
-
-    toggleMethod() {
-      if (!this.multiple) {
-        return v => this.internalValue === v;
-      }
-
-      const internalValue = this.internalValue;
-
-      if (Array.isArray(internalValue)) {
-        return v => internalValue.includes(v);
-      }
-
-      return () => false;
-    }
-
-  },
-  watch: {
-    internalValue: 'updateItemsState',
-    items: 'updateItemsState'
-  },
-
-  created() {
-    if (this.multiple && !Array.isArray(this.internalValue)) {
-      Object(console["c" /* consoleWarn */])('Model must be bound to an array if the multiple property is true.', this);
-    }
-  },
-
-  methods: {
-    genData() {
-      return {
-        class: this.classes
-      };
-    },
-
-    getValue(item, i) {
-      return item.value == null || item.value === '' ? i : item.value;
-    },
-
-    onClick(item) {
-      this.updateInternalValue(this.getValue(item, this.items.indexOf(item)));
-    },
-
-    register(item) {
-      const index = this.items.push(item) - 1;
-      item.$on('change', () => this.onClick(item)); // If no value provided and mandatory,
-      // assign first registered item
-
-      if (this.mandatory && !this.selectedValues.length) {
-        this.updateMandatory();
-      }
-
-      this.updateItem(item, index);
-    },
-
-    unregister(item) {
-      if (this._isDestroyed) return;
-      const index = this.items.indexOf(item);
-      const value = this.getValue(item, index);
-      this.items.splice(index, 1);
-      const valueIndex = this.selectedValues.indexOf(value); // Items is not selected, do nothing
-
-      if (valueIndex < 0) return; // If not mandatory, use regular update process
-
-      if (!this.mandatory) {
-        return this.updateInternalValue(value);
-      } // Remove the value
-
-
-      if (this.multiple && Array.isArray(this.internalValue)) {
-        this.internalValue = this.internalValue.filter(v => v !== value);
-      } else {
-        this.internalValue = undefined;
-      } // If mandatory and we have no selection
-      // add the last item as value
-
-      /* istanbul ignore else */
-
-
-      if (!this.selectedItems.length) {
-        this.updateMandatory(true);
-      }
-    },
-
-    updateItem(item, index) {
-      const value = this.getValue(item, index);
-      item.isActive = this.toggleMethod(value);
-    },
-
-    // https://github.com/vuetifyjs/vuetify/issues/5352
-    updateItemsState() {
-      this.$nextTick(() => {
-        if (this.mandatory && !this.selectedItems.length) {
-          return this.updateMandatory();
-        } // TODO: Make this smarter so it
-        // doesn't have to iterate every
-        // child in an update
-
-
-        this.items.forEach(this.updateItem);
-      });
-    },
-
-    updateInternalValue(value) {
-      this.multiple ? this.updateMultiple(value) : this.updateSingle(value);
-    },
-
-    updateMandatory(last) {
-      if (!this.items.length) return;
-      const items = this.items.slice();
-      if (last) items.reverse();
-      const item = items.find(item => !item.disabled); // If no tabs are available
-      // aborts mandatory value
-
-      if (!item) return;
-      const index = this.items.indexOf(item);
-      this.updateInternalValue(this.getValue(item, index));
-    },
-
-    updateMultiple(value) {
-      const defaultValue = Array.isArray(this.internalValue) ? this.internalValue : [];
-      const internalValue = defaultValue.slice();
-      const index = internalValue.findIndex(val => val === value);
-      if (this.mandatory && // Item already exists
-      index > -1 && // value would be reduced below min
-      internalValue.length - 1 < 1) return;
-      if ( // Max is set
-      this.max != null && // Item doesn't exist
-      index < 0 && // value would be increased above max
-      internalValue.length + 1 > this.max) return;
-      index > -1 ? internalValue.splice(index, 1) : internalValue.push(value);
-      this.internalValue = internalValue;
-    },
-
-    updateSingle(value) {
-      const isSame = value === this.internalValue;
-      if (this.mandatory && isSame) return;
-      this.internalValue = isSame ? undefined : value;
-    }
-
-  },
-
-  render(h) {
-    return h(this.tag, this.genData(), this.$slots.default);
-  }
-
-});
-/* harmony default export */ var VItemGroup_VItemGroup = (BaseItemGroup.extend({
-  name: 'v-item-group',
-
-  provide() {
-    return {
-      itemGroup: this
-    };
-  }
-
-}));
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/button-group/index.js
-// Extensions
-
-/* @vue/component */
-
-/* harmony default export */ var button_group = (BaseItemGroup.extend({
-  name: 'button-group',
-
-  provide() {
-    return {
-      btnToggle: this
-    };
-  },
-
-  computed: {
-    classes() {
-      return BaseItemGroup.options.computed.classes.call(this);
-    }
-
-  },
-  methods: {
-    // Isn't being passed down through types
-    genData: BaseItemGroup.options.methods.genData
-  }
-}));
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/colorable/index.js
-var colorable = __webpack_require__(9);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/measurable/index.js
-var measurable = __webpack_require__(19);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/scrollable/index.js
-var scrollable = __webpack_require__(21);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/toggleable/index.js
-var toggleable = __webpack_require__(10);
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VBottomNavigation/VBottomNavigation.js
-// Styles
- // Mixins
-
-
-
-
-
-
-
-
- // Utilities
-
-
-
-/* harmony default export */ var VBottomNavigation_VBottomNavigation = (Object(mixins["a" /* default */])(Object(applicationable["a" /* default */])('bottom', ['height', 'inputValue']), colorable["a" /* default */], measurable["a" /* default */], Object(toggleable["b" /* factory */])('inputValue'), proxyable["a" /* default */], scrollable["a" /* default */], themeable["a" /* default */]
-/* @vue/component */
-).extend({
-  name: 'v-bottom-navigation',
-  props: {
-    activeClass: {
-      type: String,
-      default: 'v-btn--active'
-    },
-    backgroundColor: String,
-    grow: Boolean,
-    height: {
-      type: [Number, String],
-      default: 56
-    },
-    hideOnScroll: Boolean,
-    horizontal: Boolean,
-    inputValue: {
-      type: Boolean,
-      default: true
-    },
-    mandatory: Boolean,
-    shift: Boolean
-  },
-
-  data() {
-    return {
-      isActive: this.inputValue
-    };
-  },
-
-  computed: {
-    canScroll() {
-      return scrollable["a" /* default */].options.computed.canScroll.call(this) && (this.hideOnScroll || !this.inputValue);
-    },
-
-    classes() {
-      return {
-        'v-bottom-navigation--absolute': this.absolute,
-        'v-bottom-navigation--grow': this.grow,
-        'v-bottom-navigation--fixed': !this.absolute && (this.app || this.fixed),
-        'v-bottom-navigation--horizontal': this.horizontal,
-        'v-bottom-navigation--shift': this.shift
-      };
-    },
-
-    styles() {
-      return { ...this.measurableStyles,
-        transform: this.isActive ? 'none' : 'translateY(100%)'
-      };
-    }
-
-  },
-
-  created() {
-    /* istanbul ignore next */
-    if (this.$attrs.hasOwnProperty('active')) {
-      Object(console["a" /* breaking */])('active.sync', 'value or v-model', this);
-    }
-  },
-
-  methods: {
-    thresholdMet() {
-      this.isActive = !this.isScrollingUp;
-      this.$emit('update:input-value', this.isActive);
-    },
-
-    updateApplication() {
-      return this.$el ? this.$el.clientHeight : 0;
-    },
-
-    updateValue(val) {
-      this.$emit('change', val);
-    }
-
-  },
-
-  render(h) {
-    const data = this.setBackgroundColor(this.backgroundColor, {
-      staticClass: 'v-bottom-navigation',
-      class: this.classes,
-      style: this.styles,
-      props: {
-        activeClass: this.activeClass,
-        mandatory: Boolean(this.mandatory || this.value !== undefined),
-        value: this.internalValue
-      },
-      on: {
-        change: this.updateValue
-      }
-    });
-
-    if (this.canScroll) {
-      data.directives = data.directives || [];
-      data.directives.push({
-        arg: this.scrollTarget,
-        name: 'scroll',
-        value: this.onScroll
-      });
-    }
-
-    return h(button_group, this.setTextColor(this.color, data), this.$slots.default);
-  }
-
-}));
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VFooter/VFooter.sass
-var VFooter = __webpack_require__(123);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/VSheet.js + 1 modules
-var VSheet = __webpack_require__(11);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/mixins/ssr-bootable/index.js
-var ssr_bootable = __webpack_require__(20);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/util/helpers.js
-var helpers = __webpack_require__(1);
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VFooter/VFooter.js
-// Styles
- // Components
-
- // Mixins
-
-
- // Utilities
-
-
-
-/* @vue/component */
-
-/* harmony default export */ var VFooter_VFooter = (Object(mixins["a" /* default */])(VSheet["a" /* default */], Object(applicationable["a" /* default */])('footer', ['height', 'inset']), ssr_bootable["a" /* default */]).extend({
-  name: 'v-footer',
-  props: {
-    height: {
-      default: 'auto',
-      type: [Number, String]
-    },
-    inset: Boolean,
-    padless: Boolean,
-    tag: {
-      type: String,
-      default: 'footer'
-    }
-  },
-  computed: {
-    applicationProperty() {
-      return this.inset ? 'insetFooter' : 'footer';
-    },
-
-    classes() {
-      return { ...VSheet["a" /* default */].options.computed.classes.call(this),
-        'v-footer--absolute': this.absolute,
-        'v-footer--fixed': !this.absolute && (this.app || this.fixed),
-        'v-footer--padless': this.padless,
-        'v-footer--inset': this.inset
-      };
-    },
-
-    computedBottom() {
-      if (!this.isPositioned) return undefined;
-      return this.app ? this.$vuetify.application.bottom : 0;
-    },
-
-    computedLeft() {
-      if (!this.isPositioned) return undefined;
-      return this.app && this.inset ? this.$vuetify.application.left : 0;
-    },
-
-    computedRight() {
-      if (!this.isPositioned) return undefined;
-      return this.app && this.inset ? this.$vuetify.application.right : 0;
-    },
-
-    isPositioned() {
-      return Boolean(this.absolute || this.fixed || this.app);
-    },
-
-    styles() {
-      const height = parseInt(this.height);
-      return { ...VSheet["a" /* default */].options.computed.styles.call(this),
-        height: isNaN(height) ? height : Object(helpers["f" /* convertToUnit */])(height),
-        left: Object(helpers["f" /* convertToUnit */])(this.computedLeft),
-        right: Object(helpers["f" /* convertToUnit */])(this.computedRight),
-        bottom: Object(helpers["f" /* convertToUnit */])(this.computedBottom)
-      };
-    }
-
-  },
-  methods: {
-    updateApplication() {
-      const height = parseInt(this.height);
-      return isNaN(height) ? this.$el ? this.$el.clientHeight : 0 : height;
-    }
-
-  },
-
-  render(h) {
-    const data = this.setBackgroundColor(this.color, {
-      staticClass: 'v-footer',
-      class: this.classes,
-      style: this.styles
-    });
-    return h(this.tag, data, this.$slots.default);
-  }
-
-}));
-// CONCATENATED MODULE: ./components/general/molecules/CgmFooterBase.vue
-
-
-
-function injectStyles (context) {
-  
-  var style0 = __webpack_require__(117)
-if (style0.__inject__) style0.__inject__(context)
-
-}
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  molecules_CgmFooterBasevue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "7647d462",
-  "7f6f3d07"
-  
-)
-
-/* harmony default export */ var CgmFooterBase = __webpack_exports__["default"] = (component.exports);
-
-/* vuetify-loader */
-
-
-
-installComponents_default()(component, {VBottomNavigation: VBottomNavigation_VBottomNavigation,VFooter: VFooter_VFooter})
-
-
-/***/ }),
-/* 43 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoHeader.vue?vue&type=template&id=90ba8d96&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('CgmHeaderBase')}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./components/create/organisms/CcoHeader.vue?vue&type=template&id=90ba8d96&scoped=true&
-
-// EXTERNAL MODULE: ./components/general/molecules/CgmHeaderBase.vue + 8 modules
-var CgmHeaderBase = __webpack_require__(41);
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoHeader.vue?vue&type=script&lang=js&
-//
-//
-//
-
-/* harmony default export */ var CcoHeadervue_type_script_lang_js_ = ({
-  name: 'CooHeader',
-  components: {
-    CgmHeaderBase: CgmHeaderBase["default"]
-  }
-});
-// CONCATENATED MODULE: ./components/create/organisms/CcoHeader.vue?vue&type=script&lang=js&
- /* harmony default export */ var organisms_CcoHeadervue_type_script_lang_js_ = (CcoHeadervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(4);
-
-// CONCATENATED MODULE: ./components/create/organisms/CcoHeader.vue
-
-
-
-function injectStyles (context) {
-  
-  
-}
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  organisms_CcoHeadervue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "90ba8d96",
-  "5cd6b188"
-  
-)
-
-/* harmony default export */ var CcoHeader = __webpack_exports__["default"] = (component.exports);
-
-/* nuxt-component-imports */
-installComponents(component, {CgmHeaderBase: __webpack_require__(41).default})
-
-
-/***/ }),
-/* 44 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoNavi.vue?vue&type=template&id=7b24b8d5&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('CgmNaviBase')}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./components/create/organisms/CcoNavi.vue?vue&type=template&id=7b24b8d5&scoped=true&
-
-// EXTERNAL MODULE: ./components/general/molecules/CgmNaviBase.vue + 9 modules
-var CgmNaviBase = __webpack_require__(40);
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoNavi.vue?vue&type=script&lang=js&
-//
-//
-//
-
-/* harmony default export */ var CcoNavivue_type_script_lang_js_ = ({
-  name: 'CooNavi',
-  components: {
-    CgmNaviBase: CgmNaviBase["default"]
-  }
-});
-// CONCATENATED MODULE: ./components/create/organisms/CcoNavi.vue?vue&type=script&lang=js&
- /* harmony default export */ var organisms_CcoNavivue_type_script_lang_js_ = (CcoNavivue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(4);
-
-// CONCATENATED MODULE: ./components/create/organisms/CcoNavi.vue
-
-
-
-function injectStyles (context) {
-  
-  
-}
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  organisms_CcoNavivue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "7b24b8d5",
-  "36a774d6"
-  
-)
-
-/* harmony default export */ var CcoNavi = __webpack_exports__["default"] = (component.exports);
-
-/* nuxt-component-imports */
-installComponents(component, {CgmNaviBase: __webpack_require__(40).default})
-
-
-/***/ }),
-/* 45 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoFooter.vue?vue&type=template&id=3cf6c91a&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('CgmFooterBase',{staticClass:"CooFtrBase"},[_c('CgaFooterBtn',{attrs:{"label":'TOP',"icon":['fas', 'table'],"activechecker":{ dist: 'current', dir: '/create' },"clickfunc":_vm.gotoNextTab}}),_vm._v(" "),_c('CgaFooterBtn',{attrs:{"label":'CRIATIVE',"icon":['fas', 'images'],"activechecker":{ dist: 'lowwer', dir: '/create/criative' },"clickfunc":_vm.changeActiveSheet}}),_vm._v(" "),_c('CgaFooterSheet',{attrs:{"active":_vm.activeSheet==='CRIATIVE',"disablefunc":_vm.changeActiveSheet}},[_vm._v("\n    クリエイティブ準備中\n  ")]),_vm._v(" "),_c('CgaFooterBtn',{attrs:{"label":'MYBRAND',"icon":['fas', 'tags'],"activechecker":{ dist: 'lowwer', dir: '/create/brand' },"clickfunc":_vm.changeActiveSheet}}),_vm._v(" "),_c('CgaFooterSheet',{attrs:{"active":_vm.activeSheet==='MYBRAND',"disablefunc":_vm.changeActiveSheet}},[_c('CcoBrandsList',{attrs:{"clickfunc":_vm.gotoNextBrand}})],1),_vm._v(" "),_c('CgaFooterBtn',{attrs:{"label":'MYSHOP',"icon":['fas', 'store'],"activechecker":{ dist: 'lowwer', dir: '/create/shop' },"clickfunc":_vm.changeActiveSheet}}),_vm._v(" "),_c('CgaFooterSheet',{attrs:{"active":_vm.activeSheet==='MYSHOP',"disablefunc":_vm.changeActiveSheet}},[_vm._v("\n    マイショップ準備中\n  ")]),_vm._v(" "),_c('CgaFooterBtn',{attrs:{"label":'SHOPING',"icon":['fas', 'shopping-bag'],"clickfunc":_vm.changeActiveSheet}}),_vm._v(" "),_c('CgaFooterSheet',{attrs:{"active":_vm.activeSheet==='SHOPING',"disablefunc":_vm.changeActiveSheet}},[_vm._v("\n    マイショップ準備中\n  ")])],1)}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./components/create/organisms/CcoFooter.vue?vue&type=template&id=3cf6c91a&scoped=true&
-
-// EXTERNAL MODULE: ./components/general/molecules/CgmFooterBase.vue + 8 modules
-var CgmFooterBase = __webpack_require__(42);
-
-// EXTERNAL MODULE: ./components/general/atoms/CgaFooterBtn.vue + 4 modules
-var CgaFooterBtn = __webpack_require__(47);
-
-// EXTERNAL MODULE: ./components/general/atoms/CgaFooterSheet.vue + 13 modules
-var CgaFooterSheet = __webpack_require__(39);
-
-// EXTERNAL MODULE: ./components/create/organisms/CcoBrandsList.vue + 4 modules
-var CcoBrandsList = __webpack_require__(48);
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoFooter.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-/* harmony default export */ var CcoFootervue_type_script_lang_js_ = ({
-  name: 'CooFooter',
-  components: {
-    CgmFooterBase: CgmFooterBase["default"],
-    CgaFooterBtn: CgaFooterBtn["default"],
-    CgaFooterSheet: CgaFooterSheet["default"],
-    CcoBrandsList: CcoBrandsList["default"]
-  },
-  data: () => ({
-    activeSheet: ''
-  }),
-  methods: {
-    changeActiveSheet(key) {
-      this.activeSheet = key;
-    },
-
-    gotoNextTab(key) {
-      this.activeSheet = '';
-      let next = '';
-
-      switch (key) {
-        case 'TOP':
-          next = '/create';
-      }
-
-      this.$router.push(next);
-    },
-
-    gotoNextBrand(bid) {
-      console.log('goto next');
-      this.activeSheet = '';
-      this.$router.push(`/create/brand/${bid}`);
-    }
-
-  }
-});
-// CONCATENATED MODULE: ./components/create/organisms/CcoFooter.vue?vue&type=script&lang=js&
- /* harmony default export */ var organisms_CcoFootervue_type_script_lang_js_ = (CcoFootervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(4);
-
-// CONCATENATED MODULE: ./components/create/organisms/CcoFooter.vue
-
-
-
-function injectStyles (context) {
-  
-  var style0 = __webpack_require__(135)
-if (style0.__inject__) style0.__inject__(context)
-
-}
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  organisms_CcoFootervue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "3cf6c91a",
-  "9f3b796c"
-  
-)
-
-/* harmony default export */ var CcoFooter = __webpack_exports__["default"] = (component.exports);
-
-/* nuxt-component-imports */
-installComponents(component, {CgaFooterBtn: __webpack_require__(47).default,CgaFooterSheet: __webpack_require__(39).default,CcoBrandsList: __webpack_require__(48).default,CgmFooterBase: __webpack_require__(42).default})
-
-
-/***/ }),
-/* 46 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/organisms/CgoUserOnly.vue?vue&type=template&id=1c0a76ca&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.cUser !== null)?_vm._t("default"):_c('div',[_c('h2',[_vm._v("ログインしてください")])])],2)}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./components/general/organisms/CgoUserOnly.vue?vue&type=template&id=1c0a76ca&scoped=true&
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/organisms/CgoUserOnly.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-const {
-  mapGetters
-} = __webpack_require__(16);
-
-/* harmony default export */ var CgoUserOnlyvue_type_script_lang_js_ = ({
-  name: 'CgoUserOnly',
-  computed: { ...mapGetters('xd/general/xdgcuser', ['cUser'])
-  },
-
-  /* ログインユーザー状態に起因する処理 */
-  created() {
-    console.log('CGO userOnly create'); // ログイン強制 CURRENT USER が決まる **LATER
-
-    this.$store.dispatch('xd/general/xdgcuser/forceLogin');
-  },
-
-  beforeDestroy() {
-    console.log('CGO userOnly beforeDestroy');
-  }
-
-});
-// CONCATENATED MODULE: ./components/general/organisms/CgoUserOnly.vue?vue&type=script&lang=js&
- /* harmony default export */ var organisms_CgoUserOnlyvue_type_script_lang_js_ = (CgoUserOnlyvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(4);
-
-// CONCATENATED MODULE: ./components/general/organisms/CgoUserOnly.vue
-
-
-
-function injectStyles (context) {
-  
-  
-}
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  organisms_CgoUserOnlyvue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "1c0a76ca",
-  "bad1c8f0"
-  
-)
-
-/* harmony default export */ var CgoUserOnly = __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-/* 47 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/atoms/CgaFooterBtn.vue?vue&type=template&id=64c14a9e&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:['CgaFtrBtn', { 'CgaFtrBtn--active': _vm.isActive }],on:{"click":function($event){return _vm.iconClick()}}},[_c('font-awesome-icon',{staticClass:"CgaFtrBtn--icon",attrs:{"icon":_vm.icon}}),_vm._ssrNode(" <p class=\"CgaFtrBtn--label\" data-v-64c14a9e>"+_vm._ssrEscape("\n    "+_vm._s(_vm.label)+"\n  ")+"</p>")],2)}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./components/general/atoms/CgaFooterBtn.vue?vue&type=template&id=64c14a9e&scoped=true&
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/general/atoms/CgaFooterBtn.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ var CgaFooterBtnvue_type_script_lang_js_ = ({
-  name: 'CgaFooterBtn',
-  props: {
-    label: {
-      type: String,
-      default: 'ラベル'
-    },
-    icon: {
-      type: Array,
-      default: () => {
-        return ['fas', 'location-arrow'];
-      }
-    },
-    activechecker: {
-      type: Object,
-      default: null
-    },
-    clickfunc: {
-      type: Function,
-      default: null
-    }
-  },
-  computed: {
-    isActive() {
-      if (this.$props.activechecker === null) {
-        // NTD
-        return false;
-      } else if (typeof this.$props.activechecker.dist !== 'undefined' && typeof this.$props.activechecker.dir !== 'undefined') {
-        //
-        const dist = this.$props.activechecker.dist;
-        const dir = this.$props.activechecker.dir;
-        const path = this.$route.path;
-
-        switch (dist) {
-          case 'lowwer':
-            if (path.indexOf(dir) === 0) {
-              return true;
-            }
-
-            break;
-
-          case 'current':
-            if (path === dir || path === dir + '/') {
-              return true;
-            }
-
-            break;
-
-          default:
-            return false;
-        }
-      }
-
-      return false;
-    }
-
-  },
-
-  mounted() {
-    console.log('CGA FtrBtn mounted ' + this.$route.path);
-  },
-
-  methods: {
-    iconClick() {
-      if (this.$props.clickFunc !== null) {
-        this.$props.clickfunc(this.$props.label);
-      }
-    }
-
-  }
-});
-// CONCATENATED MODULE: ./components/general/atoms/CgaFooterBtn.vue?vue&type=script&lang=js&
- /* harmony default export */ var atoms_CgaFooterBtnvue_type_script_lang_js_ = (CgaFooterBtnvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(4);
-
-// CONCATENATED MODULE: ./components/general/atoms/CgaFooterBtn.vue
-
-
-
-function injectStyles (context) {
-  
-  var style0 = __webpack_require__(125)
-if (style0.__inject__) style0.__inject__(context)
-
-}
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  atoms_CgaFooterBtnvue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "64c14a9e",
-  "deacf5a6"
-  
-)
-
-/* harmony default export */ var CgaFooterBtn = __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-/* 48 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoBrandsList.vue?vue&type=template&id=5d164bde&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-sheet',{staticClass:"CcoBrandsList",attrs:{"outlined":"","v-if":_vm.myBrands!==null}},[_vm._l((_vm.myBrands),function(bname,bid){return _c('p',{key:bid,staticClass:"CcoBrandsList--item",on:{"click":function($event){return _vm.onClick(bid)}}},[_vm._v("\n    "+_vm._s(bid)+" 編集\n  ")])}),_vm._v(" "),_c('p',{staticClass:"CcoBrandsList--item",on:{"click":function($event){return _vm.onClick('')}}},[_vm._v("\n    ＋ ブランド新規作成\n  ")])],2)}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./components/create/organisms/CcoBrandsList.vue?vue&type=template&id=5d164bde&scoped=true&
-
-// CONCATENATED MODULE: ./node_modules/@nuxt/webpack/node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/@nuxt/webpack/node_modules/vue-loader/lib??vue-loader-options!./components/create/organisms/CcoBrandsList.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-const {
-  mapGetters
-} = __webpack_require__(16);
-
-/* harmony default export */ var CcoBrandsListvue_type_script_lang_js_ = ({
-  name: 'CcoBrandsList',
-  props: {
-    clickfunc: {
-      type: Function,
-      default: null
-    }
-  },
-  computed: { ...mapGetters('xd/general/xdgcuser', ['myBrands'])
-  },
-  methods: {
-    onClick(bid) {
-      if (this.$props.clickFunc !== null) {
-        this.$props.clickfunc(bid);
-      }
-    }
-
-  }
-});
-// CONCATENATED MODULE: ./components/create/organisms/CcoBrandsList.vue?vue&type=script&lang=js&
- /* harmony default export */ var organisms_CcoBrandsListvue_type_script_lang_js_ = (CcoBrandsListvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/@nuxt/webpack/node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(4);
-
-// EXTERNAL MODULE: ./node_modules/vuetify-loader/lib/runtime/installComponents.js
-var installComponents = __webpack_require__(8);
-var installComponents_default = /*#__PURE__*/__webpack_require__.n(installComponents);
-
-// EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/VSheet.js + 1 modules
-var VSheet = __webpack_require__(11);
-
-// CONCATENATED MODULE: ./components/create/organisms/CcoBrandsList.vue
-
-
-
-function injectStyles (context) {
-  
-  var style0 = __webpack_require__(133)
-if (style0.__inject__) style0.__inject__(context)
-
-}
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  organisms_CcoBrandsListvue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "5d164bde",
-  "4e70418e"
-  
-)
-
-/* harmony default export */ var CcoBrandsList = __webpack_exports__["default"] = (component.exports);
-
-/* vuetify-loader */
-
-
-installComponents_default()(component, {VSheet: VSheet["a" /* default */]})
-
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports) {
-
-module.exports = require("vue-client-only");
-
-/***/ }),
-/* 50 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Scroll; });
-function inserted(el, binding) {
-  const {
-    self = false
-  } = binding.modifiers || {};
-  const value = binding.value;
-  const options = typeof value === 'object' && value.options || {
-    passive: true
-  };
-  const handler = typeof value === 'function' || 'handleEvent' in value ? value : value.handler;
-  const target = self ? el : binding.arg ? document.querySelector(binding.arg) : window;
-  if (!target) return;
-  target.addEventListener('scroll', handler, options);
-  el._onScroll = {
-    handler,
-    options,
-    // Don't reference self
-    target: self ? undefined : target
-  };
-}
-
-function unbind(el) {
-  if (!el._onScroll) return;
-  const {
-    handler,
-    options,
-    target = el
-  } = el._onScroll;
-  target.removeEventListener('scroll', handler, options);
-  delete el._onScroll;
-}
-
-const Scroll = {
-  inserted,
-  unbind
-};
-/* harmony default export */ __webpack_exports__["b"] = (Scroll);
-
-/***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9031,7 +9040,7 @@ function mergeListeners(...args) {
 }
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9078,7 +9087,7 @@ function provide(namespace, self = false) {
 }
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9132,7 +9141,7 @@ const Intersect = {
 /* harmony default export */ __webpack_exports__["a"] = (Intersect);
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9170,7 +9179,7 @@ const Resize = {
 /* harmony default export */ __webpack_exports__["a"] = (Resize);
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9442,8 +9451,8 @@ const VIcon_VIcon = Object(mixins["a" /* default */])(binds_attrs["a" /* default
 /* harmony default export */ var components_VIcon = __webpack_exports__["a"] = (components_VIcon_VIcon);
 
 /***/ }),
-/* 56 */,
-/* 57 */
+/* 57 */,
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -9459,7 +9468,7 @@ module.exports.__inject__ = function (context) {
 };
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -9475,7 +9484,7 @@ module.exports.__inject__ = function (context) {
 };
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -9491,7 +9500,7 @@ module.exports.__inject__ = function (context) {
 };
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -9503,11 +9512,11 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(6).default
 module.exports.__inject__ = function (context) {
-  add("00dd3cf4", content, true, context)
+  add("1ce44005", content, true, context)
 };
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -9523,7 +9532,7 @@ module.exports.__inject__ = function (context) {
 };
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -9539,7 +9548,7 @@ module.exports.__inject__ = function (context) {
 };
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -9555,7 +9564,7 @@ module.exports.__inject__ = function (context) {
 };
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -9571,7 +9580,7 @@ module.exports.__inject__ = function (context) {
 };
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -9587,13 +9596,13 @@ module.exports.__inject__ = function (context) {
 };
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports) {
 
 module.exports = require("vuexfire");
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9638,12 +9647,6 @@ if (initFlag === true) {
 
 
 /***/ }),
-/* 68 */
-/***/ (function(module, exports) {
-
-// This file is intentionally left empty for noop aliases
-
-/***/ }),
 /* 69 */
 /***/ (function(module, exports) {
 
@@ -9683,7 +9686,7 @@ module.exports = require("@fortawesome/vue-fontawesome");
 var VBtn = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/lib/components/VSheet/index.js
-var VSheet = __webpack_require__(30);
+var VSheet = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VProgressCircular/VProgressCircular.sass
 var VProgressCircular = __webpack_require__(105);
@@ -10049,7 +10052,7 @@ const baseMixins = Object(mixins["a" /* default */])(VSheet["a" /* default */], 
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(78);
-module.exports = __webpack_require__(148);
+module.exports = __webpack_require__(149);
 
 
 /***/ }),
@@ -10102,7 +10105,7 @@ function provideFunctionalComponents(component, components) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_error_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(57);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_error_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(58);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_error_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_error_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_error_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_error_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
@@ -10126,7 +10129,7 @@ module.exports = exports;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_loading_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(58);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_loading_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(59);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_loading_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_loading_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_loading_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_loading_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
@@ -10575,7 +10578,7 @@ module.exports = exports;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgmFooterBase_vue_vue_type_style_index_0_id_7647d462_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(59);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgmFooterBase_vue_vue_type_style_index_0_id_7647d462_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(60);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgmFooterBase_vue_vue_type_style_index_0_id_7647d462_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgmFooterBase_vue_vue_type_style_index_0_id_7647d462_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgmFooterBase_vue_vue_type_style_index_0_id_7647d462_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgmFooterBase_vue_vue_type_style_index_0_id_7647d462_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
@@ -10674,9 +10677,9 @@ module.exports = exports;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterBtn_vue_vue_type_style_index_0_id_64c14a9e_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(60);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterBtn_vue_vue_type_style_index_0_id_64c14a9e_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterBtn_vue_vue_type_style_index_0_id_64c14a9e_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterBtn_vue_vue_type_style_index_0_id_64c14a9e_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterBtn_vue_vue_type_style_index_0_id_64c14a9e_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterBtn_vue_vue_type_style_index_0_id_37291480_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterBtn_vue_vue_type_style_index_0_id_37291480_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterBtn_vue_vue_type_style_index_0_id_37291480_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterBtn_vue_vue_type_style_index_0_id_37291480_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterBtn_vue_vue_type_style_index_0_id_37291480_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -10687,7 +10690,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(5);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".CgaFtrBtn[data-v-64c14a9e]{text-align:center;color:grey}.CgaFtrBtn.CgaFtrBtn--active[data-v-64c14a9e]{color:#000}.CgaFtrBtn .CgaFtrBtn--icon[data-v-64c14a9e]{margin:0;padding:0;font-size:2rem;width:3.4rem}.CgaFtrBtn .CgaFtrBtn--label[data-v-64c14a9e]{margin:.2rem 0 0;padding:0;font-size:.4rem;font-weight:700;letter-spacing:0}.CgaFtrBtn .CgaFtrBtn--sheet[data-v-64c14a9e]{padding:1rem}.CgaFtrBtn .CgaFtrBtn--sheet *[data-v-64c14a9e]{margin:0}", ""]);
+exports.push([module.i, ".CgaFtrBtn[data-v-37291480]{text-align:center;color:grey}.CgaFtrBtn.CgaFtrBtn--active[data-v-37291480]{color:#000}.CgaFtrBtn .CgaFtrBtn--icon[data-v-37291480]{margin:0;padding:0;font-size:2rem;width:3.4rem}.CgaFtrBtn .CgaFtrBtn--label[data-v-37291480]{margin:.2rem 0 0;padding:0;font-size:.4rem;font-weight:700;letter-spacing:0}.CgaFtrBtn .CgaFtrBtn--sheet[data-v-37291480]{padding:1rem}.CgaFtrBtn .CgaFtrBtn--sheet *[data-v-37291480]{margin:0}", ""]);
 // Exports
 module.exports = exports;
 
@@ -10698,7 +10701,7 @@ module.exports = exports;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterSheet_vue_vue_type_style_index_0_id_358acc68_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterSheet_vue_vue_type_style_index_0_id_358acc68_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(62);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterSheet_vue_vue_type_style_index_0_id_358acc68_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterSheet_vue_vue_type_style_index_0_id_358acc68_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterSheet_vue_vue_type_style_index_0_id_358acc68_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CgaFooterSheet_vue_vue_type_style_index_0_id_358acc68_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
@@ -10772,7 +10775,7 @@ module.exports = exports;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CcoBrandsList_vue_vue_type_style_index_0_id_5d164bde_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(62);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CcoBrandsList_vue_vue_type_style_index_0_id_5d164bde_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(63);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CcoBrandsList_vue_vue_type_style_index_0_id_5d164bde_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CcoBrandsList_vue_vue_type_style_index_0_id_5d164bde_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CcoBrandsList_vue_vue_type_style_index_0_id_5d164bde_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CcoBrandsList_vue_vue_type_style_index_0_id_5d164bde_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
@@ -10796,7 +10799,7 @@ module.exports = exports;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CcoFooter_vue_vue_type_style_index_0_id_3cf6c91a_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(63);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CcoFooter_vue_vue_type_style_index_0_id_3cf6c91a_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(64);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CcoFooter_vue_vue_type_style_index_0_id_3cf6c91a_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CcoFooter_vue_vue_type_style_index_0_id_3cf6c91a_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CcoFooter_vue_vue_type_style_index_0_id_3cf6c91a_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_CcoFooter_vue_vue_type_style_index_0_id_3cf6c91a_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
@@ -10820,7 +10823,7 @@ module.exports = exports;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(64);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(65);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
@@ -10844,7 +10847,7 @@ module.exports = exports;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_default_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(65);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_default_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(66);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_default_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_default_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_default_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_nuxt_webpack_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_nuxt_webpack_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_nuxt_webpack_node_modules_vue_loader_lib_index_js_vue_loader_options_default_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
@@ -10874,11 +10877,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getters", function() { return getters; });
 const {
   vuexfireMutations
-} = __webpack_require__(66);
+} = __webpack_require__(67);
 
 const {
   firestore
-} = __webpack_require__(67);
+} = __webpack_require__(68);
 
 const cfBrands = __webpack_require__(38);
 
@@ -10940,6 +10943,9 @@ const actions = {
 const getters = {
   refBrandById: () => bid => {
     return firestore.collection('xbrands').doc(bid);
+  },
+  refBrandProducts: () => bid => {
+    return firestore.collection('xbrands').doc(bid).collection('products');
   }
   /*
   ownBrandsRef: () => (uid) => {
@@ -10985,11 +10991,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getters", function() { return getters; });
 const {
   vuexfireMutations
-} = __webpack_require__(66);
+} = __webpack_require__(67);
 
 const {
   firestore
-} = __webpack_require__(67);
+} = __webpack_require__(68);
 /*
 const cfUsers = require('~/classes/cfUsers.js')
 const cfBrands = require('~/classes/cfBrands.js')
@@ -11237,17 +11243,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actions", function() { return actions; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getters", function() { return getters; });
 // const moment = require('moment')
-const cfBrands = __webpack_require__(38); // let dXdcCProducts = []
+const cfBrands = __webpack_require__(38);
 
-
+let dXdcCProducts = [];
 const state = () => ({
   /*
   bidValiState: '',
   cBrand: null,
   cBrandPermit: '' // MNG or EDT or VEW or NON
   */
-  pList: {},
-  cProductId: ''
+  pList: {} // cProductId: ''
+
 });
 const mutations = {
   /*
@@ -11264,11 +11270,12 @@ const mutations = {
 
   addPList(state, product) {
     state.pList[product.id] = product;
-  },
-
-  setCProductId(state, pid) {
-    state.cProductId = pid;
   }
+  /* ,
+  setCProductId (state, pid) {
+   state.cProductId = pid
+  } */
+
 
 };
 const actions = {
@@ -11285,11 +11292,9 @@ const actions = {
 
     product.creater = rootGetters['xd/general/xdgcuser/cUserId'];
     product.brand = rootGetters['xd/create/xdcbrand/cBrandId']; // 日時設定
-    // product.dateCreate = moment().format()
-    // product.dateUpdate = moment().format()
 
-    product.dateCreate = 'NOW';
-    product.dateUpdate = 'NOW'; // 表示用データ追加
+    product.dateCreate = new Date();
+    product.dateUpdate = new Date(); // 表示用データ追加
 
     commit('addPList', product); // Firestore追加
 
@@ -11304,30 +11309,41 @@ const actions = {
     commit,
     state,
     rootGetters
-  }, {
-    page,
-    ppp
-  }) {},
+  }, bid) {
+    console.log('  XDC BRAND ACT Set PLIST ' + bid);
+    const plistRef = rootGetters['xf/xfbrands/refBrandProducts'](bid);
+    dXdcCProducts.push(plistRef.withConverter(cfBrands.ConvCProduct).onSnapshot(snap => {
+      const plist = {};
+
+      if (!snap.empty) {
+        console.log('  XDC BRAND SNP Set PLIST ' + bid);
+        snap.forEach(docs => {
+          plist[docs.data().id] = docs.data();
+        });
+      }
+
+      commit('setPList', plist);
+    }));
+  },
 
   resetPList({
     commit,
     state,
     rootGetters
-  }) {},
+  }) {
+    console.log('  XDC BRAND ACT Reset PLIST ');
+    dXdcCProducts.forEach(f => {
+      f();
+    });
+    dXdcCProducts = [];
+    commit('setPList', {});
+  }
+  /*,
+  setCProductId ({ commit, state, rootGetters }, { pid }) {
+  },
+  resetCProductId ({ commit, state, rootGetters }) {
+  } */
 
-  setCProductId({
-    commit,
-    state,
-    rootGetters
-  }, {
-    pid
-  }) {},
-
-  resetCProductId({
-    commit,
-    state,
-    rootGetters
-  }) {}
   /*
     ブランド追加
     - ログインチェック
@@ -11400,13 +11416,15 @@ const actions = {
 const getters = {
   pList: (state, getters, rootState, rootGetters) => {
     return state.pList;
-  },
+  }
+  /*,
   cProductId: (state, getters, rootState, rootGetters) => {
-    return state.cProductId;
+  return state.cProductId
   },
   cProduct: (state, getters, rootState, rootGetters) => {
-    return state.pList[state.cProductId];
-  }
+  return state.pList[state.cProductId]
+  } */
+
   /*
   bidValiState: (state, getters, rootState, rootGetters) => {
     return state.bidValiState
@@ -11678,6 +11696,12 @@ exports.ConvCUser = ConvCUser;
 
 /***/ }),
 /* 148 */
+/***/ (function(module, exports) {
+
+// This file is intentionally left empty for noop aliases
+
+/***/ }),
+/* 149 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12505,17 +12529,17 @@ if (false) {}
 
 
 
-const _788555da = () => interopDefault(__webpack_require__.e(/* import() | pages/create/index */ 3).then(__webpack_require__.bind(null, 192)));
+const _788555da = () => interopDefault(__webpack_require__.e(/* import() | pages/create/index */ 3).then(__webpack_require__.bind(null, 199)));
 
-const _73651f93 = () => interopDefault(__webpack_require__.e(/* import() | pages/create/brand/index */ 2).then(__webpack_require__.bind(null, 193)));
+const _73651f93 = () => interopDefault(__webpack_require__.e(/* import() | pages/create/brand/index */ 2).then(__webpack_require__.bind(null, 200)));
 
-const _45d4b5a4 = () => interopDefault(__webpack_require__.e(/* import() | pages/create/shop/index */ 5).then(__webpack_require__.bind(null, 191)));
+const _45d4b5a4 = () => interopDefault(__webpack_require__.e(/* import() | pages/create/shop/index */ 5).then(__webpack_require__.bind(null, 198)));
 
-const _72682a8a = () => interopDefault(__webpack_require__.e(/* import() | pages/create/brand/_id */ 1).then(__webpack_require__.bind(null, 194)));
+const _72682a8a = () => interopDefault(__webpack_require__.e(/* import() | pages/create/brand/_id */ 1).then(__webpack_require__.bind(null, 201)));
 
-const _0d9bd10c = () => interopDefault(__webpack_require__.e(/* import() | pages/create/shop/_id */ 4).then(__webpack_require__.bind(null, 195)));
+const _0d9bd10c = () => interopDefault(__webpack_require__.e(/* import() | pages/create/shop/_id */ 4).then(__webpack_require__.bind(null, 202)));
 
-const _c3851854 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 6).then(__webpack_require__.bind(null, 196))); // TODO: remove in Nuxt 3
+const _c3851854 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 6).then(__webpack_require__.bind(null, 203))); // TODO: remove in Nuxt 3
 
 
 const emptyFn = () => {};
@@ -13754,7 +13778,7 @@ fontawesome_svg_core_["library"].add(free_solid_svg_icons_["faLocationArrow"], f
 external_vue_default.a.component('font-awesome-icon', vue_fontawesome_["FontAwesomeIcon"]);
 external_vue_default.a.config.productionTip = false;
 // EXTERNAL MODULE: ./.nuxt/empty.js
-var _nuxt_empty = __webpack_require__(68);
+var _nuxt_empty = __webpack_require__(148);
 
 // CONCATENATED MODULE: ./plugins/routerOption.js
 /* harmony default export */ var routerOption = (/* async */({
@@ -13799,8 +13823,6 @@ var _nuxt_empty = __webpack_require__(68);
  // Source: ..\\plugins\\firebase (mode: 'client')
 
  // Source: ..\\plugins\\routerOption (mode: 'all')
-
- // Source: ..\\plugins\\infiniteloading (mode: 'client')
 // Component: <ClientOnly>
 
 external_vue_default.a.component(external_vue_client_only_default.a.name, external_vue_client_only_default.a); // TODO: Remove in Nuxt 3: <NoSsr>
@@ -14036,9 +14058,7 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof routerOption === 'function') {
     await routerOption(app.context, inject);
-  }
-
-  if (false) {} // Lock enablePreview in context
+  } // Lock enablePreview in context
 
 
   if (false) {} // If server-side, wait for async component to be resolved first

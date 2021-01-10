@@ -8,6 +8,7 @@ export { default as CcoHeader } from '../..\\components\\create\\organisms\\CcoH
 export { default as CcoNavi } from '../..\\components\\create\\organisms\\CcoNavi.vue'
 export { default as CcoProductCreate } from '../..\\components\\create\\organisms\\CcoProductCreate.vue'
 export { default as CcoShopCreate } from '../..\\components\\create\\organisms\\CcoShopCreate.vue'
+export { default as CcoProductEdit } from '../..\\components\\create\\organisms\\CcoProductEdit.vue'
 export { default as CctBrandId } from '../..\\components\\create\\templates\\CctBrandId.vue'
 export { default as CctBrandIndex } from '../..\\components\\create\\templates\\CctBrandIndex.vue'
 export { default as CctShopIndex } from '../..\\components\\create\\templates\\CctShopIndex.vue'
@@ -30,6 +31,7 @@ export const LazyCcoHeader = import('../..\\components\\create\\organisms\\CcoHe
 export const LazyCcoNavi = import('../..\\components\\create\\organisms\\CcoNavi.vue' /* webpackChunkName: "components_create/organisms/CcoNavi" */).then(c => c.default || c)
 export const LazyCcoProductCreate = import('../..\\components\\create\\organisms\\CcoProductCreate.vue' /* webpackChunkName: "components_create/organisms/CcoProductCreate" */).then(c => c.default || c)
 export const LazyCcoShopCreate = import('../..\\components\\create\\organisms\\CcoShopCreate.vue' /* webpackChunkName: "components_create/organisms/CcoShopCreate" */).then(c => c.default || c)
+export const LazyCcoProductEdit = import('../..\\components\\create\\organisms\\CcoProductEdit.vue' /* webpackChunkName: "components_create/organisms/CcoProductEdit" */).then(c => c.default || c)
 export const LazyCctBrandId = import('../..\\components\\create\\templates\\CctBrandId.vue' /* webpackChunkName: "components_create/templates/CctBrandId" */).then(c => c.default || c)
 export const LazyCctBrandIndex = import('../..\\components\\create\\templates\\CctBrandIndex.vue' /* webpackChunkName: "components_create/templates/CctBrandIndex" */).then(c => c.default || c)
 export const LazyCctShopIndex = import('../..\\components\\create\\templates\\CctShopIndex.vue' /* webpackChunkName: "components_create/templates/CctShopIndex" */).then(c => c.default || c)
