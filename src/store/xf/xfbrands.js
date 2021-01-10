@@ -26,6 +26,14 @@ export const actions = {
     console.log('    XF ACT BRANDS ADD Product ' + product.name)
     const productsRef = firestore.collection('xbrands').doc(product.brand).collection('products')
     productsRef.doc(product.id).withConverter(cfBrands.ConvCProduct).set(product)
+  },
+  /*
+    プロダクトの追加
+  */
+  updateProduct ({ commit, state, rootGetters }, product) {
+    console.log('    XF ACT BRANDS UPDATE Product ' + product.name)
+    const productsRef = firestore.collection('xbrands').doc(product.brand).collection('products')
+    productsRef.doc(product.id).withConverter(cfBrands.ConvCProduct).set(product)
   }
   /*
     プロダクト+画像の追加

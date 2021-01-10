@@ -43,10 +43,10 @@
             class="CooPedDil--creatives--garalley"
           >
             <v-img
-              v-for="(path, key) in pe_creatives"
+              v-for="(cObj, key) in pe_creatives"
               :key="key"
               class="CooPedDil--creatives--images"
-              :src="path"
+              :src="cObj.getPath()"
             />
           </div>
           <v-file-input
@@ -81,6 +81,7 @@
 </template>
 <script>
 import CgmOkCancelDialog from '@/components/general/molecules/CgmOkCancelDialog.vue'
+const cfBrands = require('~/classes/cfBrands.js')
 export default {
   name: 'CcoProductEdit',
   components: {
@@ -110,12 +111,14 @@ export default {
     pe_type: '',
     pe_status: '',
     pe_topimage: '',
+    /*
     pe_creater: '',
     pe_dateCreate: '',
     pe_dateUpdate: '',
     pe_dateRelease: '',
     pe_dateEnd: '',
     pe_brand: '',
+    */
     pe_attention: {},
     pe_purchase: {},
     pe_creatives: {},
@@ -164,12 +167,14 @@ export default {
       this.pe_type = this.$props.product.type
       this.pe_status = this.$props.product.status
       this.pe_topimage = this.$props.product.topimage
+      /*
       this.pe_creater = this.$props.product.creater
       this.pe_dateCreate = this.$props.product.dateCreate
       this.pe_dateUpdate = this.$props.product.dateUpdate
       this.pe_dateRelease = this.$props.product.dateRelease
       this.pe_dateEnd = this.$props.product.dateEnd
       this.pe_brand = this.$props.product.brand
+      */
       this.pe_attention = Object.assign({}, this.$props.product.attention)
       this.pe_purchase = Object.assign({}, this.$props.product.purchase)
       this.pe_creatives = Object.assign({}, this.$props.product.creatives)
@@ -212,11 +217,26 @@ export default {
       } if (file === null) {
         //
       } else {
-        this.$set(this.pe_creatives, `FILE_${Math.random().toString(32).substring(2)}`, window.URL.createObjectURL(file))
+        const creative = new cfBrands.CCreative()
+        creative.setFromFile(file)
+        this.$set(this.pe_creatives, creative.id, creative)
+        // this.$set(this.pe_creatives, `FILE_${Math.random().toString(32).substring(2)}`, window.URL.createObjectURL(file))
       }
     },
     updateProduct () {
       console.log('CCO product edit update ' + this.$props.product.id)
+      if (this.isEdited) {
+        const pAfter = Object.assign({}, this.$props.product)
+        pAfter.price = this.pe_price
+        pAfter.type = this.pe_type
+        pAfter.status = this.pe_status
+        pAfter.topimage = this.pe_topimage
+        pAfter.attention = Object.assign({}, this.pe_attention)
+        pAfter.purchase = Object.assign({}, this.pe_purchase)
+        pAfter.creatives = Object.assign({}, this.pe_creatives)
+        this.$store.dispatch('xd/create/xdcproducts/updateProduct', pAfter)
+      }
+      this.$props.closefunc()
     }
   }
 }

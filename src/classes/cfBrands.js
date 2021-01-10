@@ -9,20 +9,6 @@ class CBrand {
     this.shop = {}
     this.sells = {}
     this.staffs = {}
-    /*
-    this.setLogo = function (l) {
-      this.logo = l
-    }
-    this.setShop = function (s) {
-      this.shop = s
-    }
-    this.setSells = function (s) {
-      this.sells = s
-    }
-    this.setStaffs = function (s) {
-      this.staffs = s
-    }
-    */
   }
 }
 
@@ -138,6 +124,10 @@ class CProduct {
 }
 const ConvCProduct = {
   toFirestore (product) {
+    const creativesObj = {}
+    for (const cid in product.creatives) {
+      creativesObj[cid] = product.creatives[cid].toObj()
+    }
     return {
       name: product.name,
       price: product.price,
@@ -152,13 +142,14 @@ const ConvCProduct = {
       brand: product.brand,
       attention: product.attention,
       purchase: product.purchase,
-      creatives: product.creatives
+      creatives: creativesObj
     }
   },
   fromFirestore (snapshot, options) {
     const data = snapshot.data(options)
     const id = snapshot.id
     const product = new CProduct(data.name)
+    const creativesClass = {}
     product.id = id
     product.price = data.price
     product.status = data.status
@@ -172,12 +163,93 @@ const ConvCProduct = {
     product.brand = data.brand
     product.attention = Object.assign({}, data.attention)
     product.purchase = Object.assign({}, data.purchase)
-    product.creatives = Object.assign({}, data.creatives)
+    for (const cid in data.creatives) {
+      creativesClass[cid] = (new CCreative()).fromObj(data.creatives[cid])
+    }
+    // product.creatives = Object.assign({}, data.creatives)
     return product
   }
 }
 
+class CCreative {
+  constructor () {
+    this.id = ''
+    this.title = ''
+    this.type = ''
+    this.file = null
+    this.url = ''
+    this.synergy = {}
+    this.pv = 0
+    this.like = 0
+    this.dateCreate = ''
+    this.dateUpdate = ''
+  }
+
+  toObj () {
+    const ret = {}
+    ret.id = this.id
+    ret.title = this.title
+    ret.type = this.type
+    ret.file = this.file
+    ret.url = this.url
+    ret.synergy = this.synergy
+    ret.pv = this.pv
+    ret.like = this.like
+    ret.dateCreate = this.dateCreate
+    ret.dateUpdate = this.dateUpdate
+    return ret
+  }
+
+  fromObj (obj) {
+    this.id = obj.id
+    this.title = obj.title
+    this.type = obj.type
+    this.file = obj.file
+    this.url = obj.url
+    this.synergy = obj.synergy
+    this.pv = obj.pv
+    this.like = obj.like
+    this.dateCreate = obj.dateCreate
+    this.dateUpdate = obj.dateUpdate
+  }
+
+  setFromFile (file) {
+    this.type = 'FILE'
+    this.id = Math.random().toString(32).substring(2)
+    this.file = file
+    this.dateCreate = new Date()
+    return this
+  }
+
+  setUploadUrl (url) {
+    this.type = 'URL'
+    this.url = url
+    this.file = null
+    return this
+  }
+
+  getPath () {
+    if (this.type === 'FILE') {
+      return window.URL.createObjectURL(this.file)
+    } else if (this.type === 'URL') {
+      return this.url
+    }
+    return ''
+  }
+}
+/*
+const ConvCCreative = {
+  toFirestore (product) {
+    return {
+    }
+  },
+  fromFirestore (snapshot, options) {
+  }
+}
+*/
 exports.CBrand = CBrand
 exports.CProduct = CProduct
+exports.CCreative = CCreative
 exports.ConvCBrand = ConvCBrand
 exports.ConvCProduct = ConvCProduct
+// exports.ConvCProduct = ConvCCreative
