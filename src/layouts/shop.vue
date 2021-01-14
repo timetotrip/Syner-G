@@ -2,33 +2,33 @@
   <v-app id="app">
     <CgoLayoutBase>
       <template #header>
-        <CcoHeader />
+        <CsoHeader />
       </template>
       <template #content>
         <Nuxt id="Nuxt" />
       </template>
       <template #footer>
-        <CcoFooter />
+        <CsoFooter />
       </template>
       <template #navigation>
-        <CcoNavi />
+        <CsoNavi />
       </template>
     </CgoLayoutBase>
   </v-app>
 </template>
 
 <script>
-import CcoHeader from '@/components/create/organisms/CcoHeader.vue'
-import CcoNavi from '@/components/create/organisms/CcoNavi.vue'
-import CcoFooter from '@/components/create/organisms/CcoFooter.vue'
+import CsoHeader from '@/components/shop/organisms/CsoHeader.vue'
+import CsoNavi from '@/components/shop/organisms/CsoNavi.vue'
+import CsoFooter from '@/components/shop/organisms/CsoFooter.vue'
 import CgoLayoutBase from '@/components/general/organisms/CgoLayoutBase.vue'
 
 export default {
   name: 'LayoutCreate',
   components: {
-    CcoHeader,
-    CcoNavi,
-    CcoFooter,
+    CsoHeader,
+    CsoNavi,
+    CsoFooter,
     CgoLayoutBase
   }
 }

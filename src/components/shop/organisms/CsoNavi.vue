@@ -4,7 +4,7 @@
 <script>
 import CgmNaviBase from '@/components/general/molecules/CgmNaviBase.vue'
 export default {
-  name: 'CooNavi',
+  name: 'CsoNavi',
   components: {
     CgmNaviBase
   }

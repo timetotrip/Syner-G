@@ -4,7 +4,7 @@
 <script>
 import CgmHeaderBase from '@/components/general/molecules/CgmHeaderBase.vue'
 export default {
-  name: 'CooHeader',
+  name: 'CsoHeader',
   components: {
     CgmHeaderBase
   }

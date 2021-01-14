@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-  layout: 'create'
+  layout: 'shop'
 }
 </script>
 <style lang="scss">

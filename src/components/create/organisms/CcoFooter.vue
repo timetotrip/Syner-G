@@ -1,5 +1,5 @@
 <template>
-  <CgmFooterBase class="CooFtrBase">
+  <CgmFooterBase>
     <CgaFooterBtn
       :label="'TOP'"
       :icon="['fas', 'table']"
@@ -49,7 +49,7 @@ import CgaFooterBtn from '@/components/general/atoms/CgaFooterBtn.vue'
 import CgaFooterSheet from '@/components/general/atoms/CgaFooterSheet.vue'
 import CcoBrandsList from '@/components/create/organisms/CcoBrandsList.vue'
 export default {
-  name: 'CooFooter',
+  name: 'CcoFooter',
   components: {
     CgmFooterBase,
     CgaFooterBtn,
@@ -81,10 +81,4 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-.CooFtrBase{
-  // background-color: blue;
-  .CooFtrBase--sheetitem{
-    margin: 0;
-  }
-}
 </style>

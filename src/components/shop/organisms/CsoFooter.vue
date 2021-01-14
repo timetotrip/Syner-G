@@ -1,11 +1,12 @@
 <template>
-  <CgmFooterBase class="CooFtrBase">
+  <CgmFooterBase>
     <CgaFooterBtn
       :label="'TOP'"
       :icon="['fas', 'table']"
       :activechecker="{ dist: 'current', dir: '/create' }"
       :clickfunc="gotoNextTab"
     />
+    <!--
     <CgaFooterBtn
       :label="'CRIATIVE'"
       :icon="['fas', 'images']"
@@ -30,6 +31,7 @@
       :activechecker="{ dist: 'lowwer', dir: '/create/shop' }"
       :clickfunc="changeActiveSheet"
     />
+    -->
     <CgaFooterSheet :active="activeSheet==='MYSHOP'" :disablefunc="changeActiveSheet">
       マイショップ準備中
     </CgaFooterSheet>
@@ -47,14 +49,12 @@
 import CgmFooterBase from '@/components/general/molecules/CgmFooterBase.vue'
 import CgaFooterBtn from '@/components/general/atoms/CgaFooterBtn.vue'
 import CgaFooterSheet from '@/components/general/atoms/CgaFooterSheet.vue'
-import CcoBrandsList from '@/components/create/organisms/CcoBrandsList.vue'
 export default {
-  name: 'CooFooter',
+  name: 'CsoFooter',
   components: {
     CgmFooterBase,
     CgaFooterBtn,
-    CgaFooterSheet,
-    CcoBrandsList
+    CgaFooterSheet
   },
   data: () => ({
     activeSheet: ''
@@ -81,10 +81,4 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-.CooFtrBase{
-  // background-color: blue;
-  .CooFtrBase--sheetitem{
-    margin: 0;
-  }
-}
 </style>

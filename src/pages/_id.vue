@@ -1,10 +1,14 @@
 <template>
-  <div>
-    SHOP {{ $route.params.id }}
-  </div>
+  <CstShopId
+    :sid="$route.params.id"
+  />
 </template>
 <script>
+import CstShopId from '@/components/shop/templates/CstShopId.vue'
 export default {
+  components: {
+    CstShopId
+  },
   layout: 'shop'
 }
 </script>

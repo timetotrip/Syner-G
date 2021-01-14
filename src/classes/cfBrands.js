@@ -28,9 +28,9 @@ const ConvCBrand = {
     const id = snapshot.id
     const brand = new CBrand(id, data.name, data.owner)
     brand.logo = data.logo
-    brand.shop = data.shop
-    brand.sells = data.sells
-    brand.staffs = data.staffs
+    brand.shop = Object.assign({}, data.shop)
+    brand.sells = Object.assign({}, data.sells)
+    brand.staffs = Object.assign({}, data.staffs)
     return brand
   }
 }

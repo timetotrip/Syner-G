@@ -1,5 +1,6 @@
 import Vue from 'vue'
-
+let timeoutIdScl = 0
+let timeoutIdRsz = 0
 Vue.use({
   install (Vue) {
     const $window = Vue.observable({
@@ -12,11 +13,19 @@ Vue.use({
     // Nuxt を使用しなければこの分岐は削除してください
     if (process.browser) {
       const onScroll = () => {
-        $window.pageYOffset = global.pageYOffset
+        if (timeoutIdScl) { return }
+        timeoutIdScl = setTimeout(function () {
+          timeoutIdScl = 0
+          $window.pageYOffset = global.pageYOffset
+        }, 500)
       }
       const onResize = () => {
-        $window.width = document.documentElement.clientWidth
-        $window.height = global.innerHeight
+        if (timeoutIdRsz) { return }
+        timeoutIdRsz = setTimeout(function () {
+          timeoutIdRsz = 0
+          $window.width = document.documentElement.clientWidth
+          $window.height = global.innerHeight
+        }, 500)
       }
       global.addEventListener('scroll', onScroll)
       global.addEventListener('resize', onResize)
