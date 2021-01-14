@@ -1,11 +1,21 @@
 <template>
-  <v-app id="app" class="layoutcreate">
-    <CcoHeader id="Header" />
-    <CgoUserOnly id="Content">
-      <Nuxt id="Nuxt" />
-    </CgoUserOnly>
-    <CcoFooter id="Footer" />
-    <CcoNavi id="Navigation" />
+  <v-app id="app">
+    <CgoLayoutBase>
+      <template #header>
+        <CcoHeader />
+      </template>
+      <template #content>
+        <CgoUserOnly>
+          <Nuxt id="Nuxt" />
+        </CgoUserOnly>
+      </template>
+      <template #footer>
+        <CcoFooter />
+      </template>
+      <template #navigation>
+        <CcoNavi />
+      </template>
+    </CgoLayoutBase>
   </v-app>
 </template>
 
@@ -14,6 +24,7 @@ import CcoHeader from '@/components/create/organisms/CcoHeader.vue'
 import CcoNavi from '@/components/create/organisms/CcoNavi.vue'
 import CcoFooter from '@/components/create/organisms/CcoFooter.vue'
 import CgoUserOnly from '@/components/general/organisms/CgoUserOnly.vue'
+import CgoLayoutBase from '@/components/general/organisms/CgoLayoutBase.vue'
 
 export default {
   name: 'LayoutCreate',
@@ -21,50 +32,12 @@ export default {
     CcoHeader,
     CcoNavi,
     CcoFooter,
-    CgoUserOnly
+    CgoUserOnly,
+    CgoLayoutBase
   }
 }
 
 </script>
 
 <style lang="scss">
-$b-height: 60px;
-#app.layoutcreate{
-  position: relative;
-  widows: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  #Header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: $b-height;
-  }
-  #Content{
-    position: absolute;
-    top: $b-height;
-    left: 0;
-    right: 0;
-    bottom: $b-height;
-    max-height: calc( 100% - 104px );
-    overflow-y: scroll;
-    #Nuxt{
-      position:absolute;
-      top:0;
-      left:0;
-      right:0;
-      bottom:0;
-      overflow-y: scroll;
-      padding: 1rem;
-    }
-  }
-  #Footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: $b-height;
-  }
-}
 </style>

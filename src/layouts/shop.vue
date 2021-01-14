@@ -1,32 +1,36 @@
 <template>
   <v-app id="app">
-    <!--
-    <Header id="Header" />
-    <Nuxt id="Nuxt" />
-    <Footer id="Footer" />
-    <Navigation id="Navigation" />
-    <Models id="Models" />
-    -->
-    <Nuxt id="Nuxt" />
+    <CgoLayoutBase>
+      <template #header>
+        <CcoHeader />
+      </template>
+      <template #content>
+        <Nuxt id="Nuxt" />
+      </template>
+      <template #footer>
+        <CcoFooter />
+      </template>
+      <template #navigation>
+        <CcoNavi />
+      </template>
+    </CgoLayoutBase>
   </v-app>
 </template>
 
 <script>
-/*
-import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
-import Navigation from '@/components/Navigation.vue'
-import Models from '@/models/models'
-*/
+import CcoHeader from '@/components/create/organisms/CcoHeader.vue'
+import CcoNavi from '@/components/create/organisms/CcoNavi.vue'
+import CcoFooter from '@/components/create/organisms/CcoFooter.vue'
+import CgoLayoutBase from '@/components/general/organisms/CgoLayoutBase.vue'
+
 export default {
-  /*
+  name: 'LayoutCreate',
   components: {
-    Header,
-    Footer,
-    Navigation,
-    Models
+    CcoHeader,
+    CcoNavi,
+    CcoFooter,
+    CgoLayoutBase
   }
-  */
 }
 
 </script>

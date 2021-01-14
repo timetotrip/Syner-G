@@ -22,7 +22,8 @@ module.exports = {
   plugins: [
     { src: '@/plugins/fontawesome', ssr: true },
     { src: '@/plugins/firebase', ssr: false },
-    { src: '@/plugins/routerOption', ssr: true }
+    { src: '@/plugins/routerOption', ssr: true },
+    { src: '@/plugins/window', ssr: true }
     // { src: '@/plugins/infiniteloading', ssr: false }
   ],
 

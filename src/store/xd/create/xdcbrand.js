@@ -1,5 +1,10 @@
 const cfBrands = require('~/classes/cfBrands.js')
 let dXdcCBrand = []
+const ngBrandIds = [
+  'create',
+  'index',
+  'offical'
+]
 
 export const state = () => ({
   bidValiState: '',
@@ -23,17 +28,21 @@ export const actions = {
   */
   bidValiSet ({ commit, state, rootGetters }, bid) {
     console.log('  XDC BRAD ACT start vali bid ' + bid)
-    commit('bidValiState', bid)
-    const bidRef = rootGetters['xf/xfbrands/refBrandById'](bid)
-    bidRef.get().then((snap) => {
-      if (snap.exists) {
-        console.log('   XDC BRAD SNP error vali bid ' + bid)
-        commit('bidValiState', 'ng')
-      } else {
-        console.log('   XDC BRAD SNP ok vali bid ' + bid)
-        commit('bidValiState', 'ok')
-      }
-    })
+    if (ngBrandIds.includes(bid)) {
+      commit('bidValiState', 'ng')
+    } else {
+      commit('bidValiState', bid)
+      const bidRef = rootGetters['xf/xfbrands/refBrandById'](bid)
+      bidRef.get().then((snap) => {
+        if (snap.exists) {
+          console.log('   XDC BRAD SNP error vali bid ' + bid)
+          commit('bidValiState', 'ng')
+        } else {
+          console.log('   XDC BRAD SNP ok vali bid ' + bid)
+          commit('bidValiState', 'ok')
+        }
+      })
+    }
   },
   /*
     ブランドID重複チェック リセット
