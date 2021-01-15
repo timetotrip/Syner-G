@@ -26,7 +26,7 @@ export const actions = {
   /*
     ブランドID重複チェック
   */
-  bidValiSet ({ commit, state, rootGetters }, sid) {
+  sidValiSet ({ commit, state, rootGetters }, sid) {
     console.log('  XDC SHOP ACT start vali sid ' + sid)
     if (ngShopIds.includes(sid)) {
       commit('sidValiState', 'ng')
@@ -56,16 +56,16 @@ export const actions = {
     - ログインチェック
     - xfbrandsの更新→xfusersの更新
   */
-  addBrand ({ commit, state, rootGetters }, { bid, bname }) {
-    console.log('  XDC BRAND ACT Add brands ' + bid + bname)
+  addBrandShop ({ commit, state, rootGetters }, { sid, sname, bid }) {
+    console.log('  XDC Shop ACT Add Shop ' + sid + sname)
     const cUserId = rootGetters['xd/general/xdgcuser/cUserId']
     if (cUserId === '') {
-      console.log('  XDC cUserId ACT Add brands - done no login')
+      console.log('  XDC cUserId ACT Add Shop - done no login')
     }
-    const brand = new cfShops.CShop(bid, bname, cUserId)
-    this.dispatch('xf/xfbrands/addBrand', brand, { root: true })
-    this.dispatch('xd/general/xdgcuser/addMngBrand', bid, { root: true })
-    // commit('setCbrand', { cBrand: brand, permit: 'MNG' })
+    const shop = new cfShops.CShop(sid, sname, cUserId)
+    shop.brands[bid] = sname
+    this.dispatch('xf/xfshops/addShop', shop, { root: true })
+    this.dispatch('xd/general/xdgcuser/addMngShop', sid, { root: true })
   }
   /*
     カレントブランドの設定

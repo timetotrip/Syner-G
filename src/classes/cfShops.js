@@ -15,10 +15,10 @@ class CShop {
 
 const ConvCShop = {
   toFirestore (shop) {
+    // console.log(shop)
     return {
       name: shop.name,
       owner: shop.owner,
-      shop: shop.shop,
       logo: shop.logo,
       brands: shop.brands,
       products: shop.products,

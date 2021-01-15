@@ -84,6 +84,19 @@ export const actions = {
     cUserRef.update({
       ['permitBrands.' + bid]: 'MNG'
     })
+  },
+  /*
+    MngShops追加
+  */
+  addMngShop ({ commit, state, rootGetters }, sid) {
+    console.log('  XDG CUSER ACT add mng shop ' + sid)
+    if (state.cUser === null) {
+      return 0
+    }
+    const cUserRef = rootGetters['xf/xfusers/refCUser'](state.cUser.id)
+    cUserRef.update({
+      ['permitShops.' + sid]: 'MNG'
+    })
   }
 }
 export const getters = {
@@ -127,6 +140,31 @@ export const getters = {
   */
   hasBrandPermit: (state, getters, rootState, rootGetters) => (bid, need) => {
     const pmt = rootGetters['xd/general/xdgcuser/brandPermit'](bid)
+    return rootGetters['xd/general/xdgcuser/hasPermit'](need, pmt)
+  },
+  /*
+    SHOPのパーミット返却
+  */
+  shopPermit: (state, getters, rootState, rootGetters) => (sid) => {
+    if (!process.browser) {
+      return ''
+    } else if (state.cUser === null) {
+      return ''
+    } else if (typeof state.cUser.permitShops[sid] === 'undefined') {
+      return ''
+    } else if (typeof state.cUser.permitShops[sid] === 'undefined') {
+      return ''
+    }
+    return state.cUser.permitShops[sid]
+  },
+  /*
+    ブランドのパーミットチェック
+  */
+  hasShopPermit: (state, getters, rootState, rootGetters) => (sid, need) => {
+    const pmt = rootGetters['xd/general/xdgcuser/shopPermit'](sid)
+    return rootGetters['xd/general/xdgcuser/hasPermit'](need, pmt)
+  },
+  hasPermit: (state, getters, rootState, rootGetters) => (need, pmt) => {
     switch (need) {
       case 'MNG':
         switch (pmt) {

@@ -3,14 +3,14 @@
     <h2>オリジナルショップを作ろう</h2>
     {{ this.$props.defbrand }}
     <v-text-field
-      ref="bidfield"
+      ref="sidfield"
       v-model="sid"
       label="ショップID"
       counter="12"
       :rules="[rules.required, rules.maxlength, rules.minlength, rules.textonly]"
       outlined
-      @focus="sidValiReset()"
-      @change="sidValiStart()"
+      @focus="onForcus()"
+      @change="onChange()"
     />
     <p>{{ checkSidValiState }}</p>
     <p>ショップIDはオンラインショップのURLになるんだ</p>
@@ -101,8 +101,11 @@ export default {
     this.sidValiReset()
     this.$refs.form.resetValidation()
     if (this.$props.defid !== '') {
+      console.log('CCO shop mounted def id ' + this.$props.defid)
       this.sid = this.$props.defid
-      this.sidValiStart()
+      this.$store.dispatch('xd/create/xdcshop/sidValiSet', this.sid)
+      // this.$refs.sidfield.value = this.sid
+      // this.sidValiStart()
     }
     if (this.$props.defname !== '') {
       this.sname = this.$props.defname
@@ -112,9 +115,17 @@ export default {
     }
   },
   methods: {
+    onForcus () {
+      console.log('COO shop on forcus')
+      this.sidValiReset()
+    },
+    onChange () {
+      console.log('COO shop on onChange')
+      this.sidValiStart()
+    },
     sidValiStart () {
       console.log('CCO shop bidValiStart ' + this.sid)
-      if (this.$refs.bidfield.validate()) {
+      if (this.$refs.sidfield.validate()) {
         this.$store.dispatch('xd/create/xdcshop/sidValiSet', this.sid)
       }
     },
@@ -122,11 +133,12 @@ export default {
       console.log('CCO shop bidValiReset')
       this.$store.dispatch('xd/create/xdcshop/sidValiReset')
     },
-    addBrand () {
+    addShop () {
       console.log('CCO shop aAddShop ' + this.sname)
-      this.$store.dispatch('xd/create/xdcshop/addShop', {
-        bid: this.sid,
-        bname: this.sname
+      this.$store.dispatch('xd/create/xdcshop/addBrandShop', {
+        sid: this.sid,
+        sname: this.sname,
+        bid: this.sbrand
       })
       this.$router.push(`/create/shop/${this.sid}`)
     }

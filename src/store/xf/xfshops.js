@@ -13,12 +13,12 @@ export const mutations = {
 export const actions = {
   /*
     ブランドの追加
-  *//*
-  addBrand ({ commit, state, rootGetters }, brand) {
-    console.log('    XF BRANDS ACT ADD Brand ' + brand.name)
-    const brandsRef = firestore.collection('xbrands')
-    brandsRef.doc(brand.id).withConverter(cfBrands.ConvCBrand).set(brand)
-  }, */
+  */
+  addShop ({ commit, state, rootGetters }, shop) {
+    console.log('    XF SHOPSS ACT ADD shop ' + shop.name)
+    const shopsRef = firestore.collection('xshops')
+    shopsRef.doc(shop.id).withConverter(cfShops.ConvCShop).set(shop)
+  }
   /*
     プロダクトの追加
   *//*
