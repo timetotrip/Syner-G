@@ -6,7 +6,7 @@ class CBrand {
     this.owner = owner
     this.id = id
     this.logo = ''
-    this.shop = {}
+    this.shop = ''
     this.sells = {}
     this.staffs = {}
   }
@@ -17,7 +17,7 @@ const ConvCBrand = {
     return {
       name: brand.name,
       owner: brand.owner,
-      shop: brand.shop,
+      shop: brand.shop.toString(),
       logo: brand.logo,
       sells: brand.sells,
       staffs: brand.staffs
@@ -28,7 +28,7 @@ const ConvCBrand = {
     const id = snapshot.id
     const brand = new CBrand(id, data.name, data.owner)
     brand.logo = data.logo
-    brand.shop = Object.assign({}, data.shop)
+    brand.shop = data.shop.toString()
     brand.sells = Object.assign({}, data.sells)
     brand.staffs = Object.assign({}, data.staffs)
     return brand

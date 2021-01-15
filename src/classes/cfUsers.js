@@ -21,7 +21,7 @@ const ConvCUser = {
   },
   fromFirestore (snapshot, options) {
     const data = snapshot.data(options)
-    const user = CUser(data.id, data.name)
+    const user = new CUser(data.id, data.name)
     user.permitBrands = Object.assign({}, data.permitBrands)
     user.permitShops = Object.assign({}, data.permitShops)
     return user

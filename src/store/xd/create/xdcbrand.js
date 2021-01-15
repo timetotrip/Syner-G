@@ -107,6 +107,17 @@ export const actions = {
     console.log('  XDC BRAND ACT reset Cbrand ')
     dXdcCBrand.forEach((f) => { f() })
     dXdcCBrand = []
+  },
+  /*
+    ブランドにショップ追加
+  */
+  addBrandShop ({ commit, state, rootGetters }, { bid, sid }) {
+    console.log('  XDC BRAND ACT add Shop ')
+    if (state.cBrand === null) {
+      return 0
+    }
+    const cBrandRef = rootGetters['xf/xfbrands/refBrandById'](bid)
+    cBrandRef.update({ shop: sid })
   }
 }
 

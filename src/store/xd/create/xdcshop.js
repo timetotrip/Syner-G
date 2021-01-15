@@ -65,7 +65,7 @@ export const actions = {
     const shop = new cfShops.CShop(sid, sname, cUserId)
     shop.brands[bid] = sname
     this.dispatch('xf/xfshops/addShop', shop, { root: true })
-    this.dispatch('xd/general/xdgcuser/addMngShop', sid, { root: true })
+    this.dispatch('xd/create/xdcbrand/addBrandShop', { bid, sid }, { root: true })
   }
   /*
     カレントブランドの設定
