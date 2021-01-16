@@ -40,5 +40,12 @@
     "component": "D:\\\\LocalService\\\\tsunade\\\\src\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
     "_name": "_c3851854"
+  },
+  {
+    "name": "id",
+    "path": "/:id",
+    "component": "D:\\\\LocalService\\\\tsunade\\\\src\\\\pages\\\\_id.vue",
+    "chunkName": "pages/_id",
+    "_name": "_2d2273be"
   }
 ]

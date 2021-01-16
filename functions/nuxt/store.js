@@ -14,10 +14,14 @@ let store = {};
   store.modules = store.modules || {}
 
   resolveStoreModules(require('..\\store\\xf\\xfbrands.js'), 'xf/xfbrands.js')
+  resolveStoreModules(require('..\\store\\xf\\xfshops.js'), 'xf/xfshops.js')
+  resolveStoreModules(require('..\\store\\xf\\xfstorage.js'), 'xf/xfstorage.js')
   resolveStoreModules(require('..\\store\\xf\\xfusers.js'), 'xf/xfusers.js')
   resolveStoreModules(require('..\\store\\xd\\create\\xdcbrand.js'), 'xd/create/xdcbrand.js')
   resolveStoreModules(require('..\\store\\xd\\create\\xdcproducts.js'), 'xd/create/xdcproducts.js')
+  resolveStoreModules(require('..\\store\\xd\\create\\xdcshop.js'), 'xd/create/xdcshop.js')
   resolveStoreModules(require('..\\store\\xd\\general\\xdgcuser.js'), 'xd/general/xdgcuser.js')
+  resolveStoreModules(require('..\\store\\xd\\shop\\xdsshop.js'), 'xd/shop/xdsshop.js')
 
   // If the environment supports hot reloading...
 })()

@@ -1,6 +1,7 @@
 {
   "entry": "server.js",
   "files": {
+    "pages/_id.js": "pages/_id.js",
     "pages/create/brand/_id.js": "pages/create/brand/_id.js",
     "pages/create/brand/index.js": "pages/create/brand/index.js",
     "pages/create/index.js": "pages/create/index.js",
@@ -10,6 +11,7 @@
     "server.js": "server.js"
   },
   "maps": {
+    "pages/_id.js": "pages/_id.js.map",
     "pages/create/brand/_id.js": "pages/create/brand/_id.js.map",
     "pages/create/brand/index.js": "pages/create/brand/index.js.map",
     "pages/create/index.js": "pages/create/index.js.map",

@@ -65,6 +65,12 @@
   "LazyCcoProductEdit": {
     "description": "Auto imported from components/create/organisms/CcoProductEdit.vue"
   },
+  "CcoBrandsShopLink": {
+    "description": "Auto imported from components/create/organisms/CcoBrandsShopLink.vue"
+  },
+  "LazyCcoBrandsShopLink": {
+    "description": "Auto imported from components/create/organisms/CcoBrandsShopLink.vue"
+  },
   "CctBrandId": {
     "description": "Auto imported from components/create/templates/CctBrandId.vue"
   },
@@ -82,6 +88,54 @@
   },
   "LazyCctShopIndex": {
     "description": "Auto imported from components/create/templates/CctShopIndex.vue"
+  },
+  "CsoFooter": {
+    "description": "Auto imported from components/shop/organisms/CsoFooter.vue"
+  },
+  "LazyCsoFooter": {
+    "description": "Auto imported from components/shop/organisms/CsoFooter.vue"
+  },
+  "CsoHeader": {
+    "description": "Auto imported from components/shop/organisms/CsoHeader.vue"
+  },
+  "LazyCsoHeader": {
+    "description": "Auto imported from components/shop/organisms/CsoHeader.vue"
+  },
+  "CsoNavi": {
+    "description": "Auto imported from components/shop/organisms/CsoNavi.vue"
+  },
+  "LazyCsoNavi": {
+    "description": "Auto imported from components/shop/organisms/CsoNavi.vue"
+  },
+  "Cso1stView": {
+    "description": "Auto imported from components/shop/organisms/Cso1stView.vue"
+  },
+  "LazyCso1stView": {
+    "description": "Auto imported from components/shop/organisms/Cso1stView.vue"
+  },
+  "CsoProductsAll": {
+    "description": "Auto imported from components/shop/organisms/CsoProductsAll.vue"
+  },
+  "LazyCsoProductsAll": {
+    "description": "Auto imported from components/shop/organisms/CsoProductsAll.vue"
+  },
+  "CgaFooterBtn": {
+    "description": "Auto imported from components/general/atoms/CgaFooterBtn.vue"
+  },
+  "LazyCgaFooterBtn": {
+    "description": "Auto imported from components/general/atoms/CgaFooterBtn.vue"
+  },
+  "CgaFooterSheet": {
+    "description": "Auto imported from components/general/atoms/CgaFooterSheet.vue"
+  },
+  "LazyCgaFooterSheet": {
+    "description": "Auto imported from components/general/atoms/CgaFooterSheet.vue"
+  },
+  "CstShopId": {
+    "description": "Auto imported from components/shop/templates/CstShopId.vue"
+  },
+  "LazyCstShopId": {
+    "description": "Auto imported from components/shop/templates/CstShopId.vue"
   },
   "CgmFloatActMenu": {
     "description": "Auto imported from components/general/molecules/CgmFloatActMenu.vue"
@@ -107,17 +161,11 @@
   "LazyCgmNaviBase": {
     "description": "Auto imported from components/general/molecules/CgmNaviBase.vue"
   },
-  "CgaFooterBtn": {
-    "description": "Auto imported from components/general/atoms/CgaFooterBtn.vue"
+  "CgmOkCancelDialog": {
+    "description": "Auto imported from components/general/molecules/CgmOkCancelDialog.vue"
   },
-  "LazyCgaFooterBtn": {
-    "description": "Auto imported from components/general/atoms/CgaFooterBtn.vue"
-  },
-  "CgaFooterSheet": {
-    "description": "Auto imported from components/general/atoms/CgaFooterSheet.vue"
-  },
-  "LazyCgaFooterSheet": {
-    "description": "Auto imported from components/general/atoms/CgaFooterSheet.vue"
+  "LazyCgmOkCancelDialog": {
+    "description": "Auto imported from components/general/molecules/CgmOkCancelDialog.vue"
   },
   "CgoUserBrandPermmit": {
     "description": "Auto imported from components/general/organisms/CgoUserBrandPermmit.vue"
@@ -130,5 +178,17 @@
   },
   "LazyCgoUserOnly": {
     "description": "Auto imported from components/general/organisms/CgoUserOnly.vue"
+  },
+  "CgoLayoutBase": {
+    "description": "Auto imported from components/general/organisms/CgoLayoutBase.vue"
+  },
+  "LazyCgoLayoutBase": {
+    "description": "Auto imported from components/general/organisms/CgoLayoutBase.vue"
+  },
+  "CgoUserShopPermmit": {
+    "description": "Auto imported from components/general/organisms/CgoUserShopPermmit.vue"
+  },
+  "LazyCgoUserShopPermmit": {
+    "description": "Auto imported from components/general/organisms/CgoUserShopPermmit.vue"
   }
 }
