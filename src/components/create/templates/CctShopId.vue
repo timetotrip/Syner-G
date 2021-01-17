@@ -1,7 +1,7 @@
 <template>
   <CgoUserShopPermmit
     :sid="sid"
-    :need="'VEW'"
+    :need="'MNG'"
   >
     <CgmFloatActMenu
       :v-if="cShop!==null"

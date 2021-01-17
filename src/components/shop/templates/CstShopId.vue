@@ -1,6 +1,6 @@
 <template>
   <CgmFloatActMenu
-    :v-if="true/*cBrand!==null*/"
+    :v-if="cShop!==null"
     :defaultkey="'top'"
     :menus="[{
       key: 'top',
@@ -14,7 +14,7 @@
   >
     <template #top>
       <Cso1stView />
-      <CsoProductsAll />
+      <CsoProductsAll :v-if="cShop!==null" :shop="cShop" />
     </template>
     <!--
     <template #product>
@@ -40,15 +40,15 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('xd/shop/xdcshop', ['cShop'])
+    ...mapGetters('xd/shop/xdsshop', ['cShop'])
   },
   mounted () {
     console.log('Cst shop id mounted')
-    this.$store.dispatch('xd/shop/xdcshop/setCShop', this.$props.sid)
+    this.$store.dispatch('xd/shop/xdsshop/setCShop', this.$props.sid)
   },
   beforeDestroy () {
     console.log('Cst shop id beforeDestroy')
-    this.$store.dispatch('xd/shop/xdcshop/resetCShop')
+    this.$store.dispatch('xd/shop/xdsshop/resetCShop')
   }
 }
 </script>

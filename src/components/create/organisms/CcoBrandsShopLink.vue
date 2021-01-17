@@ -19,8 +19,7 @@ export default {
       if (this.$props.brand !== null) {
         if (this.$props.brand.shop !== '') {
           this.$router.push(`/create/shop/${this.$props.brand.shop}/`)
-        }
-        else {
+        } else {
           this.$router.push(`/create/shop/?id=${this.$props.brand.id}&name=${this.$props.brand.name}&brand=${this.$props.brand.id}`)
         }
       }

@@ -1,4 +1,5 @@
 const cfBrands = require('~/classes/cfBrands.js')
+const cfCreatives = require('~/classes/cfCreatives.js')
 let dXdcCProducts = []
 
 export const state = () => ({
@@ -19,11 +20,13 @@ export const actions = {
     console.log('  XDC BRAND ACT Add product ' + pname)
     // クラス生成と初期化
     const product = new cfBrands.CProduct(pname)
+    const bid = rootGetters['xd/create/xdcbrand/cBrandId']
+    const uid = rootGetters['xd/general/xdgcuser/cUserId']
     // ID発番
-    product.id = Math.random().toString(32).substring(2)
+    product.id = bid + Math.random().toString(32).substring(2)
     // クリエイターとブランドのID紐づけ
-    product.creater = rootGetters['xd/general/xdgcuser/cUserId']
-    product.brand = rootGetters['xd/create/xdcbrand/cBrandId']
+    product.creater = uid
+    product.brand = bid
     // 日時設定
     product.dateCreate = new Date()
     product.dateUpdate = new Date()
@@ -49,10 +52,33 @@ export const actions = {
     for (const cid in pAfter.creatives) {
       if (pAfter.creatives[cid].type === 'FILE') {
         fileTask.push(pAfter.creatives[cid])
-        delete pAfter.creatives[cid]
+        // delete pAfter.creatives[cid]
+        pAfter.creatives[cid].uploadingRef()
       }
     }
-    this.dispatch('xd/create/xdcproducts/updateProductCore', { pAfter, fileTask }, { root: true })
+    this.dispatch('xf/xfbrands/updateProduct', pAfter, { root: true })
+    this.dispatch('xd/create/xdcproducts/updateProductCreative', fileTask, { root: true })
+  },
+  updateProductCreative ({ commit, state, rootGetters }, fileTask) {
+    console.log('  XDC BRAND ACT update product creative = ' + fileTask.length)
+    fileTask.forEach((ft) => {
+      const cid = ft.id
+      const cRef = rootGetters['xf/xfstorage/refCreativeById'](cid)
+      const uTask = cRef.put(ft.file)
+      uTask.on('state_changed',
+        (snapshot) => { /* Progress */ },
+        (err) => { console.log(err) },
+        () => {
+          uTask.snapshot.ref.getDownloadURL().then((url) => {
+            console.log('  XDC BRAND SNP update product core file upload')
+            console.log(url)
+            const cobj = new cfCreatives.CCreative()
+            cobj.setIdUrl(cid, url)
+            this.dispatch('xf/xfcreatives/addCreative', cobj, { root: true })
+          })
+        }
+      )
+    })
   },
   updateProductCore ({ commit, state, rootGetters }, { pAfter, fileTask }) {
     console.log('  XDC BRAND ACT update product core file = ' + fileTask.length)

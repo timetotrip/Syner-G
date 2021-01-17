@@ -1,6 +1,6 @@
 <template>
   <div v-if="brand!==null">
-    <h2>{{ brand.name }} ブランド トップ</h2>
+    <h2>{{ brand.name }} ブランド サマリー</h2>
     <p>詳細準備中</p>
     <CcoBrandsShopLink :brand="brand" />
   </div>

@@ -15,5 +15,8 @@ export const actions = {
 export const getters = {
   refProductCreative: (state, getters, rootState, rootGetters) => (bid, pid, cid) => {
     return firestorage.ref(`creatives/${bid}/${pid}/${cid}`)
+  },
+  refCreativeById: (state, getters, rootState, rootGetters) => (cid) => {
+    return firestorage.ref(`creatives/${cid}`)
   }
 }

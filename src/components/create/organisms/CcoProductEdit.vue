@@ -217,8 +217,8 @@ export default {
       } if (file === null) {
         //
       } else {
-        const creative = new cfBrands.CCreative()
-        creative.setFromFile(file)
+        const creative = new cfBrands.CCreativeRef()
+        creative.setFromFile(file, this.$props.product.id)
         this.$set(this.pe_creatives, creative.id, creative)
         // this.$set(this.pe_creatives, `FILE_${Math.random().toString(32).substring(2)}`, window.URL.createObjectURL(file))
       }

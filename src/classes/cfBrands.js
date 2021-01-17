@@ -164,25 +164,27 @@ const ConvCProduct = {
     product.attention = Object.assign({}, data.attention)
     product.purchase = Object.assign({}, data.purchase)
     for (const cid in data.creatives) {
-      creativesClass[cid] = (new CCreative()).fromObj(data.creatives[cid])
+      creativesClass[cid] = (new CCreativeRef()).fromObj(data.creatives[cid])
     }
     // product.creatives = Object.assign({}, data.creatives)
     return product
   }
 }
 
-class CCreative {
+class CCreativeRef {
   constructor () {
     this.id = ''
     this.title = ''
     this.type = ''
     this.file = null
     this.url = ''
+    /*
     this.synergy = {}
     this.pv = 0
     this.like = 0
     this.dateCreate = ''
     this.dateUpdate = ''
+    */
   }
 
   toObj () {
@@ -192,11 +194,13 @@ class CCreative {
     ret.type = this.type
     ret.file = this.file
     ret.url = this.url
+    /*
     ret.synergy = this.synergy
     ret.pv = this.pv
     ret.like = this.like
     ret.dateCreate = this.dateCreate
     ret.dateUpdate = this.dateUpdate
+    */
     return ret
   }
 
@@ -206,19 +210,26 @@ class CCreative {
     this.type = obj.type
     this.file = obj.file
     this.url = obj.url
+    /*
     this.synergy = obj.synergy
     this.pv = obj.pv
     this.like = obj.like
     this.dateCreate = obj.dateCreate
     this.dateUpdate = obj.dateUpdate
+    */
   }
 
-  setFromFile (file) {
+  setFromFile (file, pid) {
     this.type = 'FILE'
-    this.id = Math.random().toString(32).substring(2)
+    this.id = `P-${pid}-${Math.random().toString(32).substring(4)}`
     this.file = file
     this.dateCreate = new Date()
     return this
+  }
+
+  uploadingRef () {
+    this.type = 'REF'
+    this.file = null
   }
 
   setUploadUrl (url) {
@@ -249,7 +260,7 @@ const ConvCCreative = {
 */
 exports.CBrand = CBrand
 exports.CProduct = CProduct
-exports.CCreative = CCreative
+exports.CCreativeRef = CCreativeRef
 exports.ConvCBrand = ConvCBrand
 exports.ConvCProduct = ConvCProduct
 // exports.ConvCProduct = ConvCCreative

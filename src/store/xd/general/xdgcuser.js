@@ -183,6 +183,7 @@ export const getters = {
             return false
         }
       case 'VEW':
+        /*
         switch (pmt) {
           case 'MNG':
           case 'EDT':
@@ -191,6 +192,8 @@ export const getters = {
           default :
             return false
         }
+        */
+        return true
       default :
         return false
     }
