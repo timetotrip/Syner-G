@@ -146,6 +146,7 @@ export const getters = {
     SHOPのパーミット返却
   */
   shopPermit: (state, getters, rootState, rootGetters) => (sid) => {
+    console.log(sid)
     if (!process.browser) {
       return ''
     } else if (state.cUser === null) {

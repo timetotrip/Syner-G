@@ -1,5 +1,5 @@
 const cfShops = require('~/classes/cfShops.js')
-// let dXdcCShop = []
+let dXdcCShop = []
 const ngShopIds = [
   'create',
   'index',
@@ -16,7 +16,7 @@ export const mutations = {
   sidValiState (state, result) {
     state.sidValiState = result
   },
-  setCbrand (state, { cShop, permit }) {
+  setCShop (state, { cShop, permit }) {
     state.cShop = cShop
     state.cShopPermit = permit
   }
@@ -66,52 +66,49 @@ export const actions = {
     shop.brands[bid] = sname
     this.dispatch('xf/xfshops/addShop', shop, { root: true })
     this.dispatch('xd/create/xdcbrand/addBrandShop', { bid, sid }, { root: true })
-  }
+    this.dispatch('xd/general/xdgcuser/addMngShop', sid, { root: true })
+  },
   /*
-    カレントブランドの設定
+    カレントショップの設定
   */
-  /*
-  setCBrand ({ commit, state, rootGetters }, bid) {
-    console.log('  XDC BRAND Set Cbrand ' + bid)
-    if (!rootGetters['xd/general/xdgcuser/hasBrandPermit'](bid, 'VEW')) {
+  setCShop ({ commit, state, rootGetters }, sid) {
+    console.log('  XDC SHOP Set CSHOP ' + sid)
+    if (!rootGetters['xd/general/xdgcuser/hasShopPermit'](sid, 'VEW')) {
       // 権限チェック
-      console.log('  XDC BRAND Set Cbrand NO Permit error ' + bid)
+      console.log('  XDC SHOP Set CSHOP NO Permit error ' + sid)
       return 0
-    } else if (state.cBrand != null) {
+    } else if (state.cShop != null) {
       // 既に設定済み場合は何もしない
-      if (state.cBrand.id === bid) {
-        console.log('  XDC BRAND Set Cbrand ARLADY NTD ' + bid)
+      if (state.cShop.id === sid) {
+        console.log('  XDC SHOP Set CSHOP ARLADY NTD ' + sid)
         return 0
       }
     }
     // 過去の設定をリセット
-    dXdcCBrand.forEach((f) => { f() })
-    dXdcCBrand = []
+    dXdcCShop.forEach((f) => { f() })
+    dXdcCShop = []
     // 現在の権限設定を取得
-    const pmt = rootGetters['xd/general/xdgcuser/brandPermit'](bid)
+    const pmt = rootGetters['xd/general/xdgcuser/shopPermit'](sid)
     // ブランド 参照の取得
-    const cBrandRef = rootGetters['xf/xfbrands/refBrandById'](bid)
+    const cShopRef = rootGetters['xf/xfshops/refShopById'](sid)
     // イベントハンドラの設定
-    dXdcCBrand.push(cBrandRef.withConverter(cfBrands.ConvCBrand).onSnapshot((snap) => {
+    dXdcCShop.push(cShopRef.withConverter(cfShops.ConvCShop).onSnapshot((snap) => {
       if (!snap.empty) {
-        console.log('  XDC BRAND Set Cbrand SET' + bid)
-        commit('setCbrand', { cBrand: snap.data(), permit: pmt })
+        console.log('  XDC SHOP Set CSHOP SET' + sid)
+        commit('setCShop', { cShop: snap.data(), permit: pmt })
       } else {
-        console.log('  XDC BRAND Set Cbrand ERROR CANT FIND' + bid)
+        console.log('  XDC SHOP Set CSHOP ERROR CANT FIND' + sid)
       }
     }))
   },
-  */
   /*
-    カレントブランドのリセット
+    カレントショップのリセット
   */
-  /*
-  resetCBrand ({ commit, state, rootGetters }) {
-    console.log('  XDC BRAND ACT reset Cbrand ')
-    dXdcCBrand.forEach((f) => { f() })
-    dXdcCBrand = []
+  resetCShop ({ commit, state, rootGetters }) {
+    console.log('  XDC Shop ACT reset CShop ')
+    dXdcCShop.forEach((f) => { f() })
+    dXdcCShop = []
   }
-  */
 }
 
 export const getters = {
