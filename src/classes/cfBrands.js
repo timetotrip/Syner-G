@@ -166,7 +166,7 @@ const ConvCProduct = {
     for (const cid in data.creatives) {
       creativesClass[cid] = (new CCreativeRef()).fromObj(data.creatives[cid])
     }
-    // product.creatives = Object.assign({}, data.creatives)
+    product.creatives = creativesClass
     return product
   }
 }
@@ -210,6 +210,7 @@ class CCreativeRef {
     this.type = obj.type
     this.file = obj.file
     this.url = obj.url
+    return this
     /*
     this.synergy = obj.synergy
     this.pv = obj.pv

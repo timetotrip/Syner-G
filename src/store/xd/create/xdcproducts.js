@@ -41,7 +41,7 @@ export const actions = {
     console.log('  XDC BRAND ACT update product ' + pAfter.name)
     const pid = pAfter.id
     const pBefor = state.pList[pid]
-    const fileTask = []
+    const fileTask = {}
     // 日時設定
     pAfter.dateUpdate = new Date()
     for (const cid in pBefor.creatives) {
@@ -51,7 +51,8 @@ export const actions = {
     }
     for (const cid in pAfter.creatives) {
       if (pAfter.creatives[cid].type === 'FILE') {
-        fileTask.push(pAfter.creatives[cid])
+        // fileTask.push(pAfter.creatives[cid])
+        fileTask[cid] = pAfter.creatives[cid].file
         // delete pAfter.creatives[cid]
         pAfter.creatives[cid].uploadingRef()
       }
@@ -61,10 +62,11 @@ export const actions = {
   },
   updateProductCreative ({ commit, state, rootGetters }, fileTask) {
     console.log('  XDC BRAND ACT update product creative = ' + fileTask.length)
-    fileTask.forEach((ft) => {
-      const cid = ft.id
+    for (const cid in fileTask) {
+    // fileTask.forEach((ft) => {
+      // const cid = ft.id
       const cRef = rootGetters['xf/xfstorage/refCreativeById'](cid)
-      const uTask = cRef.put(ft.file)
+      const uTask = cRef.put(fileTask[cid])
       uTask.on('state_changed',
         (snapshot) => { /* Progress */ },
         (err) => { console.log(err) },
@@ -78,7 +80,7 @@ export const actions = {
           })
         }
       )
-    })
+    }
   },
   updateProductCore ({ commit, state, rootGetters }, { pAfter, fileTask }) {
     console.log('  XDC BRAND ACT update product core file = ' + fileTask.length)

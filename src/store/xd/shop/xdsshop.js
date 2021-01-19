@@ -1,9 +1,12 @@
 const cfShops = require('~/classes/cfShops.js')
 const cfBrands = require('~/classes/cfBrands.js')
+const cfCreatives = require('~/classes/cfCreatives.js')
+const pathLocading = ''
 let dXdsCShop = []
 export const state = () => ({
   cShop: null,
-  cProducts: []
+  cProducts: [],
+  cCreatives: {}
 })
 
 export const mutations = {
@@ -15,6 +18,7 @@ export const mutations = {
   },
   resetCProducts (state) {
     state.cProducts = []
+    state.cCreatives = {}
   },
   pushCProducts (state, cProducts) {
     const newProducts = Object.assign({}, state.cProducts)
@@ -22,6 +26,11 @@ export const mutations = {
       newProducts[pid] = cProducts[pid]
     }
     state.cProducts = newProducts
+  },
+  pushCCreative (state, creative) {
+    const newCreatives = Object.assign({}, state.cCreatives)
+    newCreatives[creative.id] = creative
+    state.cCreatives = newCreatives
   }
 }
 
@@ -76,9 +85,38 @@ export const actions = {
           })
         }
         commit('pushCProducts', plist)
+        this.dispatch('xd/shop/xdsshop/setProductsCreatives', plist, { root: true })
       }))
     }
     // TODO プロダクトショップを作るタイミングでここに追記
+    //
+    // ////
+  },
+  setProductsCreatives ({ commit, state, rootGetters }, plist) {
+    console.log('  XDC SHOP Set CPRODUCTS CREATIVE ')
+    let cIds = []
+    for (const pid in plist) {
+      for (const cid in plist[pid].creatives) {
+        if (typeof state.cCreatives[cid] !== 'undefined') {
+          // already
+        } else if (cIds.includes(cid)) {
+          // already
+        } else {
+          cIds.push(cid)
+        }
+      }
+    }
+    while (cIds.length > 0) {
+      const cIds10 = cIds.slice(0, 10)
+      const cIds10Ref = rootGetters['xf/xfcreatives/refCreativesByIds10'](cIds10)
+      dXdsCShop.push(cIds10Ref.withConverter(cfCreatives.ConvCCreative).onSnapshot((snaps) => {
+        snaps.forEach((snap) => {
+          console.log('  XDC SHOP Set CREATIVE ' + snap.data().id)
+          commit('pushCCreative', snap.data())
+        })
+      }))
+      cIds = cIds.slice(10)
+    }
   },
   /*
     カレントSHOPのリセット
@@ -97,5 +135,56 @@ export const getters = {
   },
   cProducts: (state, getters, rootState, rootGetters) => {
     return state.cProducts
+  },
+  cProCreatives: (state, getters, rootState, rootGetters) => (pid) => {
+    if (typeof state.cProducts[pid] === 'undefined') {
+      return {}
+    }
+    return state.cProducts[pid].creatives
+  },
+  cProCreativeIds: (state, getters, rootState, rootGetters) => (pid) => {
+    const creatives = rootGetters['xd/shop/xdsshop/cProCreatives'](pid)
+    if (creatives === {}) {
+      return []
+    }
+    return Object.keys(creatives)
+  },
+  cCrePath: (state, getters, rootState, rootGetters) => (cid) => {
+    if (state.cCreatives === {}) {
+      return pathLocading
+    } else if (typeof state.cCreatives[cid] === 'undefined') {
+      return pathLocading
+    }
+    return state.cCreatives[cid].url
+  },
+  cProTopCid: (state, getters, rootState, rootGetters) => (pid) => {
+    return state.cProducts[pid].topimage
+  },
+  cProHasTopCre: (state, getters, rootState, rootGetters) => (pid) => {
+    /*
+    if (typeof state.cProducts[pid] === 'undefined') {
+      return false
+    } else if (state.cProducts[pid].topimage !== '') {
+      return true
+    }
+    const pCreativeIds = rootGetters['xd/shop/xdsshop/cProCreativeIds'](pid)
+    if (pCreativeIds.length > 0) {
+      return true
+    }
+    return false
+    */
+    return false
+  },
+  cProTopCrePath: (state, getters, rootState, rootGetters) => (pid) => {
+    if (typeof state.cProducts[pid] === 'undefined') {
+      return ''
+    } else if (state.cProducts[pid].topimage !== '') {
+      return state.cProducts[pid].topimage
+    }
+    const pCreativeIds = rootGetters['xd/shop/xdsshop/cProCreativeIds'](pid)
+    if (pCreativeIds.length > 0) {
+      return rootGetters['xd/shop/xdsshop/cCrePath'](pCreativeIds[0])
+    }
+    return pathLocading
   }
 }

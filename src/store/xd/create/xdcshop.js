@@ -118,15 +118,4 @@ export const getters = {
   cShop: (state, getters, rootState, rootGetters) => {
     return state.cShop
   }
-  /*,
-  cBrandId: (state, getters, rootState, rootGetters) => {
-    if (state.cBrand === null) {
-      return ''
-    }
-    return state.cBrand.id
-  },
-  cBrandPermit: (state, getters, rootState, rootGetters) => {
-    return state.cBrandPermit
-  }
-  */
 }

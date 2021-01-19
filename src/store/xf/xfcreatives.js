@@ -24,5 +24,8 @@ export const actions = {
 export const getters = {
   refCreativeById: () => (cid) => {
     return firestore.collection('xcreatives').doc(cid)
+  },
+  refCreativesByIds10: () => (cIds10) => {
+    return firestore.collection('xcreatives').where('id', 'in', cIds10)
   }
 }
