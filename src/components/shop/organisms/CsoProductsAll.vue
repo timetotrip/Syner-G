@@ -36,7 +36,7 @@ export default {
     } else if (this.$props.shop === null) {
       //
     } else {
-      this.$store.dispatch('xd/shop/xdsshop/setCProducts', this.$props.shop.id)
+      this.$store.dispatch('xd/shop/xdsshop/setCProductsBySid', this.$props.shop.id)
     }
   }
 }

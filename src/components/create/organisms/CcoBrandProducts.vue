@@ -3,7 +3,7 @@
     <h2>{{ brand.name }} ブランド プロダクト</h2>
     <CcoProductCreate />
     <CcoProductEdit
-      v-for="(product, pid) in pList"
+      v-for="(product, pid) in cProducts"
       :key="pid"
       :product="product"
       :isopen="openProduct===pid"
@@ -34,7 +34,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('xd/create/xdcproducts', ['pList'])
+    ...mapGetters('xd/create/xdcproducts', ['cProducts'])
   },
   mounted () {
     console.log('Cct brand products mounted')
@@ -43,12 +43,12 @@ export default {
     } else if (this.$props.brand === null) {
       //
     } else {
-      this.$store.dispatch('xd/create/xdcproducts/setPList', this.$props.brand.id)
+      this.$store.dispatch('xd/create/xdcproducts/setCProductsByBid', this.$props.brand.id)
     }
   },
   beforeDestroy () {
     console.log('Cct brand products beforeDestroy')
-    this.$store.dispatch('xd/create/xdcproducts/resetPList')
+    this.$store.dispatch('xd/create/xdcproducts/resetCProducts')
   },
   methods: {
     productOpen (pid) {

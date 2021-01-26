@@ -1,4 +1,4 @@
-import ShopView from '~/store/xd/permit/xdpshopview.js'
+import ShopView from '~/store/xp/xdpshopview.js'
 const cfShops = require('~/classes/cfShops.js')
 const shopView = new ShopView()
 const ngShopIds = [

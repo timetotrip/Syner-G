@@ -32,7 +32,7 @@ export default class {
         dXdpProduct = []
         commit('resetCProducts')
       },
-      setCProducts ({ commit, state, rootGetters }, sid) {
+      setCProductsBySid ({ commit, state, rootGetters }, sid) {
         console.log('  XDC SHOP Set CPRODUCTS ' + sid)
         if (state.cShop === null) {
           return 0
@@ -58,12 +58,22 @@ export default class {
             // this.dispatch('xd/permit/xdpcreativeview/setProductsCreatives', plist, { root: true })
           }))
         }
-        // TODO プロダクトショップを作るタイミングでここに追記
-        //
-        // ////
+      },
+      setCProductsByBid ({ commit, state, rootGetters }, bid) {
+        console.log('  XDC BRAND ACT Set PLIST ' + bid)
+        const plistRef = rootGetters['xf/xfbrands/refBrandProducts'](bid)
+        dXdpProduct.push(plistRef.withConverter(cfBrands.ConvCProduct).onSnapshot((snap) => {
+          const plist = {}
+          if (!snap.empty) {
+            console.log('  XDC BRAND SNP Set PLIST ' + bid)
+            snap.forEach((docs) => {
+              plist[docs.data().id] = docs.data()
+            })
+          }
+          commit('pushCProducts', plist)
+        }))
       }
     }
-
     this.getters = {
       cProducts: (state, getters, rootState, rootGetters) => {
         return state.cProducts

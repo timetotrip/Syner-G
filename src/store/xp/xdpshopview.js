@@ -9,9 +9,6 @@ export default class {
     this.mutations = {
       setCShop (state, cShop) {
         state.cShop = cShop
-      },
-      setCProducts (state, cProducts) {
-        state.cProducts = cProducts
       }
     }
 

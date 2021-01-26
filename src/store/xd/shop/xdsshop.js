@@ -1,6 +1,6 @@
-import ShopView from '~/store/xd/permit/xdpshopview.js'
-import ProductView from '~/store/xd/permit/xdpproductview.js'
-import CreativeView from '~/store/xd/permit/xdpcreativeview.js'
+import ShopView from '~/store/xp/xdpshopview.js'
+import ProductView from '~/store/xp/xdpproductview.js'
+import CreativeView from '~/store/xp/xdpcreativeview.js'
 const shopView = new ShopView()
 const productView = new ProductView()
 const creativeView = new CreativeView()

@@ -1,4 +1,4 @@
-import ShopEdit from '~/store/xd/permit/xdpshopedit.js'
+import ShopEdit from '~/store/xp/xdpshopedit.js'
 // const sPath = 'xd/create/xdcshop'
 const shopEdit = new ShopEdit()
 
@@ -16,7 +16,6 @@ const getters = {
   ...shopEdit.getters
 }
 export default {
-  sPath: 'xd/create/xdcshop',
   namespaced: true,
   state,
   getters,
