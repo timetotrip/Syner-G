@@ -204,8 +204,7 @@ export default {
     },
     onCrSelect (cRef) {
       console.log('CCO product edit select file')
-        this.$set(this.pe_creativeRefs, cRef.id, cRef)
-      }
+      this.$set(this.pe_creativeRefs, cRef.id, cRef)
     },
     updateProduct () {
       console.log('CCO product edit update ' + this.$props.product.id)
