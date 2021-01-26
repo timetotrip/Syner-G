@@ -44,19 +44,7 @@ export default class {
           return 0
         }
         for (const bid in state.cShop.brands) {
-          const plistRef = rootGetters['xf/xfbrands/refBrandProducts'](bid)
-          dXdpProduct.push(plistRef.withConverter(cfBrands.ConvCProduct).onSnapshot((snap) => {
-            const plist = {}
-            if (!snap.empty) {
-              console.log('  XDC SHOP SNP Set CPRODUCTS ' + bid)
-              snap.forEach((docs) => {
-                plist[docs.data().id] = docs.data()
-              })
-            }
-            commit('pushCProducts', plist)
-            this.dispatch(`${state.sPath}/setProductsCreatives`, plist, { root: true })
-            // this.dispatch('xd/permit/xdpcreativeview/setProductsCreatives', plist, { root: true })
-          }))
+          this.dispatch(`${state.sPath}/setCProductsByBid`, bid, { root: true })
         }
       },
       setCProductsByBid ({ commit, state, rootGetters }, bid) {
@@ -71,6 +59,7 @@ export default class {
             })
           }
           commit('pushCProducts', plist)
+          this.dispatch(`${state.sPath}/setProductsCreatives`, plist, { root: true })
         }))
       }
     }

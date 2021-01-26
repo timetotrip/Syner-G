@@ -1,30 +1,30 @@
 import ShopView from '~/store/xp/xdpshopview.js'
 import ProductView from '~/store/xp/xdpproductview.js'
-import CreativeView from '~/store/xp/xdpcreativeview.js'
+import CreativeEdit from '~/store/xp/xdpcreativeedit.js'
 const shopView = new ShopView()
 const productView = new ProductView()
-const creativeView = new CreativeView()
+const creativeEdit = new CreativeEdit()
 
 const state = {
   sPath: 'xd/shop/xdsshop',
   ...shopView.state,
   ...productView.state,
-  ...creativeView.state
+  ...creativeEdit.state
 }
 const mutations = {
   ...shopView.mutations,
   ...productView.mutations,
-  ...creativeView.mutations
+  ...creativeEdit.mutations
 }
 const actions = {
   ...shopView.actions,
   ...productView.actions,
-  ...creativeView.actions
+  ...creativeEdit.actions
 }
 const getters = {
   ...shopView.getters,
   ...productView.getters,
-  ...creativeView.getters
+  ...creativeEdit.getters
 }
 
 export default {

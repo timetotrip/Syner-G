@@ -29,7 +29,7 @@ export default {
   methods: {
     addProduct () {
       console.log('CCO product addProduct ' + this.pname)
-      this.$store.dispatch('xd/create/xdcproducts/addProduct', this.pname)
+      this.$store.dispatch('xd/create/xdcbrand/addProduct', this.pname)
       this.pname = ''
     }
   }

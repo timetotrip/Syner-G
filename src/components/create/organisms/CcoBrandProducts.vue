@@ -34,7 +34,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('xd/create/xdcproducts', ['cProducts'])
+    ...mapGetters('xd/create/xdcbrand', ['cProducts'])
   },
   mounted () {
     console.log('Cct brand products mounted')
@@ -43,12 +43,12 @@ export default {
     } else if (this.$props.brand === null) {
       //
     } else {
-      this.$store.dispatch('xd/create/xdcproducts/setCProductsByBid', this.$props.brand.id)
+      this.$store.dispatch('xd/create/xdcbrand/setCProductsByBid', this.$props.brand.id)
     }
   },
   beforeDestroy () {
     console.log('Cct brand products beforeDestroy')
-    this.$store.dispatch('xd/create/xdcproducts/resetCProducts')
+    this.$store.dispatch('xd/create/xdcbrand/resetCProducts')
   },
   methods: {
     productOpen (pid) {

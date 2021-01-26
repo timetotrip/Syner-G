@@ -217,7 +217,7 @@ export default {
         pAfter.attention = Object.assign({}, this.pe_attention)
         pAfter.purchase = Object.assign({}, this.pe_purchase)
         pAfter.creatives = Object.assign({}, this.pe_creativeRefs)
-        this.$store.dispatch('xd/create/xdcproducts/updateProduct', pAfter)
+        this.$store.dispatch('xd/create/xdcbrand/updateProduct', pAfter)
       }
       this.$props.closefunc()
     }
