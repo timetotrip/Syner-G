@@ -40,7 +40,7 @@
             label="価格"
           />
           <CcmUploadCreative
-            :creatives="pe_creativeRefs"
+            :creativerefs="pe_creativeRefs"
             :crfunc="onCrSelect"
             :code="`P-${product.id}`"
           />

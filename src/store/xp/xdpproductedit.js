@@ -1,6 +1,5 @@
 import ProductView from '~/store/xp/xdpproductview.js'
 const cfBrands = require('~/classes/cfBrands.js')
-const cfCreatives = require('~/classes/cfCreatives.js')
 const productView = new ProductView()
 export default class {
   constructor () {
@@ -49,26 +48,6 @@ export default class {
         }
         this.dispatch('xf/xfbrands/updateProduct', pAfter, { root: true })
         this.dispatch(`${state.sPath}/updateProductCreative`, fileTask, { root: true })
-      },
-      updateProductCreative ({ commit, state, rootGetters }, fileTask) {
-        console.log('  XDC BRAND ACT update product creative = ' + fileTask.length)
-        for (const cid in fileTask) {
-          const cRef = rootGetters['xf/xfstorage/refCreativeById'](cid)
-          const uTask = cRef.put(fileTask[cid])
-          uTask.on('state_changed',
-            (snapshot) => { /* Progress */ },
-            (err) => { console.log(err) },
-            () => {
-              uTask.snapshot.ref.getDownloadURL().then((url) => {
-                console.log('  XDC BRAND SNP update product core file upload')
-                console.log(url)
-                const cobj = new cfCreatives.CCreative()
-                cobj.setIdUrl(cid, url)
-                this.dispatch('xf/xfcreatives/addCreative', cobj, { root: true })
-              })
-            }
-          )
-        }
       }
     }
     this.getters = {

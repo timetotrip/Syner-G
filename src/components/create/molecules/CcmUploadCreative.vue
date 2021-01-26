@@ -4,10 +4,10 @@
       class="ucGaralley"
     >
       <v-img
-        v-for="(cObj, key) in creatives"
+        v-for="(cObj, key) in getCRefUrls(creativerefs)"
         :key="key"
         class="ucImages"
-        :src="cObj.getPath()"
+        :src="cObj"
       />
     </div>
     <v-file-input
@@ -19,16 +19,12 @@
   </div>
 </template>
 <script>
-/*
-import CgmCreativeBox from '@/components/general/molecules/CgmCreativeBox.vue'
-import CgaPrice from '@/components/general/atoms/CgaPrice.vue'
 const { mapGetters } = require('vuex')
-*/
 const cfBrands = require('~/classes/cfBrands.js')
 export default {
   name: 'CcmUploadCreative',
   props: {
-    creatives: {
+    creativerefs: {
       type: Object,
       default: null
     },
@@ -44,6 +40,9 @@ export default {
   data: () => ({
     inputView: true
   }),
+  computed: {
+    ...mapGetters('xd/create/xdcbrand', ['getCRefUrls'])
+  },
   methods: {
     onFileSelect (FILE) {
       if (this.$props.crfunc === null) {
