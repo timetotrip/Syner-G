@@ -9,18 +9,25 @@ class CBrand {
     this.shop = ''
     this.sells = {}
     this.staffs = {}
+    // クリエイティブ 連想配列
+    this.creatives = {}
   }
 }
 
 const ConvCBrand = {
   toFirestore (brand) {
+    const creativesObj = {}
+    for (const cid in brand.creatives) {
+      creativesObj[cid] = brand.creatives[cid].toObj()
+    }
     return {
       name: brand.name,
       owner: brand.owner,
       shop: brand.shop.toString(),
       logo: brand.logo,
       sells: brand.sells,
-      staffs: brand.staffs
+      staffs: brand.staffs,
+      creatives: creativesObj
     }
   },
   fromFirestore (snapshot, options) {
@@ -31,6 +38,11 @@ const ConvCBrand = {
     brand.shop = data.shop.toString()
     brand.sells = Object.assign({}, data.sells)
     brand.staffs = Object.assign({}, data.staffs)
+    const creativesClass = {}
+    for (const cid in data.creatives) {
+      creativesClass[cid] = (new CCreativeRef()).fromObj(data.creatives[cid])
+    }
+    brand.creatives = creativesClass
     return brand
   }
 }
@@ -220,9 +232,9 @@ class CCreativeRef {
     */
   }
 
-  setFromFile (file, pid) {
+  setFromFile (file, code) {
     this.type = 'FILE'
-    this.id = `P-${pid}-${Math.random().toString(32).substring(4)}`
+    this.id = `${code}-${Math.random().toString(32).substring(4)}`
     this.file = file
     this.dateCreate = new Date()
     return this

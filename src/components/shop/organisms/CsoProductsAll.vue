@@ -1,11 +1,15 @@
 <template>
-  <div v-if="shop !== null">
-    <h2>{{ shop.name }}</h2>
-    <CsmPBox
-      v-for="p in cProducts"
-      :key="p.id"
-      :product="cProducts[p.id]"
-    />
+  <div v-if="shop !== null" class="productsAll">
+    <h2 class="paTitle">
+      Products
+    </h2>
+    <div class="paList">
+      <CsmPBox
+        v-for="p in cProducts"
+        :key="p.id"
+        :product="cProducts[p.id]"
+      />
+    </div>
   </div>
 </template>
 <script>
@@ -38,4 +42,14 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+.productsAll {
+  .paTitle{
+    width:100%;
+    text-align: center;
+  }
+  .paList{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 </style>

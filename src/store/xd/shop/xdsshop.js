@@ -133,6 +133,12 @@ export const getters = {
   cShop: (state, getters, rootState, rootGetters) => {
     return state.cShop
   },
+  cShopName: (state, getters, rootState, rootGetters) => {
+    if (state.cShop === null) {
+      return ''
+    }
+    return state.cShop.name
+  },
   cProducts: (state, getters, rootState, rootGetters) => {
     return state.cProducts
   },

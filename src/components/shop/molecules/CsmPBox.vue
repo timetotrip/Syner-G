@@ -1,18 +1,21 @@
 <template>
-  <div v-if="product !== null">
-    <h2>{{ product.name }}</h2>
+  <div v-if="product !== null" class="pBox">
     <CgmCreativeBox
       :src="cProTopCrePath(product.id)"
     />
+    <h3 class="pbTitle">{{ product.name }}</h3>
+    <CgaPrice :price="product.price" class="pbPrice" />
   </div>
 </template>
 <script>
 import CgmCreativeBox from '@/components/general/molecules/CgmCreativeBox.vue'
+import CgaPrice from '@/components/general/atoms/CgaPrice.vue'
 const { mapGetters } = require('vuex')
 export default {
   name: 'CsmPBox',
   components: {
-    CgmCreativeBox
+    CgmCreativeBox,
+    CgaPrice
   },
   props: {
     product: {
@@ -33,4 +36,10 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+.pBox {
+  width: 50%;
+  .pbTitle{
+    font-size: 0.8rem;
+  }
+}
 </style>

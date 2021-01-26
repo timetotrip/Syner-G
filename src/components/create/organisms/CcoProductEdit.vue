@@ -39,20 +39,10 @@
             type="number"
             label="価格"
           />
-          <div
-            class="CooPedDil--creatives--garalley"
-          >
-            <v-img
-              v-for="(cObj, key) in pe_creatives"
-              :key="key"
-              class="CooPedDil--creatives--images"
-              :src="cObj.getPath()"
-            />
-          </div>
-          <v-file-input
-            accept="image/*"
-            label="画像をアップロード"
-            @change="onFileSelect"
+          <CcmUploadCreative
+            :creatives="pe_creativeRefs"
+            :crfunc="onCrSelect"
+            :code="`P-${product.id}`"
           />
           <v-btn
             @click="closeProduct()"
@@ -81,11 +71,13 @@
 </template>
 <script>
 import CgmOkCancelDialog from '@/components/general/molecules/CgmOkCancelDialog.vue'
+import CcmUploadCreative from '@/components/create/molecules/CcmUploadCreative.vue'
 const cfBrands = require('~/classes/cfBrands.js')
 export default {
   name: 'CcoProductEdit',
   components: {
-    CgmOkCancelDialog
+    CgmOkCancelDialog,
+    CcmUploadCreative
   },
   props: {
     product: {
@@ -121,7 +113,7 @@ export default {
     */
     pe_attention: {},
     pe_purchase: {},
-    pe_creatives: {},
+    pe_creativeRefs: {},
     okcancelDialog: false
   }),
   computed: {
@@ -150,7 +142,7 @@ export default {
         return true
       } else if (!this.$props.product.isEqualPurchase(this.pe_purchase)) {
         return true
-      } else if (!this.$props.product.isEqualCreatives(this.pe_creatives)) {
+      } else if (!this.$props.product.isEqualCreatives(this.pe_creativeRefs)) {
         return true
       }
       return false
@@ -177,7 +169,7 @@ export default {
       */
       this.pe_attention = Object.assign({}, this.$props.product.attention)
       this.pe_purchase = Object.assign({}, this.$props.product.purchase)
-      this.pe_creatives = Object.assign({}, this.$props.product.creatives)
+      this.pe_creativeRefs = Object.assign({}, this.$props.product.creatives)
     }
   },
   methods: {
@@ -210,17 +202,9 @@ export default {
     dialogCloseCancel () {
       this.okcancelDialog = false
     },
-    onFileSelect (file) {
+    onCrSelect (cRef) {
       console.log('CCO product edit select file')
-      if (typeof file === 'undefined') {
-        //
-      } if (file === null) {
-        //
-      } else {
-        const creative = new cfBrands.CCreativeRef()
-        creative.setFromFile(file, this.$props.product.id)
-        this.$set(this.pe_creatives, creative.id, creative)
-        // this.$set(this.pe_creatives, `FILE_${Math.random().toString(32).substring(2)}`, window.URL.createObjectURL(file))
+        this.$set(this.pe_creativeRefs, cRef.id, cRef)
       }
     },
     updateProduct () {
@@ -233,7 +217,7 @@ export default {
         pAfter.topimage = this.pe_topimage
         pAfter.attention = Object.assign({}, this.pe_attention)
         pAfter.purchase = Object.assign({}, this.pe_purchase)
-        pAfter.creatives = Object.assign({}, this.pe_creatives)
+        pAfter.creatives = Object.assign({}, this.pe_creativeRefs)
         this.$store.dispatch('xd/create/xdcproducts/updateProduct', pAfter)
       }
       this.$props.closefunc()
@@ -244,15 +228,5 @@ export default {
 <style scoped lang="scss">
 .CooPedDil--base{
   padding: 1rem;
-  .CooPedDil--creatives--garalley{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1rem!important;
-    justify-content: space-around;
-    .CooPedDil--creatives--images{
-      width: 40%;
-      flex-grow: 0;
-    }
-  }
 }
 </style>

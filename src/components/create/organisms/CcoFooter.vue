@@ -31,7 +31,7 @@
       :clickfunc="changeActiveSheet"
     />
     <CgaFooterSheet :active="activeSheet==='MYSHOP'" :disablefunc="changeActiveSheet">
-      マイショップ準備中
+      <CcoShopsList :clickfunc="gotoNextShop" />
     </CgaFooterSheet>
     <CgaFooterBtn
       :label="'SHOPING'"
@@ -48,13 +48,15 @@ import CgmFooterBase from '@/components/general/molecules/CgmFooterBase.vue'
 import CgaFooterBtn from '@/components/general/atoms/CgaFooterBtn.vue'
 import CgaFooterSheet from '@/components/general/atoms/CgaFooterSheet.vue'
 import CcoBrandsList from '@/components/create/organisms/CcoBrandsList.vue'
+import CcoShopsList from '@/components/create/organisms/CcoShopsList.vue'
 export default {
   name: 'CcoFooter',
   components: {
     CgmFooterBase,
     CgaFooterBtn,
     CgaFooterSheet,
-    CcoBrandsList
+    CcoBrandsList,
+    CcoShopsList
   },
   data: () => ({
     activeSheet: ''
@@ -76,6 +78,11 @@ export default {
       console.log('goto next')
       this.activeSheet = ''
       this.$router.push(`/create/brand/${bid}`)
+    },
+    gotoNextShop (sid) {
+      console.log('goto next')
+      this.activeSheet = ''
+      this.$router.push(`/create/shop/${sid}`)
     }
   }
 }

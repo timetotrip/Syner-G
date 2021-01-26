@@ -213,5 +213,21 @@ export const getters = {
       }
       return ret
     }
+  },
+  myShops: (state, getters, rootState, rootGetters) => {
+    console.log('  XDG CUSER GTR myShops')
+    if (!process.browser) {
+      return null
+    } else if (state.cUser === null) {
+      return null
+    } else if (typeof state.cUser.permitShops === 'undefined') {
+      return null
+    } else {
+      const ret = {}
+      for (const sid in state.cUser.permitShops) {
+        ret[sid] = '名前あとで'
+      }
+      return ret
+    }
   }
 }
