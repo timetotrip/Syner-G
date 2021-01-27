@@ -47,7 +47,7 @@ export default class {
           }
         }
         this.dispatch('xf/xfbrands/updateProduct', pAfter, { root: true })
-        this.dispatch(`${state.sPath}/updateProductCreative`, fileTask, { root: true })
+        this.dispatch(`${state.sPath}/uploadCreatives`, fileTask, { root: true })
       }
     }
     this.getters = {

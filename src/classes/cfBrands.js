@@ -12,6 +12,24 @@ class CBrand {
     // クリエイティブ 連想配列
     this.creatives = {}
   }
+
+  isEqualCreatives (ctv) {
+    for (const key in this.creatives) {
+      if (typeof ctv[key] === 'undefined') {
+        return false
+      } else if (ctv[key] !== this.creatives[key]) {
+        return false
+      }
+    }
+    for (const key in ctv) {
+      if (typeof this.creatives[key] === 'undefined') {
+        return false
+      } else if (ctv[key] !== this.creatives[key]) {
+        return false
+      }
+    }
+    return true
+  }
 }
 
 const ConvCBrand = {

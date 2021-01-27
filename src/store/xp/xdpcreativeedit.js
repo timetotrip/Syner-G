@@ -14,7 +14,7 @@ export default class {
 
     this.actions = {
       ...creativeView.actions,
-      updateProductCreative ({ commit, state, rootGetters }, fileTask) {
+      uploadCreatives ({ commit, state, rootGetters }, fileTask) {
         console.log('  XDC BRAND ACT update product creative = ' + fileTask.length)
         for (const cid in fileTask) {
           const cRef = rootGetters['xf/xfstorage/refCreativeById'](cid)
