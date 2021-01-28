@@ -1,5 +1,3 @@
-// const cfShops = require('~/classes/cfShops.js')
-// const cfBrands = require('~/classes/cfBrands.js')
 const cfCreatives = require('~/classes/cfCreatives.js')
 const pathLocading = ''
 let dXdpCreative = []
@@ -62,48 +60,6 @@ export default class {
         }
         return state.cCreatives[cid].url
       }
-      /*
-      cProCreatives: (state, getters, rootState, rootGetters) => (pid) => {
-        if (typeof state.cProducts[pid] === 'undefined') {
-          return {}
-        }
-        return state.cProducts[pid].creatives
-      },
-      cProCreativeIds: (state, getters, rootState, rootGetters) => (pid) => {
-        const creatives = rootGetters[`${state.sPath}/cProCreatives`](pid)
-        if (creatives === {}) {
-          return []
-        }
-        return Object.keys(creatives)
-      },
-      cProTopCid: (state, getters, rootState, rootGetters) => (pid) => {
-        return state.cProducts[pid].topimage
-      },
-      cProHasTopCre: (state, getters, rootState, rootGetters) => (pid) => {
-        if (typeof state.cProducts[pid] === 'undefined') {
-          return false
-        } else if (state.cProducts[pid].topimage !== '') {
-          return true
-        }
-        const pCreativeIds = rootGetters['xd/permit/xdpshopview/cProCreativeIds'](pid)
-        if (pCreativeIds.length > 0) {
-          return true
-        }
-        return false
-      },
-      cProTopCrePath: (state, getters, rootState, rootGetters) => (pid) => {
-        if (typeof state.cProducts[pid] === 'undefined') {
-          return ''
-        } else if (state.cProducts[pid].topimage !== '') {
-          return state.cProducts[pid].topimage
-        }
-        const pCreativeIds = rootGetters[`${state.sPath}/cProCreativeIds`](pid)
-        if (pCreativeIds.length > 0) {
-          return rootGetters[`${state.sPath}/cCrePath`](pCreativeIds[0])
-        }
-        return pathLocading
-      }
-      */
     }
   }
 }

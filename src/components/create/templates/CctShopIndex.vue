@@ -36,6 +36,15 @@ export default {
       }
       return ''
     }
+  },
+  mounted () {
+    console.log('Cct Shop index mounted')
+    this.$store.dispatch('xd/create/xdcshop/resetCBrand')
+    this.$store.dispatch('xd/create/xdcshop/setCBrand', this.defSbrand)
+  },
+  beforeDestroy () {
+    console.log('Cct Shop index beforeDestroy')
+    this.$store.dispatch('xd/create/xdcshop/resetCBrand')
   }
 }
 </script>

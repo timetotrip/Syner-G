@@ -45,17 +45,17 @@ export default {
   mounted () {
     console.log('Cst shop id mounted')
     this.$store.dispatch('xd/shop/xdsshop/resetCShop')
-    this.$store.dispatch('xd/create/xdcbrand/resetCBrand')
-    this.$store.dispatch('xd/create/xdcbrand/resetCProducts')
-    this.$store.dispatch('xd/create/xdcbrand/resetCCreatives')
+    this.$store.dispatch('xd/shop/xdsshop/resetCBrand')
+    this.$store.dispatch('xd/shop/xdsshop/resetCProducts')
+    this.$store.dispatch('xd/shop/xdsshop/resetCCreatives')
     this.$store.dispatch('xd/shop/xdsshop/setCShop', this.$props.sid)
   },
   beforeDestroy () {
     console.log('Cst shop id beforeDestroy')
     this.$store.dispatch('xd/shop/xdsshop/resetCShop')
-    this.$store.dispatch('xd/create/xdcbrand/resetCBrand')
-    this.$store.dispatch('xd/create/xdcbrand/resetCProducts')
-    this.$store.dispatch('xd/create/xdcbrand/resetCCreatives')
+    this.$store.dispatch('xd/shop/xdsshop/resetCBrand')
+    this.$store.dispatch('xd/shop/xdsshop/resetCProducts')
+    this.$store.dispatch('xd/shop/xdsshop/resetCCreatives')
   }
 }
 </script>

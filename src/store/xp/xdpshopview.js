@@ -3,12 +3,14 @@ let dXdpShop = []
 export default class {
   constructor () {
     this.state = {
-      cShop: null
+      cShop: null,
+      cShopPermit: '' // MNG or EDT or VEW or NON
     }
 
     this.mutations = {
-      setCShop (state, cShop) {
+      setCShop (state, { cShop, permit }) {
         state.cShop = cShop
+        state.cShopPermit = permit
       }
     }
 
@@ -32,6 +34,9 @@ export default class {
           if (!snap.empty) {
             console.log('  XDC SHOP Set CSHOP SET' + sid)
             commit('setCShop', snap.data())
+            if (snap.data().brand !== '') {
+              this.dispatch(`${state.sPath}/setCBrand`, snap.data().brand, { root: true })
+            }
           } else {
             console.log('  XDC SHOP Set CSHOP ERROR CANT FIND' + sid)
           }
@@ -44,8 +49,8 @@ export default class {
         console.log('  XDC BRAND ACT reset Cbrand ')
         dXdpShop.forEach((f) => { f() })
         dXdpShop = []
-        this.dispatch(`${this.sPath}/resetCProducts`, { root: true })
-        this.dispatch(`${this.sPath}/resetCCreatives`, { root: true })
+        this.dispatch(`${state.sPath}/resetCProducts`, { root: true })
+        this.dispatch(`${state.sPath}/resetCCreatives`, { root: true })
       }
     }
 
@@ -60,6 +65,8 @@ export default class {
       cShopName: (state, getters, rootState, rootGetters) => {
         console.log('  XDC BRAND ACT cShopName ')
         if (!process.browser) {
+          return ''
+        } else if (typeof state.cShop === 'undefined') {
           return ''
         } else if (state.cShop === null) {
           return ''

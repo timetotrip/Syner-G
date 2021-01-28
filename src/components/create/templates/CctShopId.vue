@@ -40,11 +40,18 @@ export default {
   },
   mounted () {
     console.log('Cct Shop id mounted')
+    this.$store.dispatch('xd/create/xdcshop/resetCShop')
+    this.$store.dispatch('xd/create/xdcshop/resetCBrand')
+    this.$store.dispatch('xd/create/xdcshop/resetCProducts')
+    this.$store.dispatch('xd/create/xdcshop/resetCCreatives')
     this.$store.dispatch('xd/create/xdcshop/setCShop', this.$props.sid)
   },
   beforeDestroy () {
     console.log('Cct Shop id beforeDestroy')
     this.$store.dispatch('xd/create/xdcshop/resetCShop')
+    this.$store.dispatch('xd/create/xdcshop/resetCBrand')
+    this.$store.dispatch('xd/create/xdcshop/resetCProducts')
+    this.$store.dispatch('xd/create/xdcshop/resetCCreatives')
   }
 }
 </script>

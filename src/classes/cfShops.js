@@ -6,7 +6,7 @@ class CShop {
     this.owner = owner
     this.id = id
     this.logo = ''
-    this.brands = {}
+    this.brand = ''
     this.products = {}
     this.sells = {}
     this.staffs = {}
@@ -20,7 +20,7 @@ const ConvCShop = {
       name: shop.name,
       owner: shop.owner,
       logo: shop.logo,
-      brands: shop.brands,
+      brand: shop.brand,
       products: shop.products,
       sells: shop.sells,
       staffs: shop.staffs,
@@ -32,7 +32,7 @@ const ConvCShop = {
     const id = snapshot.id
     const shop = new CShop(id, data.name, data.owner)
     shop.logo = data.logo
-    shop.brands = Object.assign({}, data.brands)
+    shop.brand = data.brand
     shop.products = Object.assign({}, data.products)
     shop.sells = Object.assign({}, data.sells)
     shop.staffs = Object.assign({}, data.staffs)
@@ -72,4 +72,5 @@ class CsFront {
 }
 
 exports.CShop = CShop
+exports.CsFront = CsFront
 exports.ConvCShop = ConvCShop
