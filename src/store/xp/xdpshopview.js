@@ -27,13 +27,15 @@ export default class {
             return 0
           }
         }
+        // 現在の権限設定を取得
+        const pmt = rootGetters['xd/general/xdgcuser/shopPermit'](sid)
         // ショップ 参照の取得
         const cShopRef = rootGetters['xf/xfshops/refShopById'](sid)
         // イベントハンドラの設定
         dXdpShop.push(cShopRef.withConverter(cfShops.ConvCShop).onSnapshot((snap) => {
           if (!snap.empty) {
             console.log('  XDC SHOP Set CSHOP SET' + sid)
-            commit('setCShop', snap.data())
+            commit('setCShop', { cShop: snap.data(), permit: pmt })
             if (snap.data().brand !== '') {
               this.dispatch(`${state.sPath}/setCBrand`, snap.data().brand, { root: true })
             }
@@ -67,6 +69,7 @@ export default class {
         if (!process.browser) {
           return ''
         } else if (typeof state.cShop === 'undefined') {
+          console.log('warn')
           return ''
         } else if (state.cShop === null) {
           return ''

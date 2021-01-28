@@ -7,13 +7,6 @@ const brandView = new BrandView()
 const productView = new ProductView()
 const creativeEdit = new CreativeEdit()
 
-const state = {
-  sPath: 'xd/shop/xdsshop',
-  ...shopView.state,
-  ...brandView.state,
-  ...productView.state,
-  ...creativeEdit.state
-}
 const mutations = {
   ...shopView.mutations,
   ...brandView.mutations,
@@ -36,7 +29,13 @@ const getters = {
 export default {
   sPath: 'xd/shop/xdsshop',
   namespaced: true,
-  state,
+  state: () => ({
+    sPath: 'xd/shop/xdsshop',
+    ...shopView.state,
+    ...brandView.state,
+    ...productView.state,
+    ...creativeEdit.state
+  }),
   getters,
   actions,
   mutations

@@ -43,9 +43,8 @@ export default class {
           console.log('  XDC SHOP Set CPRODUCTS ARLADY NTD ' + sid)
           return 0
         }
-        for (const bid in state.cShop.brands) {
-          this.dispatch(`${state.sPath}/setCProductsByBid`, bid, { root: true })
-        }
+        // for (const bid in state.cShop.brand) {
+        this.dispatch(`${state.sPath}/setCProductsByBid`, state.cShop.brand, { root: true })
       },
       setCProductsByBid ({ commit, state, rootGetters }, bid) {
         console.log('  XDC BRAND ACT Set PLIST ' + bid)

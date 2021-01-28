@@ -5,12 +5,6 @@ const brandEdit = new BrandEdit()
 const productEdit = new ProductEdit()
 const creativeEdit = new CreativeEdit()
 
-const state = {
-  sPath: 'xd/create/xdcbrand',
-  ...brandEdit.state,
-  ...productEdit.state,
-  ...creativeEdit.state
-}
 const mutations = {
   ...brandEdit.mutations,
   ...productEdit.mutations,
@@ -28,7 +22,12 @@ const getters = {
 }
 export default {
   namespaced: true,
-  state,
+  state: () => ({
+    sPath: 'xd/create/xdcbrand',
+    ...brandEdit.state,
+    ...productEdit.state,
+    ...creativeEdit.state
+  }),
   getters,
   actions,
   mutations

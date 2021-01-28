@@ -1,7 +1,7 @@
 <template>
   <div v-if="product !== null" class="pBox">
     <CgmCreativeBox
-      :src="cProTopCrePath(product.id)"
+      :src="cCrePath(product.topimage)"
     />
     <h3 class="pbTitle">
       {{ product.name }}
@@ -26,7 +26,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('xd/shop/xdsshop', ['cProducts', 'cProTopCrePath'])
+    ...mapGetters('xd/shop/xdsshop', ['cProducts', 'cCrePath'])
   },
   methods: {
     /*
