@@ -10,16 +10,12 @@ class CShop {
     this.products = {}
     this.sells = {}
     this.staffs = {}
-    this.front = {}
+    this.front = []
   }
 }
 
 const ConvCShop = {
   toFirestore (shop) {
-    const frontObj = {}
-    for (const fid in shop.front) {
-      frontObj[fid] = shop.front[fid].toObj()
-    }
     return {
       name: shop.name,
       owner: shop.owner,
@@ -28,11 +24,10 @@ const ConvCShop = {
       products: shop.products,
       sells: shop.sells,
       staffs: shop.staffs,
-      front: frontObj
+      front: shop.front.map((f) => { return f.toObj() })
     }
   },
   fromFirestore (snapshot, options) {
-    const frontClass = {}
     const data = snapshot.data(options)
     const id = snapshot.id
     const shop = new CShop(id, data.name, data.owner)
@@ -41,34 +36,38 @@ const ConvCShop = {
     shop.products = Object.assign({}, data.products)
     shop.sells = Object.assign({}, data.sells)
     shop.staffs = Object.assign({}, data.staffs)
-    for (const fid in data.front) {
-      frontClass[fid] = (new CsFront('', 0)).fromObj(data.front[fid])
-    }
-    shop.front = frontClass
+    shop.front = data.front.map((f) => {
+      return (new CsFront(f.type)).fromObj(f)
+    })
     return shop
   }
 }
 
 class CsFront {
-  constructor (type, order) {
+  constructor (type) {
     this.type = type
-    this.order = order
-    this.creatives = {}
+    this.creativeIds = []
   }
 
   toObj () {
     const ret = {}
     ret.type = this.type
-    ret.order = this.order
-    ret.creatives = Object.assign({}, this.creatives)
+    ret.creativeIds = this.creativeIds.slice()
     return ret
   }
 
   fromObj (obj) {
     this.type = obj.type
-    this.order = obj.order
-    this.creatives = Object.assign({}, obj.creatives)
+    this.creativeIds = obj.creativeIds.slice()
     return this
+  }
+
+  setCreativeIds (crs) {
+    this.creativeIds = crs.creativeIds.slice()
+  }
+
+  pushCreativeId (cid) {
+    this.creativeIds.push(cid)
   }
 }
 

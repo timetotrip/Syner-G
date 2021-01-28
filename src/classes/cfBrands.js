@@ -10,34 +10,17 @@ class CBrand {
     this.sells = {}
     this.staffs = {}
     // クリエイティブ 連想配列
-    this.creatives = {}
+    // this.creatives = {}
+    this.creativeIds = []
   }
 
-  isEqualCreatives (ctv) {
-    for (const key in this.creatives) {
-      if (typeof ctv[key] === 'undefined') {
-        return false
-      } else if (ctv[key] !== this.creatives[key]) {
-        return false
-      }
-    }
-    for (const key in ctv) {
-      if (typeof this.creatives[key] === 'undefined') {
-        return false
-      } else if (ctv[key] !== this.creatives[key]) {
-        return false
-      }
-    }
-    return true
+  isEqualCreativeIds (cIds) {
+    return this.creativeIds.toString() === cIds.toString()
   }
 }
 
 const ConvCBrand = {
   toFirestore (brand) {
-    const creativesObj = {}
-    for (const cid in brand.creatives) {
-      creativesObj[cid] = brand.creatives[cid].toObj()
-    }
     return {
       name: brand.name,
       owner: brand.owner,
@@ -45,7 +28,7 @@ const ConvCBrand = {
       logo: brand.logo,
       sells: brand.sells,
       staffs: brand.staffs,
-      creatives: creativesObj
+      creativeIds: brand.creativeIds.slice()
     }
   },
   fromFirestore (snapshot, options) {
@@ -56,11 +39,7 @@ const ConvCBrand = {
     brand.shop = data.shop.toString()
     brand.sells = Object.assign({}, data.sells)
     brand.staffs = Object.assign({}, data.staffs)
-    const creativesClass = {}
-    for (const cid in data.creatives) {
-      creativesClass[cid] = (new CCreativeRef()).fromObj(data.creatives[cid])
-    }
-    brand.creatives = creativesClass
+    brand.creativeIds = data.creativeIds.slice()
     return brand
   }
 }
@@ -95,7 +74,7 @@ class CProduct {
     // 仕入れ 連想配列
     this.purchase = {}
     // クリエイティブ 連想配列
-    this.creatives = {}
+    this.creativeIds = []
   }
 
   isEqualAttention (atn) {
@@ -134,30 +113,12 @@ class CProduct {
     return true
   }
 
-  isEqualCreatives (ctv) {
-    for (const key in this.creatives) {
-      if (typeof ctv[key] === 'undefined') {
-        return false
-      } else if (ctv[key] !== this.creatives[key]) {
-        return false
-      }
-    }
-    for (const key in ctv) {
-      if (typeof this.creatives[key] === 'undefined') {
-        return false
-      } else if (ctv[key] !== this.creatives[key]) {
-        return false
-      }
-    }
-    return true
+  isEqualCreativeIds (cIds) {
+    return this.creativeIds.toString() === cIds.toString()
   }
 }
 const ConvCProduct = {
   toFirestore (product) {
-    const creativesObj = {}
-    for (const cid in product.creatives) {
-      creativesObj[cid] = product.creatives[cid].toObj()
-    }
     return {
       name: product.name,
       price: product.price,
@@ -172,14 +133,13 @@ const ConvCProduct = {
       brand: product.brand,
       attention: product.attention,
       purchase: product.purchase,
-      creatives: creativesObj
+      creativeIds: product.creativeIds.slice()
     }
   },
   fromFirestore (snapshot, options) {
     const data = snapshot.data(options)
     const id = snapshot.id
     const product = new CProduct(data.name)
-    const creativesClass = {}
     product.id = id
     product.price = data.price
     product.status = data.status
@@ -193,10 +153,7 @@ const ConvCProduct = {
     product.brand = data.brand
     product.attention = Object.assign({}, data.attention)
     product.purchase = Object.assign({}, data.purchase)
-    for (const cid in data.creatives) {
-      creativesClass[cid] = (new CCreativeRef()).fromObj(data.creatives[cid])
-    }
-    product.creatives = creativesClass
+    product.creativeIds = data.creativeIds.slice()
     return product
   }
 }
@@ -208,13 +165,6 @@ class CCreativeRef {
     this.type = ''
     this.file = null
     this.url = ''
-    /*
-    this.synergy = {}
-    this.pv = 0
-    this.like = 0
-    this.dateCreate = ''
-    this.dateUpdate = ''
-    */
   }
 
   toObj () {
@@ -224,13 +174,6 @@ class CCreativeRef {
     ret.type = this.type
     ret.file = this.file
     ret.url = this.url
-    /*
-    ret.synergy = this.synergy
-    ret.pv = this.pv
-    ret.like = this.like
-    ret.dateCreate = this.dateCreate
-    ret.dateUpdate = this.dateUpdate
-    */
     return ret
   }
 

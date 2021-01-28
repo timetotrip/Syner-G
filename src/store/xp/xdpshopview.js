@@ -25,11 +25,6 @@ export default class {
             return 0
           }
         }
-        // 過去の設定をリセット
-        dXdpShop.forEach((f) => { f() })
-        dXdpShop = []
-        this.dispatch(`${state.sPath}/resetCProducts`, { root: true })
-        this.dispatch(`${state.sPath}/resetCCreatives`, { root: true })
         // ショップ 参照の取得
         const cShopRef = rootGetters['xf/xfshops/refShopById'](sid)
         // イベントハンドラの設定

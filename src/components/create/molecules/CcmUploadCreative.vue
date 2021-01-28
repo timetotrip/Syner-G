@@ -4,13 +4,13 @@
       class="ucGaralley"
     >
       <div
-        v-for="(cObj, cid) in getCRefUrls(creativerefs)"
+        v-for="cid in cids"
         :key="cid"
         :class="['ucArea',{ 'uc--pickup': pickUp(cid) !== '' }]"
       >
         <v-img
           :class="['ucImage']"
-          :src="cObj"
+          :src="cCrePath(cid)"
           @click="onClick(cid)"
         />
         <p
@@ -35,12 +35,8 @@ const cfBrands = require('~/classes/cfBrands.js')
 export default {
   name: 'CcmUploadCreative',
   props: {
-    creativerefs: {
-      type: Object,
-      default: null
-    },
-    crfunc: {
-      type: Function,
+    cids: {
+      type: Array,
       default: null
     },
     code: {
@@ -50,6 +46,10 @@ export default {
     pickups: {
       type: Object,
       default: () => { return {} }
+    },
+    selectfunc: {
+      type: Function,
+      default: (FILE) => { return FILE }
     },
     clickfunc: {
       type: Function,
@@ -64,7 +64,7 @@ export default {
     inputView: true
   }),
   computed: {
-    ...mapGetters('xd/create/xdcbrand', ['getCRefUrls'])
+    ...mapGetters('xd/create/xdcbrand', ['cCrePath'])
   },
   mounted () {
     console.log('UP CRE MOUNTED')
@@ -72,21 +72,7 @@ export default {
   },
   methods: {
     onFileSelect (FILE) {
-      if (this.$props.crfunc === null) {
-        //
-      } else if (typeof FILE === 'undefined') {
-        //
-      } if (FILE === null) {
-        //
-      } else {
-        const cRef = new cfBrands.CCreativeRef()
-        cRef.setFromFile(FILE, this.$props.code)
-        this.$props.crfunc(cRef)
-        this.inputView = false
-        this.$nextTick(function () {
-          this.inputView = true
-        })
-      }
+      this.$props.selectfunc(FILE)
     },
     onClick (cid) {
       this.$props.clickfunc(cid)

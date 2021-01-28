@@ -51,5 +51,9 @@ export const getters = {
   },
   refBrandProducts: () => (bid) => {
     return firestore.collection('xbrands').doc(bid).collection('products')
+  },
+  refProductById: () => ({ bid, pid }) => {
+    console.log('REF' + pid)
+    return firestore.collection('xbrands').doc(bid).collection('products').doc(pid)
   }
 }

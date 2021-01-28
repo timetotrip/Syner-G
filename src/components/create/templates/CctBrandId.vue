@@ -72,6 +72,9 @@ export default {
   },
   mounted () {
     console.log('Cct brand id mounted')
+    this.$store.dispatch('xd/create/xdcbrand/resetCBrand')
+    this.$store.dispatch('xd/create/xdcbrand/resetCProducts')
+    this.$store.dispatch('xd/create/xdcbrand/resetCCreatives')
     this.$store.dispatch('xd/create/xdcbrand/setCBrand', this.$props.bid)
     this.$store.dispatch('xd/create/xdcbrand/setCProductsByBid', this.$props.bid)
   },
@@ -79,6 +82,7 @@ export default {
     console.log('Cct brand id beforeDestroy')
     this.$store.dispatch('xd/create/xdcbrand/resetCBrand')
     this.$store.dispatch('xd/create/xdcbrand/resetCProducts')
+    this.$store.dispatch('xd/create/xdcbrand/resetCCreatives')
   }
 }
 </script>

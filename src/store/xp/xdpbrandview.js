@@ -34,9 +34,6 @@ export default class {
             return 0
           }
         }
-        // 過去の設定をリセット
-        dXdpCBrand.forEach((f) => { f() })
-        dXdpCBrand = []
         // 現在の権限設定を取得
         const pmt = rootGetters['xd/general/xdgcuser/brandPermit'](bid)
         // ブランド 参照の取得
@@ -46,7 +43,9 @@ export default class {
           if (!snap.empty) {
             console.log('  XDC BRAND Set Cbrand SET' + bid)
             commit('setCbrand', { cBrand: snap.data(), permit: pmt })
-            this.dispatch(`${state.sPath}/setBrandCreatives`, snap.data().creatives, { root: true })
+            this.dispatch(`${state.sPath}/setCreativesByIds`, snap.data().creativeIds, { root: true })
+            // console.log('must check')
+            // this.dispatch(`${state.sPath}/setBrandCreatives`, snap.data().creatives, { root: true })
           } else {
             console.log('  XDC BRAND Set Cbrand ERROR CANT FIND' + bid)
           }

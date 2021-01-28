@@ -30,24 +30,24 @@ export default class {
       },
       updateProduct ({ commit, state, rootGetters }, pAfter) {
         console.log('  XDC BRAND ACT update product ' + pAfter.name)
-        const pid = pAfter.id
-        const pBefor = state.cProducts[pid]
-        const fileTask = {}
-        // 日時設定
         pAfter.dateUpdate = new Date()
-        for (const cid in pBefor.creatives) {
-          if (typeof pAfter.creatives[cid] === 'undefined') {
-            // todo storage 削除処理
-          }
-        }
-        for (const cid in pAfter.creatives) {
-          if (pAfter.creatives[cid].type === 'FILE') {
-            fileTask[cid] = pAfter.creatives[cid].file
-            pAfter.creatives[cid].uploadingRef()
-          }
-        }
         this.dispatch('xf/xfbrands/updateProduct', pAfter, { root: true })
-        this.dispatch(`${state.sPath}/uploadCreatives`, fileTask, { root: true })
+      },
+      /*
+        プロダクトに画像追加
+      */
+      pushProductCreative ({ commit, state, rootGetters }, { bid, pid, cid, FILE }) {
+        console.log('  XDC PRODUCT ACT pushProductCreative ' + pid)
+        const cIds = state.cProducts[pid].creativeIds.slice()
+        cIds.push(cid)
+        const cBrandRef = rootGetters['xf/xfbrands/refProductById']({ bid, pid })
+        cBrandRef.update({ creativeIds: cIds, dateUpdate: new Date() })
+        this.dispatch(`${state.sPath}/uploadCreatives`, { [cid]: FILE }, { root: true })
+      },
+      updateProductTopImage ({ commit, state, rootGetters }, { bid, pid, cid }) {
+        console.log('  XDC PRODUCT ACT updateProductTopImage ' + pid)
+        const cBrandRef = rootGetters['xf/xfbrands/refProductById']({ bid, pid })
+        cBrandRef.update({ topimage: cid, dateUpdate: new Date() })
       }
     }
     this.getters = {

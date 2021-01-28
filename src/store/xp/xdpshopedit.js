@@ -64,11 +64,10 @@ export default class {
           console.log('  XDC cUserId ACT Add Shop - done no login')
         } else {
           const shop = new cfShops.CShop(sid, sname, cUserId)
-          shop.front = {
-            sLogo: new cfShops.CsFront('sLogo', 0),
-            Slide: new cfShops.CsFront('Slide', 1),
-            prAll: new cfShops.CsFront('prAll', 2)
-          }
+          const sfsLogo = new cfShops.CsFront('sLogo')
+          const sfSlide = new cfShops.CsFront('Slide')
+          const sfprAll = new cfShops.CsFront('prAll')
+          shop.front = [sfsLogo, sfSlide, sfprAll]
           shop.brands[bid] = sname
           this.dispatch('xf/xfshops/addShop', shop, { root: true })
           this.dispatch(`${state.sPath}/setSidToBrand`, { bid, sid }, { root: true })

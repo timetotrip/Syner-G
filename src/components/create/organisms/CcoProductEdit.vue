@@ -40,9 +40,10 @@
             label="価格"
           />
           <CcmUploadCreative
-            :creativerefs="pe_creativeRefs"
-            :crfunc="onCrSelect"
-            :code="`P-${product.id}`"
+            :cids="product.creativeIds"
+            :pickups="{ [product.topimage]: 'TOP' }"
+            :selectfunc="onCrSelect"
+            :clickfunc="onCrClick"
           />
           <v-btn
             @click="closeProduct()"
@@ -85,11 +86,11 @@ export default {
     },
     openfunc: {
       type: Function,
-      default: null
+      default: (pid) => { return pid }
     },
     closefunc: {
       type: Function,
-      default: null
+      default: () => { return 0 }
     },
     isopen: {
       type: Boolean,
@@ -104,7 +105,7 @@ export default {
     pe_topimage: '',
     pe_attention: {},
     pe_purchase: {},
-    pe_creativeRefs: {},
+    // pe_creativeRefs: {},
     okcancelDialog: false
   }),
   computed: {
@@ -133,18 +134,12 @@ export default {
         return true
       } else if (!this.$props.product.isEqualPurchase(this.pe_purchase)) {
         return true
-      } else if (!this.$props.product.isEqualCreatives(this.pe_creativeRefs)) {
-        return true
       }
       return false
     }
   },
   mounted () {
-    if (typeof this.$props.product === 'undefined') {
-      //
-    } else if (this.$props.product === null) {
-      //
-    } else {
+    if (this.$props.product !== null) {
       this.pe_name = this.$props.product.name
       this.pe_price = this.$props.product.price
       this.pe_type = this.$props.product.type
@@ -152,27 +147,16 @@ export default {
       this.pe_topimage = this.$props.product.topimage
       this.pe_attention = Object.assign({}, this.$props.product.attention)
       this.pe_purchase = Object.assign({}, this.$props.product.purchase)
-      this.pe_creativeRefs = Object.assign({}, this.$props.product.creatives)
     }
   },
   methods: {
     openProduct () {
       console.log('CCO product edit open ' + this.$props.product.id)
-      if (typeof this.$props.openfunc === 'undefined') {
-        //
-      } else if (this.$props.openfunc === null) {
-        //
-      } else {
-        this.$props.openfunc(this.$props.product.id)
-      }
+      this.$props.openfunc(this.$props.product.id)
     },
     closeProduct () {
       console.log('CCO product edit close ' + this.$props.product.id)
-      if (typeof this.$props.closefunc === 'undefined') {
-        //
-      } else if (this.$props.closefunc === null) {
-        //
-      } else if (this.isEdited) {
+      if (this.isEdited) {
         this.okcancelDialog = true
       } else {
         this.$props.closefunc()
@@ -185,9 +169,21 @@ export default {
     dialogCloseCancel () {
       this.okcancelDialog = false
     },
-    onCrSelect (cRef) {
+    onCrSelect (FILE) {
       console.log('CCO product edit select file')
-      this.$set(this.pe_creativeRefs, cRef.id, cRef)
+      const bid = this.$props.product.brand
+      const pid = this.$props.product.id
+      const cid = `P-${bid}-${Math.random().toString(32).substring(4)}`
+      this.$store.dispatch('xd/create/xdcbrand/pushProductCreative', { bid, pid, cid, FILE })
+      if (this.$props.product.topimage === '') {
+        this.$store.dispatch('xd/create/xdcbrand/updateProductTopImage', { bid, pid, cid })
+      }
+    },
+    onCrClick (cid) {
+      console.log('CCO product image click ' + cid)
+      const bid = this.$props.product.brand
+      const pid = this.$props.product.id
+      this.$store.dispatch('xd/create/xdcbrand/updateProductTopImage', { bid, pid, cid })
     },
     updateProduct () {
       console.log('CCO product edit update ' + this.$props.product.id)
@@ -199,7 +195,6 @@ export default {
         pAfter.topimage = this.pe_topimage
         pAfter.attention = Object.assign({}, this.pe_attention)
         pAfter.purchase = Object.assign({}, this.pe_purchase)
-        pAfter.creatives = Object.assign({}, this.pe_creativeRefs)
         this.$store.dispatch('xd/create/xdcbrand/updateProduct', pAfter)
       }
       this.$props.closefunc()

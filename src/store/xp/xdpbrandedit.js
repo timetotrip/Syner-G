@@ -80,34 +80,20 @@ export default class {
       /*
         ブランドに画像追加
       */
-      updateBrandImage ({ commit, state, rootGetters }, cRefsAfter) {
-        console.log('  XDC BRAND ACT update brand image ' + state.cBrand.id)
-        // const bid = state.cBrand.id
-        const cRefsBefore = Object.assign({}, state.cBrand.creatives)
-        const fileTask = {}
-        for (const cid in cRefsBefore) {
-          if (typeof cRefsAfter[cid] === 'undefined') {
-            // todo storage 削除処理
-          }
-        }
-        for (const cid in cRefsAfter) {
-          if (cRefsAfter[cid].type === 'FILE') {
-            fileTask[cid] = cRefsAfter[cid].file
-            cRefsAfter[cid].uploadingRef()
-          }
-        }
-        const aBrand = Object.assign({}, state.cBrand)
-        aBrand.creatives = cRefsAfter
-        aBrand.dateUpdate = new Date()
-        this.dispatch('xf/xfbrands/updateBrand', aBrand, { root: true })
-        this.dispatch(`${state.sPath}/uploadCreatives`, fileTask, { root: true })
+      pushBrandCreative ({ commit, state, rootGetters }, { cid, FILE }) {
+        const bid = state.cBrand.id
+        const cIds = state.cBrand.creativeIds.slice()
+        const cBrandRef = rootGetters['xf/xfbrands/refBrandById'](bid)
+        cIds.push(cid)
+        cBrandRef.update({ creativeIds: cIds, dateUpdate: new Date() })
+        this.dispatch(`${state.sPath}/uploadCreatives`, { [cid]: FILE }, { root: true })
       },
       /*
         ブランドにLOGO更新
       */
       updateBrandLogo ({ commit, state, rootGetters }, { bid, cid }) {
         const cBrandRef = rootGetters['xf/xfbrands/refBrandById'](bid)
-        cBrandRef.update({ logo: cid })
+        cBrandRef.update({ logo: cid, dateUpdate: new Date() })
       }
     }
 

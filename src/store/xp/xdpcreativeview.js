@@ -21,42 +21,25 @@ export default class {
     }
 
     this.actions = {
-      setBrandCreatives ({ commit, state, rootGetters }, cRef) {
-        const cIds = []
-        for (const cid in cRef) {
-          if (typeof state.cCreatives[cid] !== 'undefined') {
-            // already
-          } else if (cIds.includes(cid)) {
-            // already
-          } else {
-            cIds.push(cid)
-          }
-        }
-        this.dispatch(`${state.sPath}/setCreativesByIds`, cIds, { root: true })
-      },
       setProductsCreatives ({ commit, state, rootGetters }, plist) {
-        console.log('  XDC SHOP Set CPRODUCTS CREATIVE ')
+        console.log('  XDC SHOP Set setProductsCreatives ')
         const cIds = []
         for (const pid in plist) {
-          for (const cid in plist[pid].creatives) {
-            if (typeof state.cCreatives[cid] !== 'undefined') {
-              // already
-            } else if (cIds.includes(cid)) {
-              // already
-            } else {
+          plist[pid].creativeIds.forEach((cid) => {
+            if (!cIds.includes(cid)) {
               cIds.push(cid)
             }
-          }
+          })
         }
         this.dispatch(`${state.sPath}/setCreativesByIds`, cIds, { root: true })
       },
       setCreativesByIds ({ commit, state, rootGetters }, cIds) {
+        console.log('  XDC SHOP Set setCreativesByIds ')
         while (cIds.length > 0) {
           const cIds10 = cIds.slice(0, 10)
           const cIds10Ref = rootGetters['xf/xfcreatives/refCreativesByIds10'](cIds10)
           dXdpCreative.push(cIds10Ref.withConverter(cfCreatives.ConvCCreative).onSnapshot((snaps) => {
             snaps.forEach((snap) => {
-              // console.log('  XDC SHOP Set CREATIVE ' + snap.data().id)
               commit('pushCCreative', snap.data())
             })
           }))
@@ -71,6 +54,15 @@ export default class {
     }
 
     this.getters = {
+      cCrePath: (state, getters, rootState, rootGetters) => (cid) => {
+        if (state.cCreatives === {}) {
+          return pathLocading
+        } else if (typeof state.cCreatives[cid] === 'undefined') {
+          return pathLocading
+        }
+        return state.cCreatives[cid].url
+      }
+      /*
       cProCreatives: (state, getters, rootState, rootGetters) => (pid) => {
         if (typeof state.cProducts[pid] === 'undefined') {
           return {}
@@ -84,19 +76,10 @@ export default class {
         }
         return Object.keys(creatives)
       },
-      cCrePath: (state, getters, rootState, rootGetters) => (cid) => {
-        if (state.cCreatives === {}) {
-          return pathLocading
-        } else if (typeof state.cCreatives[cid] === 'undefined') {
-          return pathLocading
-        }
-        return state.cCreatives[cid].url
-      },
       cProTopCid: (state, getters, rootState, rootGetters) => (pid) => {
         return state.cProducts[pid].topimage
       },
       cProHasTopCre: (state, getters, rootState, rootGetters) => (pid) => {
-        /*
         if (typeof state.cProducts[pid] === 'undefined') {
           return false
         } else if (state.cProducts[pid].topimage !== '') {
@@ -106,8 +89,6 @@ export default class {
         if (pCreativeIds.length > 0) {
           return true
         }
-        return false
-        */
         return false
       },
       cProTopCrePath: (state, getters, rootState, rootGetters) => (pid) => {
@@ -122,6 +103,7 @@ export default class {
         }
         return pathLocading
       }
+      */
     }
   }
 }
