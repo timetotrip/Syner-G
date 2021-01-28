@@ -57,17 +57,23 @@ export default class {
         - ログインチェック
         - xfbrandsの更新→xfusersの更新
       */
-      addBrandShop ({ commit, state, rootGetters }, { sid, sname, bid }) {
+      makeBrandShop ({ commit, state, rootGetters }, { sid, sname, bid }) {
         console.log('  XDC Shop ACT Add Shop ' + sid + sname)
         const cUserId = rootGetters['xd/general/xdgcuser/cUserId']
         if (cUserId === '') {
           console.log('  XDC cUserId ACT Add Shop - done no login')
+        } else {
+          const shop = new cfShops.CShop(sid, sname, cUserId)
+          shop.front = {
+            sLogo: new cfShops.CsFront('sLogo', 0),
+            Slide: new cfShops.CsFront('Slide', 1),
+            prAll: new cfShops.CsFront('prAll', 2)
+          }
+          shop.brands[bid] = sname
+          this.dispatch('xf/xfshops/addShop', shop, { root: true })
+          this.dispatch(`${state.sPath}/setSidToBrand`, { bid, sid }, { root: true })
+          this.dispatch('xd/general/xdgcuser/addMngShop', sid, { root: true })
         }
-        const shop = new cfShops.CShop(sid, sname, cUserId)
-        shop.brands[bid] = sname
-        this.dispatch('xf/xfshops/addShop', shop, { root: true })
-        this.dispatch('xd/create/xdcbrand/addBrandShop', { bid, sid }, { root: true })
-        this.dispatch('xd/general/xdgcuser/addMngShop', sid, { root: true })
       }
     }
     this.getters = {

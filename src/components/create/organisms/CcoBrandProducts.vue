@@ -36,6 +36,7 @@ export default {
   computed: {
     ...mapGetters('xd/create/xdcbrand', ['cProducts'])
   },
+  /*
   mounted () {
     console.log('Cct brand products mounted')
     if (typeof this.$props.brand === 'undefined') {
@@ -50,6 +51,7 @@ export default {
     console.log('Cct brand products beforeDestroy')
     this.$store.dispatch('xd/create/xdcbrand/resetCProducts')
   },
+  */
   methods: {
     productOpen (pid) {
       this.openProduct = pid

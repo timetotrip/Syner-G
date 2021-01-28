@@ -21,9 +21,22 @@ export default class {
     }
 
     this.actions = {
+      setBrandCreatives ({ commit, state, rootGetters }, cRef) {
+        const cIds = []
+        for (const cid in cRef) {
+          if (typeof state.cCreatives[cid] !== 'undefined') {
+            // already
+          } else if (cIds.includes(cid)) {
+            // already
+          } else {
+            cIds.push(cid)
+          }
+        }
+        this.dispatch(`${state.sPath}/setCreativesByIds`, cIds, { root: true })
+      },
       setProductsCreatives ({ commit, state, rootGetters }, plist) {
         console.log('  XDC SHOP Set CPRODUCTS CREATIVE ')
-        let cIds = []
+        const cIds = []
         for (const pid in plist) {
           for (const cid in plist[pid].creatives) {
             if (typeof state.cCreatives[cid] !== 'undefined') {
@@ -35,12 +48,15 @@ export default class {
             }
           }
         }
+        this.dispatch(`${state.sPath}/setCreativesByIds`, cIds, { root: true })
+      },
+      setCreativesByIds ({ commit, state, rootGetters }, cIds) {
         while (cIds.length > 0) {
           const cIds10 = cIds.slice(0, 10)
           const cIds10Ref = rootGetters['xf/xfcreatives/refCreativesByIds10'](cIds10)
           dXdpCreative.push(cIds10Ref.withConverter(cfCreatives.ConvCCreative).onSnapshot((snaps) => {
             snaps.forEach((snap) => {
-              console.log('  XDC SHOP Set CREATIVE ' + snap.data().id)
+              // console.log('  XDC SHOP Set CREATIVE ' + snap.data().id)
               commit('pushCCreative', snap.data())
             })
           }))

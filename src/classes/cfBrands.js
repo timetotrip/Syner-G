@@ -241,13 +241,6 @@ class CCreativeRef {
     this.file = obj.file
     this.url = obj.url
     return this
-    /*
-    this.synergy = obj.synergy
-    this.pv = obj.pv
-    this.like = obj.like
-    this.dateCreate = obj.dateCreate
-    this.dateUpdate = obj.dateUpdate
-    */
   }
 
   setFromFile (file, code) {
@@ -279,16 +272,6 @@ class CCreativeRef {
     return ''
   }
 }
-/*
-const ConvCCreative = {
-  toFirestore (product) {
-    return {
-    }
-  },
-  fromFirestore (snapshot, options) {
-  }
-}
-*/
 exports.CBrand = CBrand
 exports.CProduct = CProduct
 exports.CCreativeRef = CCreativeRef

@@ -40,6 +40,7 @@ export default class {
     this.getters = {
       ...creativeView.getters,
       getCRefUrls: (state, getters, rootState, rootGetters) => (cRefs) => {
+        // console.log('  XDP CRE EDI getCRefUrls ')
         const ret = {}
         for (const cid in cRefs) {
           if (cRefs[cid].type === 'FILE') {

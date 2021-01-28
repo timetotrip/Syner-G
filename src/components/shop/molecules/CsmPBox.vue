@@ -3,7 +3,9 @@
     <CgmCreativeBox
       :src="cProTopCrePath(product.id)"
     />
-    <h3 class="pbTitle">{{ product.name }}</h3>
+    <h3 class="pbTitle">
+      {{ product.name }}
+    </h3>
     <CgaPrice :price="product.price" class="pbPrice" />
   </div>
 </template>

@@ -46,6 +46,7 @@ export default class {
           if (!snap.empty) {
             console.log('  XDC BRAND Set Cbrand SET' + bid)
             commit('setCbrand', { cBrand: snap.data(), permit: pmt })
+            this.dispatch(`${state.sPath}/setBrandCreatives`, snap.data().creatives, { root: true })
           } else {
             console.log('  XDC BRAND Set Cbrand ERROR CANT FIND' + bid)
           }

@@ -72,7 +72,6 @@
 <script>
 import CgmOkCancelDialog from '@/components/general/molecules/CgmOkCancelDialog.vue'
 import CcmUploadCreative from '@/components/create/molecules/CcmUploadCreative.vue'
-const cfBrands = require('~/classes/cfBrands.js')
 export default {
   name: 'CcoProductEdit',
   components: {
@@ -103,14 +102,6 @@ export default {
     pe_type: '',
     pe_status: '',
     pe_topimage: '',
-    /*
-    pe_creater: '',
-    pe_dateCreate: '',
-    pe_dateUpdate: '',
-    pe_dateRelease: '',
-    pe_dateEnd: '',
-    pe_brand: '',
-    */
     pe_attention: {},
     pe_purchase: {},
     pe_creativeRefs: {},
@@ -159,14 +150,6 @@ export default {
       this.pe_type = this.$props.product.type
       this.pe_status = this.$props.product.status
       this.pe_topimage = this.$props.product.topimage
-      /*
-      this.pe_creater = this.$props.product.creater
-      this.pe_dateCreate = this.$props.product.dateCreate
-      this.pe_dateUpdate = this.$props.product.dateUpdate
-      this.pe_dateRelease = this.$props.product.dateRelease
-      this.pe_dateEnd = this.$props.product.dateEnd
-      this.pe_brand = this.$props.product.brand
-      */
       this.pe_attention = Object.assign({}, this.$props.product.attention)
       this.pe_purchase = Object.assign({}, this.$props.product.purchase)
       this.pe_creativeRefs = Object.assign({}, this.$props.product.creatives)

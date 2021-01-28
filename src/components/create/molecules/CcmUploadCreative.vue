@@ -3,12 +3,23 @@
     <div
       class="ucGaralley"
     >
-      <v-img
-        v-for="(cObj, key) in getCRefUrls(creativerefs)"
-        :key="key"
-        class="ucImages"
-        :src="cObj"
-      />
+      <div
+        v-for="(cObj, cid) in getCRefUrls(creativerefs)"
+        :key="cid"
+        :class="['ucArea',{ 'uc--pickup': pickUp(cid) !== '' }]"
+      >
+        <v-img
+          :class="['ucImage']"
+          :src="cObj"
+          @click="onClick(cid)"
+        />
+        <p
+          v-if="pickUp(cid) !== ''"
+          :class="['ucPickUp']"
+        >
+          {{ pickUp(cid) }}
+        </p>
+      </div>
     </div>
     <v-file-input
       v-if="inputView"
@@ -35,6 +46,18 @@ export default {
     code: {
       type: String,
       default: 'UNN'
+    },
+    pickups: {
+      type: Object,
+      default: () => { return {} }
+    },
+    clickfunc: {
+      type: Function,
+      default: (cid) => { return cid }
+    },
+    canupload: {
+      type: Boolean,
+      default: true
     }
   },
   data: () => ({
@@ -42,6 +65,10 @@ export default {
   }),
   computed: {
     ...mapGetters('xd/create/xdcbrand', ['getCRefUrls'])
+  },
+  mounted () {
+    console.log('UP CRE MOUNTED')
+    this.inputView = this.$props.canupload
   },
   methods: {
     onFileSelect (FILE) {
@@ -60,6 +87,16 @@ export default {
           this.inputView = true
         })
       }
+    },
+    onClick (cid) {
+      this.$props.clickfunc(cid)
+    },
+    pickUp (cid) {
+      if (typeof this.$props.pickups[cid] === 'undefined') {
+        return ''
+      } else {
+        return this.$props.pickups[cid]
+      }
     }
   }
 }
@@ -71,9 +108,21 @@ export default {
     flex-wrap: wrap;
     padding: 1rem!important;
     justify-content: space-around;
-    .ucImages{
+    .ucArea{
+      position: relative;
       width: 40%;
       flex-grow: 0;
+      .ucImage{
+        width: 100%;
+      }
+    }
+    .ucArea.uc--pickup{
+      border: red solid 3px;
+      .ucPickUp{
+        position:absolute;
+        right: 0;
+        top: 0;
+      }
     }
   }
 }

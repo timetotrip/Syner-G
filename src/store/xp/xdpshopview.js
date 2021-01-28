@@ -28,16 +28,9 @@ export default class {
         // 過去の設定をリセット
         dXdpShop.forEach((f) => { f() })
         dXdpShop = []
-        console.log('mustCheck')
-        /*
-        this.dispatch('xd/permit/xdpproductview/resetCProducts', { root: true })
-        this.dispatch('xd/permit/xdpcriativeview/resetCCreatives', { root: true })
-        this.dispatch('resetCProducts', { root: false })
-        this.dispatch('resetCCreatives', { root: false })
-        */
         this.dispatch(`${state.sPath}/resetCProducts`, { root: true })
         this.dispatch(`${state.sPath}/resetCCreatives`, { root: true })
-        // ブランド 参照の取得
+        // ショップ 参照の取得
         const cShopRef = rootGetters['xf/xfshops/refShopById'](sid)
         // イベントハンドラの設定
         dXdpShop.push(cShopRef.withConverter(cfShops.ConvCShop).onSnapshot((snap) => {

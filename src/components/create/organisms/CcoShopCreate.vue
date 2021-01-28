@@ -135,7 +135,7 @@ export default {
     },
     addShop () {
       console.log('CCO shop aAddShop ' + this.sname)
-      this.$store.dispatch('xd/create/xdcshop/addBrandShop', {
+      this.$store.dispatch('xd/create/xdcshop/makeBrandShop', {
         sid: this.sid,
         sname: this.sname,
         bid: this.sbrand
