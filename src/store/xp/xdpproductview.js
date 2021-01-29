@@ -64,6 +64,7 @@ export default class {
     }
     this.getters = {
       cProducts: (state, getters, rootState, rootGetters) => {
+        console.log('  XDC BRAND GET cProducts ')
         return state.cProducts
       }
     }

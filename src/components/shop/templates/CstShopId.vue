@@ -6,32 +6,43 @@
       key: 'top',
       title: 'ブランド',
       icon: ['fas', 'table']
-    } /*,{
-      key: 'product',
-      title: 'プロダクト',
-      icon: ['fas', 'tshirt']
-    } */]"
+    }]"
   >
     <template #top>
-      <Cso1stView />
-      <CsoProductsAll :v-if="cShop!==null" :shop="cShop" />
+      <div
+        v-for="sf in cShopStoreFronts"
+        :key="sf.type"
+      >
+        <CsoSFsLogo
+          v-if="sf.type==='sLogo'"
+          :storefront="sf"
+        />
+        <CsoSFsSlide
+          v-if="sf.type==='Slide'"
+          :storefront="sf"
+        />
+        <CsoSfProductsAll
+          v-if="sf.type==='prAll'"
+          :shop="cShop"
+          :storefront="sf"
+        />
+      </div>
     </template>
-    <!--
-    <template #product>
-      <CcoBrandProducts :brand="cBrand" />
-    </template>
-    -->
   </CgmFloatActMenu>
 </template>
 <script>
 import CgmFloatActMenu from '@/components/general/molecules/CgmFloatActMenu.vue'
-import Cso1stView from '@/components/shop/organisms/Cso1stView.vue'
+import CsoSFsLogo from '@/components/shop/organisms/CsoSFsLogo.vue'
+import CsoSFsSlide from '@/components/shop/organisms/CsoSFsSlide.vue'
+import CsoSfProductsAll from '@/components/shop/organisms/CsoSfProductsAll.vue'
 const { mapGetters } = require('vuex')
 export default {
   name: 'CstShopId',
   components: {
     CgmFloatActMenu,
-    Cso1stView
+    CsoSFsLogo,
+    CsoSFsSlide,
+    CsoSfProductsAll
   },
   props: {
     sid: {
@@ -40,7 +51,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('xd/shop/xdsshop', ['cShop'])
+    ...mapGetters('xd/shop/xdsshop', ['cShop', 'cShopStoreFronts'])
   },
   mounted () {
     console.log('Cst shop id mounted')

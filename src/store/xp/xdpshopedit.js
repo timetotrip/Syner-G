@@ -65,10 +65,15 @@ export default class {
         } else {
           const shop = new cfShops.CShop(sid, sname, cUserId)
           const sfsLogo = new cfShops.CsFront('sLogo')
-          sfsLogo.creativeIds.push(cBrand.logo)
           const sfSlide = new cfShops.CsFront('Slide')
-          sfSlide.creativeIds = cBrand.creativeIds.slice()
           const sfprAll = new cfShops.CsFront('prAll')
+          cBrand.creativeIds.forEach((cid) => {
+            if (cid === cBrand.logo) {
+              sfsLogo.creativeIds.push(cid)
+            } else {
+              sfSlide.creativeIds.push(cid)
+            }
+          })
           shop.front = [sfsLogo, sfSlide, sfprAll]
           shop.brand = bid
           this.dispatch('xf/xfshops/addShop', shop, { root: true })

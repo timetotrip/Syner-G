@@ -65,7 +65,7 @@ export default class {
         }
       },
       cShopName: (state, getters, rootState, rootGetters) => {
-        console.log('  XDC BRAND ACT cShopName ')
+        // console.log('  XDC BRAND ACT cShopName ')
         if (!process.browser) {
           return ''
         } else if (typeof state.cShop === 'undefined') {
@@ -75,6 +75,31 @@ export default class {
           return ''
         } else {
           return state.cShop.name
+        }
+      },
+      cLinkShopCreate: (state, getters, rootState, rootGetters) => {
+        // console.log('  XDC BRAND ACT cShopName ')
+        if (!process.browser) {
+          return ''
+        } else if (typeof state.cShop === 'undefined') {
+          console.log('warn')
+          return ''
+        } else if (state.cShop === null) {
+          return ''
+        } else {
+          return `/create/shop/${state.cShop.id}`
+        }
+      },
+      cShopStoreFronts: (state, getters, rootState, rootGetters) => {
+        if (!process.browser) {
+          return []
+        } else if (typeof state.cShop === 'undefined') {
+          console.log('warn')
+          return []
+        } else if (state.cShop === null) {
+          return []
+        } else {
+          return state.cShop.front
         }
       }
     }

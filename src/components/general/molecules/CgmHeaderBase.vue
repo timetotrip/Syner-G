@@ -1,10 +1,14 @@
 <template>
-  <v-app-bar
-    class="d-flex justify-space-between elevation-0"
+  <div
+    class="HeaderBase"
   >
+    <p v-if="logo !== ''">
+      ロゴ
+    </p>
     <v-app-bar-nav-icon v-if="navi" @click.stop="$nuxt.$emit('navigation-toggle')" />
     <v-toolbar-title>{{ title }}</v-toolbar-title>
-  </v-app-bar>
+    <slot />
+  </div>
 </template>
 <script>
 export default {
@@ -17,6 +21,10 @@ export default {
     navi: {
       type: Boolean,
       default: true
+    },
+    logo: {
+      type: String,
+      default: ''
     }
   },
   data: () => ({
@@ -31,4 +39,14 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+.HeaderBase{
+  // position: absolute;
+  background: lightgray;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
 </style>

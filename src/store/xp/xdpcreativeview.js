@@ -31,7 +31,13 @@ export default class {
         }
         this.dispatch(`${state.sPath}/setCreativesByIds`, cIds, { root: true })
       },
-      setCreativesByIds ({ commit, state, rootGetters }, cIds) {
+      setCreativesByIds ({ commit, state, rootGetters }, cIdsNeed) {
+        let cIds = []
+        cIdsNeed.forEach((cid) => {
+          if (typeof state.cCreatives[cid] === 'undefined') {
+            cIds.push(cid)
+          }
+        })
         console.log('  XDC SHOP Set setCreativesByIds ')
         while (cIds.length > 0) {
           const cIds10 = cIds.slice(0, 10)

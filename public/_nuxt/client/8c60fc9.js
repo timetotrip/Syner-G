@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{460:function(t,n,e){"use strict";e.r(n);var r={layout:"create"},l=e(9),component=Object(l.a)(r,(function(){var t=this.$createElement;return(this._self._c||t)("div",[this._v("\n  CREATE SHOP INDEX "+this._s(JSON.stringify(this.$route.params))+"\n")])}),[],!1,null,null,null);n.default=component.exports}}]);
