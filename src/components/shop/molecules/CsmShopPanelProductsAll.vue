@@ -1,5 +1,6 @@
 <template>
-  <CgmSlideshowPanel v-if="storefront!==null">
+  <CgmSlideshowPanel :pagenumber="pagenumber">
+    <p>CsmShopPanelProductsAllのページです</p>
     <slot />
   </CgmSlideshowPanel>
 </template>
@@ -7,14 +8,18 @@
 import CgmSlideshowPanel from '@/components/general/molecules/CgmSlideshowPanel.vue'
 const cfShops = require('~/classes/cfShops.js')
 export default {
-  name: 'CsmStoreFrontBase',
+  name: 'CsmShopPanelProductsAll',
   components: {
     CgmSlideshowPanel
   },
   props: {
     storefront: {
       type: cfShops.CsFront,
-      default: () => { return new cfShops.CsFront('prAll') }
+      default: () => { return new cfShops.CsFront('undef') }
+    },
+    pagenumber: {
+      type: Number,
+      default: 0
     }
   },
   mounted () {

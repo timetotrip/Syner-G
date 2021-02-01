@@ -12,6 +12,18 @@ class CShop {
     this.staffs = {}
     this.front = []
   }
+
+  cIds () {
+    const ret = []
+    this.front.forEach((sf)=>{
+      sf.cIds().forEach((cid)=>{
+        if (!ret.includes(cid)) {
+          ret.push(cid)
+        }
+      })
+    })
+    return ret
+  }
 }
 
 const ConvCShop = {
@@ -47,18 +59,21 @@ class CsFront {
   constructor (type) {
     this.type = type
     this.creativeIds = []
+    this.creativeMaps = []
   }
 
   toObj () {
     const ret = {}
     ret.type = this.type
     ret.creativeIds = this.creativeIds.slice()
+    ret.creativeMaps = Object.assign({}, this.creativeMaps)
     return ret
   }
 
   fromObj (obj) {
     this.type = obj.type
     this.creativeIds = obj.creativeIds.slice()
+    this.creativeMaps = Object.assign({}, obj.creativeMaps)
     return this
   }
 
@@ -68,6 +83,16 @@ class CsFront {
 
   pushCreativeId (cid) {
     this.creativeIds.push(cid)
+  }
+
+  cIds () {
+    const ret = this.creativeIds.slice()
+    for (const cid in this.creativeMaps) {
+      if (!ret.includes(cid)) {
+        ret.push(cid)
+      }
+    }
+    return ret
   }
 }
 

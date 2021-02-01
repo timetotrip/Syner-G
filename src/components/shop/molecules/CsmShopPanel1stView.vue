@@ -23,7 +23,7 @@ export default {
     }
   },
   mounted () {
-    this.$store.dispatch('xd/shop/xdsshop/setCreativesByIds', this.$props.storefront.creativeIds)
+    // this.$store.dispatch('xd/shop/xdsshop/setCreativesByIds', this.$props.storefront.creativeIds)
   }
 }
 </script>

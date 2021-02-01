@@ -39,10 +39,14 @@ export default class {
             if (snap.data().brand !== '') {
               this.dispatch(`${state.sPath}/setCBrand`, snap.data().brand, { root: true })
             }
+            this.dispatch(`${state.sPath}/setCreativesByShop`, snap.data(), { root: true })
           } else {
             console.log('  XDC SHOP Set CSHOP ERROR CANT FIND' + sid)
           }
         }))
+      },
+      setCreativesByShop ({ commit, state, rootGetters }, cShop) {
+        this.dispatch(`${state.sPath}/setCreativesByIds`, cShop.cIds(), { root: true })
       },
       /*
         カレントSHOPのリセット

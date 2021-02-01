@@ -64,14 +64,11 @@ export default class {
           return 0
         } else {
           const shop = new cfShops.CShop(sid, sname, cUserId)
-          const sfsLogo = new cfShops.CsFront('Logo')
-          const sfnMenu = new cfShops.CsFront('Menu')
           const sf1stvw = new cfShops.CsFront('1stView')
           const sfSlide = new cfShops.CsFront('Slide')
-          const sfprAll = new cfShops.CsFront('productAll')
-          const sfSnsln = new cfShops.CsFront('SnsLink')
-          const sfFootr = new cfShops.CsFront('Footer')
+          const sfprAll = new cfShops.CsFront('productsAll')
           cBrand.creativeIds.forEach((cid) => {
+            /*
             if (cid === cBrand.logo) {
               sfsLogo.creativeIds.push(cid)
             } else if (sf1stvw.creativeIds === {}) {
@@ -79,9 +76,19 @@ export default class {
             } else {
               sfSlide.creativeIds.push(cid)
             }
+            */
+            // 仮
+            if (typeof sf1stvw.creativeMaps.logo === 'undefined') {
+              sf1stvw.creativeMaps.logo = cid
+            } else if (typeof sf1stvw.creativeMaps.background === 'undefined') {
+              sf1stvw.creativeMaps.background = cid
+            } else {
+              sfSlide.creativeIds.push(cid)
+            }
           })
-          shop.front = [sfsLogo, sf1stvw, sfnMenu, sfSlide, sfprAll, sfSnsln, sfFootr]
+          shop.front = [sf1stvw, sfSlide, sfprAll]
           shop.brand = bid
+          shop.logo = cBrand.logo
           this.dispatch('xf/xfshops/addShop', shop, { root: true })
           this.dispatch(`${state.sPath}/setSidToBrand`, { bid, sid }, { root: true })
           this.dispatch('xd/general/xdgcuser/addMngShop', sid, { root: true })

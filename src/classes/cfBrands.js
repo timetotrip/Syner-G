@@ -14,6 +14,11 @@ class CBrand {
     this.creativeIds = []
   }
 
+  cIds () {
+    const ret = this.creativeIds.slice()
+    return ret
+  }
+
   isEqualCreativeIds (cIds) {
     return this.creativeIds.toString() === cIds.toString()
   }
@@ -75,6 +80,11 @@ class CProduct {
     this.purchase = {}
     // クリエイティブ 連想配列
     this.creativeIds = []
+  }
+
+  cIds () {
+    const ret = this.creativeIds.slice()
+    return ret
   }
 
   isEqualAttention (atn) {
@@ -217,7 +227,7 @@ class CCreativeRef {
 }
 exports.CBrand = CBrand
 exports.CProduct = CProduct
-exports.CCreativeRef = CCreativeRef
+// exports.CCreativeRef = CCreativeRef  will stop using
 exports.ConvCBrand = ConvCBrand
 exports.ConvCProduct = ConvCProduct
 // exports.ConvCProduct = ConvCCreative

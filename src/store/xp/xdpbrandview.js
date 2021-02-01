@@ -43,11 +43,14 @@ export default class {
           if (!snap.empty) {
             console.log('  XDC BRAND Set Cbrand SET' + bid)
             commit('setCbrand', { cBrand: snap.data(), permit: pmt })
-            this.dispatch(`${state.sPath}/setCreativesByIds`, snap.data().creativeIds, { root: true })
+            this.dispatch(`${state.sPath}/setCreativesByBrand`, snap.data(), { root: true })
           } else {
             console.log('  XDC BRAND Set Cbrand ERROR CANT FIND' + bid)
           }
         }))
+      },
+      setCreativesByBrand ({ commit, state, rootGetters }, cBrand) {
+        this.dispatch(`${state.sPath}/setCreativesByIds`, cBrand.cIds(), { root: true })
       },
       /*
         カレントブランドのリセット

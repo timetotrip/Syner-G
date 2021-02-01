@@ -12,7 +12,7 @@ const state = {
   ...shopEdit.state,
   ...brandEdit.state,
   ...productEdit.state,
-  ...creativeEdit.stat
+  ...creativeEdit.state
 }
 const mutations = {
   ...shopEdit.mutations,

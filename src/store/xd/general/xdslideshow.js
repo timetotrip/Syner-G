@@ -44,15 +44,15 @@ export const actions = {
     スライドを指定
   */
   nPanelSet ({ commit, state, rootGetters }, num) {
-    console.log('  XD NSLID SET ' + num)
+    // console.log('  XD NSLID SET ' + num)
     commit('nPanel', { p: num, e: 0 })
   },
   nPanelReset ({ commit, state, rootGetters }, num) {
-    console.log('  XD NSLID SET ' + num)
+    // console.log('  XD NSLID SET ' + num)
     commit('resetPanel')
   },
   goPrevOnce ({ commit, state, rootGetters }) {
-    console.log('  XD NSLID goPrevOnce ')
+    // console.log('  XD NSLID goPrevOnce ')
     const nextPnl = state.nPanel - 1
     if (nextPnl >= 0) {
       commit('resetNebMax')
@@ -60,7 +60,7 @@ export const actions = {
     }
   },
   goPrevStep ({ commit, state, rootGetters }) {
-    console.log('  XD NSLID goPrevStep ')
+    // console.log('  XD NSLID goPrevStep ')
     const nextEle = state.nElem - 1
     if (nextEle < 0) {
       const nextPnl = state.nPanel - 1
@@ -71,7 +71,7 @@ export const actions = {
     } else {
       commit('nPanel', { p: state.nPanel, e: nextEle })
     }
-    console.log(`${state.nPanel}/${state.npMax}  ${state.nElem}/${state.neMax} ${state.nBit}/${state.nbMax}`)
+    // console.log(`${state.nPanel}/${state.npMax}  ${state.nElem}/${state.neMax} ${state.nBit}/${state.nbMax}`)
   },
   goNextStep ({ commit, state, rootGetters }) {
     console.log('  XD NSLID goNextStep ')
@@ -85,25 +85,25 @@ export const actions = {
     } else {
       commit('nPanel', { p: state.nPanel, e: nextEle })
     }
-    console.log(`${state.nPanel}/${state.npMax}  ${state.nElem}/${state.neMax} ${state.nBit}/${state.nbMax}`)
+    // console.log(`${state.nPanel}/${state.npMax}  ${state.nElem}/${state.neMax} ${state.nBit}/${state.nbMax}`)
   },
   goNextOnce ({ commit, state, rootGetters }) {
-    console.log('  XD NSLID goNextOnce ')
+    // console.log('  XD NSLID goNextOnce ')
     //
   },
   addPMax ({ commit, state, rootGetters }) {
-    console.log('  XD NSLID add PMax ')
+    // console.log('  XD NSLID add PMax ')
     //
     commit('nPMax', state.npMax + 1)
-    console.log(`${state.nPanel}/${state.npMax}  ${state.nElem}/${state.neMax} ${state.nBit}/${state.nbMax}`)
+    // console.log(`${state.nPanel}/${state.npMax}  ${state.nElem}/${state.neMax} ${state.nBit}/${state.nbMax}`)
   },
   addEMax ({ commit, state, rootGetters }) {
-    console.log('  XD NSLID add EMax ')
+    // console.log('  XD NSLID add EMax ')
     commit('nEMax', state.neMax + 1)
-    console.log(`${state.nPanel}/${state.npMax}  ${state.nElem}/${state.neMax} ${state.nBit}/${state.nbMax}`)
+    // console.log(`${state.nPanel}/${state.npMax}  ${state.nElem}/${state.neMax} ${state.nBit}/${state.nbMax}`)
   },
   addEMaxNum ({ commit, state, rootGetters }, em) {
-    console.log('  XD NSLID add EMax NUM ' + em)
+    // console.log('  XD NSLID add EMax NUM ' + em)
     if (em === 0) {
       //
     } else if (state.neMap[em]) {
@@ -111,7 +111,7 @@ export const actions = {
     } else {
       commit('nEMaxAdd', em)
     }
-    console.log(`${state.nPanel}/${state.npMax}  ${state.nElem}/${state.neMax} ${state.nBit}/${state.nbMax}`)
+    // console.log(`${state.nPanel}/${state.npMax}  ${state.nElem}/${state.neMax} ${state.nBit}/${state.nbMax}`)
   }
 }
 

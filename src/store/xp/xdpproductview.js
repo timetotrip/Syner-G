@@ -58,8 +58,21 @@ export default class {
             })
           }
           commit('pushCProducts', plist)
-          this.dispatch(`${state.sPath}/setProductsCreatives`, plist, { root: true })
+          this.dispatch(`${state.sPath}/setCreativesByProducts`, plist, { root: true })
         }))
+      },
+      setCreativesByProducts ({ commit, state, rootGetters }, plist) {
+        // 廃止予定 productsViewに移動
+        console.log('  XDC SHOP Set setProductsCreatives ')
+        const cIds = []
+        for (const pid in plist) {
+          plist[pid].cIds().forEach((cid) => {
+            if (!cIds.includes(cid)) {
+              cIds.push(cid)
+            }
+          })
+        }
+        this.dispatch(`${state.sPath}/setCreativesByIds`, cIds, { root: true })
       }
     }
     this.getters = {

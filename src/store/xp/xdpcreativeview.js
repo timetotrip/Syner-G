@@ -19,18 +19,6 @@ export default class {
     }
 
     this.actions = {
-      setProductsCreatives ({ commit, state, rootGetters }, plist) {
-        console.log('  XDC SHOP Set setProductsCreatives ')
-        const cIds = []
-        for (const pid in plist) {
-          plist[pid].creativeIds.forEach((cid) => {
-            if (!cIds.includes(cid)) {
-              cIds.push(cid)
-            }
-          })
-        }
-        this.dispatch(`${state.sPath}/setCreativesByIds`, cIds, { root: true })
-      },
       setCreativesByIds ({ commit, state, rootGetters }, cIdsNeed) {
         let cIds = []
         cIdsNeed.forEach((cid) => {
