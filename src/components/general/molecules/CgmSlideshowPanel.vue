@@ -5,24 +5,15 @@
   >
     <transition>
       <div
-        v-if="nPanel===pnum"
+        v-if="nPanel===pagenumber"
         class="spBase"
       >
         <div class="spBack">
-          <slot />
           <slot name="background" />
         </div>
-        <CgmSlideshowElem class="spSlideElem" :enumber="areanum" :apdelay="areadelay">
-          <div :class="'spArea ' + aClass()">
-            <h2 class="spTitle">
-              <slot name="title" />
-            </h2>
-            <div :class="'spDetails ' + dClass()">
-              <slot name="details" />
-            </div>
-            <h3 class="spSumup">
-              <slot name="sumup" />
-            </h3>
+        <CgmSlideshowElem class="spSlideElem" :enumber="areanumber" :apdelay="areadelay">
+          <div class="spArea">
+            <slot />
           </div>
         </CgmSlideshowElem>
       </div>
@@ -38,19 +29,11 @@ export default {
     CgmSlideshowElem
   },
   props: {
-    dtype: {
-      type: String,
-      default: ''
-    },
-    pnum: {
+    pagenumber: {
       type: Number,
       default: 0
     },
-    areastyle: {
-      type: String,
-      default: 'white'
-    },
-    areanum: {
+    areanumber: {
       type: Number,
       default: 0
     },
@@ -62,7 +45,7 @@ export default {
   computed: {
     ...mapGetters('xd/general/xdslideshow', ['nPanel']),
     isVisible () {
-      if (this.$store.getters['xd/general/xdslideshow/nPanel'] === this.$props.pnum) {
+      if (this.$store.getters['xd/general/xdslideshow/nPanel'] === this.$props.pagenumber) {
         return true
       } else {
         return false
@@ -83,7 +66,7 @@ export default {
     click () {
       console.log('click')
       this.$store.dispatch('xd/general/xdslideshow/goNextStep')
-    },
+    } /*,
     dClass () {
       switch (this.$props.dtype) {
         case 'vlist':
@@ -103,7 +86,7 @@ export default {
         default:
           return ''
       }
-    }
+    } */
   }
 }
 </script>
@@ -151,6 +134,7 @@ export default {
         align-items: center;
         padding: 5%;
         border-radius: 5px;
+        /*
         &.spaWhite{
           background: white;
         }
@@ -160,6 +144,7 @@ export default {
           border: 1px solid #a1a1a144;
           filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.15));
         }
+        */
         .spDetails{
           display: flex;
           justify-content: space-around;
