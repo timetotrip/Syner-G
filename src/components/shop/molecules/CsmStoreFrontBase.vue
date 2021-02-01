@@ -1,12 +1,16 @@
 <template>
-  <div v-if="storefront!==null">
+  <CgmSlideshowPanel v-if="storefront!==null">
     <slot />
-  </div>
+  </CgmSlideshowPanel>
 </template>
 <script>
+import CgmSlideshowPanel from '@/components/general/molecules/CgmSlideshowPanel.vue'
 const cfShops = require('~/classes/cfShops.js')
 export default {
   name: 'CsmStoreFrontBase',
+  components: {
+    CgmSlideshowPanel
+  },
   props: {
     storefront: {
       type: cfShops.CsFront,

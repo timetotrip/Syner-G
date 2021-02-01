@@ -27,9 +27,11 @@ export default {
 <style scoped lang="scss">
 $b-height: 60px;
 .layoutbase{
-  position: relative;
-  widows: 100vw;
-  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   overflow: hidden;
   #Header{
     position: absolute;

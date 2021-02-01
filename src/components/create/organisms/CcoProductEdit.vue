@@ -144,7 +144,7 @@ export default {
       this.pe_price = this.$props.product.price
       this.pe_type = this.$props.product.type
       this.pe_status = this.$props.product.status
-      this.pe_topimage = this.$props.product.topimage
+      // this.pe_topimage = this.$props.product.topimage
       this.pe_attention = Object.assign({}, this.$props.product.attention)
       this.pe_purchase = Object.assign({}, this.$props.product.purchase)
     }
@@ -192,7 +192,7 @@ export default {
         pAfter.price = this.pe_price
         pAfter.type = this.pe_type
         pAfter.status = this.pe_status
-        pAfter.topimage = this.pe_topimage
+        // pAfter.topimage = this.pe_topimage
         pAfter.attention = Object.assign({}, this.pe_attention)
         pAfter.purchase = Object.assign({}, this.pe_purchase)
         this.$store.dispatch('xd/create/xdcbrand/updateProduct', pAfter)

@@ -9,9 +9,9 @@
     </h2>
     <div class="paList">
       <CsmPBox
-        v-for="p in cProducts"
-        :key="p.id"
-        :product="cProducts[p.id]"
+        v-for="( pobj, pid ) in cProducts"
+        :key="pid"
+        :product="pobj"
       />
     </div>
   </CsmStoreFrontBase>

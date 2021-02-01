@@ -13,7 +13,7 @@
       }]"
     >
       <template #top>
-        <!--<CcoShopTop :brand="cBrand" />-->
+        <CcoShopUrlLink :shop="cShop" />
       </template>
     </CgmFloatActMenu>
   </CgoUserShopPermmit>
@@ -21,13 +21,14 @@
 <script>
 import CgoUserShopPermmit from '@/components/general/organisms/CgoUserShopPermmit.vue'
 import CgmFloatActMenu from '@/components/general/molecules/CgmFloatActMenu.vue'
-// import CcoBrandTop from '@/components/create/organisms/CcoBrandTop.vue'
+import CcoShopUrlLink from '@/components/create/organisms/CcoShopUrlLink.vue'
 const { mapGetters } = require('vuex')
 export default {
   name: 'CctBrandId',
   components: {
     CgoUserShopPermmit,
-    CgmFloatActMenu
+    CgmFloatActMenu,
+    CcoShopUrlLink
   },
   props: {
     sid: {

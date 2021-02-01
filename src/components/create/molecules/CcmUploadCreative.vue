@@ -72,7 +72,9 @@ export default {
   },
   methods: {
     onFileSelect (FILE) {
+      this.inputView = false
       this.$props.selectfunc(FILE)
+      this.inputView = true
     },
     onClick (cid) {
       this.$props.clickfunc(cid)

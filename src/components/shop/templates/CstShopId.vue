@@ -9,28 +9,42 @@
     }]"
   >
     <template #top>
-      <div
-        v-for="sf in cShopStoreFronts"
-        :key="sf.type"
-      >
-        <CsoSFsLogo
-          v-if="sf.type==='sLogo'"
-          :storefront="sf"
-        />
-        <CsoSFsSlide
-          v-if="sf.type==='Slide'"
-          :storefront="sf"
-        />
-        <CsoSfProductsAll
-          v-if="sf.type==='prAll'"
-          :shop="cShop"
-          :storefront="sf"
-        />
-      </div>
+      <CgmSlideshowBase>
+        <!--
+        <div
+          v-for="sf in cShopStoreFronts"
+          :key="sf.type"
+        >
+          <CsoSFsLogo
+            v-if="sf.type==='Logo'"
+            :storefront="sf"
+          />
+          <CsoSFsSlide
+            v-if="sf.type==='Slide'"
+            :storefront="sf"
+          />
+          <CsoSfProductsAll
+            v-if="sf.type==='productAll'"
+            :shop="cShop"
+            :storefront="sf"
+          />
+        </div>
+        -->
+        <v-window-item>
+          1
+        </v-window-item>
+        <v-window-item>
+          2
+        </v-window-item>
+        <v-window-item>
+          3
+        </v-window-item>
+      </CgmSlideshowBase>
     </template>
   </CgmFloatActMenu>
 </template>
 <script>
+import CgmSlideshowBase from '@/components/general/molecules/CgmSlideshowBase.vue'
 import CgmFloatActMenu from '@/components/general/molecules/CgmFloatActMenu.vue'
 import CsoSFsLogo from '@/components/shop/organisms/CsoSFsLogo.vue'
 import CsoSFsSlide from '@/components/shop/organisms/CsoSFsSlide.vue'
@@ -39,6 +53,7 @@ const { mapGetters } = require('vuex')
 export default {
   name: 'CstShopId',
   components: {
+    CgmSlideshowBase,
     CgmFloatActMenu,
     CsoSFsLogo,
     CsoSFsSlide,
