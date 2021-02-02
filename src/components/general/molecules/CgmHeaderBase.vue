@@ -41,7 +41,7 @@ export default {
 <style scoped lang="scss">
 .HeaderBase{
   // position: absolute;
-  background: lightgray;
+  background: rgba(211, 211, 211, 0.5);
   width: 100%;
   height: 100%;
   display: flex;

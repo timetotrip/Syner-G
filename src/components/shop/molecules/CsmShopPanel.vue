@@ -1,19 +1,23 @@
 <template>
   <CsmShopPanel1stView
     v-if="storefront.type==='1stView'"
+    :storefront="storefront"
     :pagenumber="pagenumber"
   />
   <CsmShopPanelSlide
     v-else-if="storefront.type==='Slide'"
+    :storefront="storefront"
     :pagenumber="pagenumber"
   />
   <CsmShopPanelProductsAll
     v-else-if="storefront.type==='productsAll'"
+    :storefront="storefront"
     :pagenumber="pagenumber"
   />
   <CsmShopPanelDefault
     v-else
     :pagenumber="pagenumber"
+    :storefront="storefront"
   >
     <p>{{ storefront.type }} 今後変更予定</p>
   </CsmShopPanelDefault>
@@ -43,7 +47,7 @@ export default {
     }
   },
   mounted () {
-    // this.$store.dispatch('xd/shop/xdsshop/setCreativesByIds', this.$props.storefront.cIds())
+    this.$store.dispatch('xd/general/xdslideshow/nPanelStart')
   }
 }
 </script>

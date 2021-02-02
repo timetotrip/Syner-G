@@ -15,8 +15,8 @@ class CShop {
 
   cIds () {
     const ret = []
-    this.front.forEach((sf)=>{
-      sf.cIds().forEach((cid)=>{
+    this.front.forEach((sf) => {
+      sf.cIds().forEach((cid) => {
         if (!ret.includes(cid)) {
           ret.push(cid)
         }
@@ -59,7 +59,7 @@ class CsFront {
   constructor (type) {
     this.type = type
     this.creativeIds = []
-    this.creativeMaps = []
+    this.creativeMaps = {}
   }
 
   toObj () {

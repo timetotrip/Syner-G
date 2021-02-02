@@ -14,7 +14,7 @@ import CgmCreativeBox from '@/components/general/molecules/CgmCreativeBox.vue'
 import CgaPrice from '@/components/general/atoms/CgaPrice.vue'
 const { mapGetters } = require('vuex')
 export default {
-  name: 'CsmPBox',
+  name: 'CsaPBox',
   components: {
     CgmCreativeBox,
     CgaPrice

@@ -8,7 +8,7 @@
         <Nuxt id="Nuxt" />
       </template>
       <template #footer>
-        <CsoFooter />
+        <!--CsoFooter />-->
       </template>
       <template #navigation>
         <CsoNavi />
@@ -20,7 +20,7 @@
 <script>
 import CsoHeader from '@/components/shop/organisms/CsoHeader.vue'
 import CsoNavi from '@/components/shop/organisms/CsoNavi.vue'
-import CsoFooter from '@/components/shop/organisms/CsoFooter.vue'
+// import CsoFooter from '@/components/shop/organisms/CsoFooter.vue'
 import CgoLayoutBase from '@/components/general/organisms/CgoLayoutBase.vue'
 
 export default {
@@ -28,7 +28,7 @@ export default {
   components: {
     CsoHeader,
     CsoNavi,
-    CsoFooter,
+    // CsoFooter,
     CgoLayoutBase
   }
 }

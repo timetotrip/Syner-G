@@ -8,25 +8,18 @@
         v-if="nPanel===pagenumber"
         class="spBase"
       >
-        <div class="spBack">
-          <slot name="background" />
-        </div>
-        <CgmSlideshowElem class="spSlideElem" :enumber="areanumber" :apdelay="areadelay">
-          <div class="spArea">
-            <slot />
-          </div>
-        </CgmSlideshowElem>
+        <slot />
       </div>
     </transition>
   </v-window-item>
 </template>
 <script>
-import CgmSlideshowElem from '@/components/general/molecules/CgmSlideshowElem.vue'
+// import CgmSlideshowElem from '@/components/general/molecules/CgmSlideshowElem.vue'
 const { mapGetters } = require('vuex')
 export default {
   name: 'CgmSlideshowPanel',
   components: {
-    CgmSlideshowElem
+    // CgmSlideshowElem
   },
   props: {
     pagenumber: {
@@ -93,8 +86,13 @@ export default {
 <style scoped lang="scss">
 .slidePanel{
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  // height: 100vh;
   transition: 2s;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   &.seInv{
     opacity: 0;
   }
@@ -108,11 +106,15 @@ export default {
       opacity: 0;
   }
   .spBase{
-    width: 100%;
-    height: 100vh;
-    padding:20% 10%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    // padding:20% 10%;
     position: relative;
     z-index: 0;
+    /*
     .spBack{
       position: absolute;
       top: 0;
@@ -144,7 +146,6 @@ export default {
           border: 1px solid #a1a1a144;
           filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.15));
         }
-        */
         .spDetails{
           display: flex;
           justify-content: space-around;
@@ -158,6 +159,7 @@ export default {
         }
       }
     }
+    */
   }
 }
 </style>

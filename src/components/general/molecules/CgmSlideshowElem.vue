@@ -44,7 +44,6 @@ export default {
   },
   mounted () {
     console.log('CmSlideElem mounted  enum-> ' + this.$props.enumber.toString())
-    // this.$store.dispatch('xd/general/xdslideshow/addEMax')
     this.$store.dispatch('xd/general/xdslideshow/addEMaxNum', this.$props.enumber)
   }
 }

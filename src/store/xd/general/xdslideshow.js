@@ -23,14 +23,13 @@ export const mutations = {
     state.neMax = state.neMax + 1
     state.neMap[em] = state.neMax
   },
-  resetPanel (state) {
+  startPanel (state) {
     state.nPanel = 0
     state.nElem = 0
-    state.nBit = 0
-    state.npMax = 0
-    state.neMax = 0
-    state.nbMax = 0
-    state.neMap = {}
+  },
+  resetPanel (state) {
+    state.nPanel = -1
+    state.nElem = -1
   },
   resetNebMax (state) {
     state.neMax = 0
@@ -48,8 +47,12 @@ export const actions = {
     commit('nPanel', { p: num, e: 0 })
   },
   nPanelReset ({ commit, state, rootGetters }, num) {
-    // console.log('  XD NSLID SET ' + num)
+    console.log('  XD NSLID SET ' + num)
     commit('resetPanel')
+  },
+  nPanelStart ({ commit, state, rootGetters }, num) {
+    console.log('  XD NSLID Start ' + num)
+    commit('startPanel')
   },
   goPrevOnce ({ commit, state, rootGetters }) {
     // console.log('  XD NSLID goPrevOnce ')
@@ -125,7 +128,7 @@ export const getters = {
     return state.nPanel
   },
   nElem: (state, getters, rootState, rootGetters) => {
-    console.log('nElem ' + state.nElem)
+    // console.log('nElem ' + state.nElem)
     return state.nElem
   }
 }

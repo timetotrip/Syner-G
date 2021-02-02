@@ -38,15 +38,16 @@ $b-height: 60px;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
     height: $b-height;
   }
   #Content{
     position: absolute;
-    top: $b-height;
+    top: 0;
     left: 0;
     right: 0;
-    bottom: $b-height;
-    max-height: calc( 100% - 104px );
+    bottom: 0;
+    // max-height: calc( 100% - 104px );
     overflow-y: scroll;
     #Nuxt{
       position:absolute;
@@ -55,7 +56,7 @@ $b-height: 60px;
       right:0;
       bottom:0;
       overflow-y: scroll;
-      padding: 1rem;
+      // padding: 1rem;
     }
   }
   #Footer{

@@ -8,7 +8,7 @@
       Products
     </h2>
     <div class="paList">
-      <CsmPBox
+      <CsaPBox
         v-for="( pobj, pid ) in cProducts"
         :key="pid"
         :product="pobj"
@@ -17,13 +17,13 @@
   </CsmStoreFrontBase>
 </template>
 <script>
-import CsmPBox from '@/components/shop/molecules/CsmPBox.vue'
+import CsaPBox from '@/components/shop/atoms/CsaPBox.vue'
 import CsmStoreFrontBase from '@/components/shop/molecules/CsmStoreFrontBase.vue'
 const { mapGetters } = require('vuex')
 export default {
   name: 'CsoSfProductsAll',
   components: {
-    CsmPBox,
+    CsaPBox,
     CsmStoreFrontBase
   },
   props: {

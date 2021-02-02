@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     priceToView () {
-      return `\\ ${this.$props.price.toLocaleString()}`
+      return `￥ ${this.$props.price.toLocaleString()}`
     }
   }
 }
