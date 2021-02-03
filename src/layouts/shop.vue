@@ -4,14 +4,8 @@
       <template #header>
         <CsoHeader />
       </template>
-      <template #content>
+      <template #main>
         <Nuxt id="Nuxt" />
-      </template>
-      <template #footer>
-        <!--CsoFooter />-->
-      </template>
-      <template #navigation>
-        <CsoNavi />
       </template>
     </CgoLayoutBase>
   </v-app>
@@ -36,4 +30,11 @@ export default {
 </script>
 
 <style lang="scss">
+#Nuxt{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 </style>

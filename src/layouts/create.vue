@@ -4,7 +4,7 @@
       <template #header>
         <CcoHeader />
       </template>
-      <template #content>
+      <template #main>
         <CgoUserOnly>
           <Nuxt id="Nuxt" />
         </CgoUserOnly>
@@ -40,4 +40,11 @@ export default {
 </script>
 
 <style lang="scss">
+#Nuxt{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 </style>

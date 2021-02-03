@@ -2,18 +2,38 @@
   <div
     class="HeaderBase"
   >
-    <p v-if="logo !== ''">
-      ロゴ
-    </p>
-    <v-app-bar-nav-icon v-if="navi" @click.stop="$nuxt.$emit('navigation-toggle')" />
-    <v-toolbar-title>{{ title }}</v-toolbar-title>
-    <slot />
+    <v-toolbar-title class="hbTitle">
+      <h1 v-if="logo!==''">
+        <CgmCreativeBox
+          :src="cCrePath(logo)"
+        />
+      </h1>
+      <h1 v-else-if="title!==''">
+        {{ title }}
+      </h1>
+      <h1 v-else>
+        Syner-G オンラインショップ
+      </h1>
+    </v-toolbar-title>
+    <div>
+      <slot />
+      <v-app-bar-nav-icon v-if="navi" @click.stop="$nuxt.$emit('navigation-toggle')" />
+    </div>
   </div>
 </template>
 <script>
+import CgmCreativeBox from '@/components/general/molecules/CgmCreativeBox.vue'
+const { mapGetters } = require('vuex')
 export default {
   name: 'CgmHeaderBase',
+  components: {
+    CgmCreativeBox
+  },
   props: {
+    logo: {
+      type: String,
+      default: ''
+    },
     title: {
       type: String,
       default: 'Syner-G α版'
@@ -21,16 +41,15 @@ export default {
     navi: {
       type: Boolean,
       default: true
-    },
-    logo: {
-      type: String,
-      default: ''
     }
   },
   data: () => ({
     drawer: false,
     group: null
   }),
+  computed: {
+    ...mapGetters('xd/shop/xdsshop', ['cCrePath'])
+  },
   watch: {
     group () {
       this.drawer = false
@@ -48,5 +67,9 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
+  .hbTitle{
+    max-width: 30%;
+    max-height: 100%;
+  }
 }
 </style>

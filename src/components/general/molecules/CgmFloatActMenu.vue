@@ -86,9 +86,9 @@ export default {
 }
 .CgmFam{
   .CgmFam--menu{
-    position:fixed;
+    position:absolute;
     right:0rem;
-    bottom:5%;
+    bottom:0%;
     padding: 1rem;
     display: flex;
     flex-direction: column-reverse;

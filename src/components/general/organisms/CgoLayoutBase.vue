@@ -1,15 +1,17 @@
 <template>
   <div class="layoutbase">
-    <div id="Header">
+    <div v-if="this.$slots.header" id="Header">
       <slot name="header" />
     </div>
     <div id="Content">
-      <slot name="content" />
+      <div v-if="this.$slots.main" id="Main">
+        <slot name="main" />
+      </div>
+      <div v-if="this.$slots.footer" id="Footer">
+        <slot name="footer" />
+      </div>
     </div>
-    <div id="Footer">
-      <slot name="footer" />
-    </div>
-    <div id="Navigation">
+    <div v-if="this.$slots.navigation" id="Navigation">
       <slot name="navigation" />
     </div>
   </div>
@@ -47,24 +49,18 @@ $b-height: 60px;
     left: 0;
     right: 0;
     bottom: 0;
-    // max-height: calc( 100% - 104px );
     overflow-y: scroll;
-    #Nuxt{
-      position:absolute;
-      top:0;
-      left:0;
-      right:0;
-      bottom:0;
+    display: flex;
+    flex-direction: column;
+    #Main{
       overflow-y: scroll;
-      // padding: 1rem;
+      flex-grow: 1;
+      position: relative;
     }
-  }
-  #Footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: $b-height;
+    #Footer{
+      flex-grow: 0;
+      height: $b-height;
+    }
   }
 }
 </style>

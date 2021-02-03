@@ -1,14 +1,24 @@
 <template>
   <CgmHeaderBase
+    v-if="cShop!==null"
     class="ShopHeader"
+    :logo="cShop.logo"
+    :title="`${cShop.name} オンラインショップ`"
     :navi="false"
-    :title="`${cShopName} ONLINE SHOP`"
   >
-    <div
-      class="shMngButton"
-      @click="onMngBtnClick"
-    >
-      管理者
+    <div class="shMenus">
+      <p>
+        ABOUT
+      </p>
+      <p>
+        CONTACT
+      </p>
+      <div
+        class="shMngButton"
+        @click="onMngBtnClick"
+      >
+        管理者
+      </div>
     </div>
   </CgmHeaderBase>
 </template>
@@ -21,7 +31,7 @@ export default {
     CgmHeaderBase
   },
   computed: {
-    ...mapGetters('xd/shop/xdsshop', ['cShopName', 'cLinkShopCreate'])
+    ...mapGetters('xd/shop/xdsshop', ['cShop', 'cLinkShopCreate'])
   },
   methods: {
     onMngBtnClick () {
@@ -32,13 +42,24 @@ export default {
 </script>
 <style scoped lang="scss">
 .ShopHeader{
-  .shMngButton{
-    background: orange;
-    color: white;
-    font-size: 0.6rem;
-    padding: 0.5rem;
-    border-radius: 3px;
-    filter: drop-shadow(1px 1px 1px black);
+  .shTitle{
+    max-width: 30%;
+  }
+  .shMenus{
+    display: flex;
+    align-items: center;
+    p{
+      font-size: 0.8rem;
+      margin: 0 0.3rem;
+    }
+    .shMngButton{
+      background: orange;
+      color: white;
+      font-size: 0.6rem;
+      padding: 0.5rem;
+      border-radius: 3px;
+      filter: drop-shadow(1px 1px 1px black);
+    }
   }
 }
 </style>
