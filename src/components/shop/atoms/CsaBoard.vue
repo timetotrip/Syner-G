@@ -50,8 +50,10 @@ export default {
   width: var(--witdhper);
   margin-left: var(--margin-l);
   margin-right: var(--margin-r);
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
 }
 </style>

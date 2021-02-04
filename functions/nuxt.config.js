@@ -39,7 +39,14 @@ module.exports = {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    'nuxt-webfontloader'
   ],
+
+  webfontloader: {
+    google: {
+      families: ['Yusei Magic', 'M PLUS Rounded 1c']
+    }
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

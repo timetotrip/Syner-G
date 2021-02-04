@@ -5,6 +5,30 @@
   "LazyLogo": {
     "description": "Auto imported from components/Logo.vue"
   },
+  "CctBrandId": {
+    "description": "Auto imported from components/create/templates/CctBrandId.vue"
+  },
+  "LazyCctBrandId": {
+    "description": "Auto imported from components/create/templates/CctBrandId.vue"
+  },
+  "CctBrandIndex": {
+    "description": "Auto imported from components/create/templates/CctBrandIndex.vue"
+  },
+  "LazyCctBrandIndex": {
+    "description": "Auto imported from components/create/templates/CctBrandIndex.vue"
+  },
+  "CctShopIndex": {
+    "description": "Auto imported from components/create/templates/CctShopIndex.vue"
+  },
+  "LazyCctShopIndex": {
+    "description": "Auto imported from components/create/templates/CctShopIndex.vue"
+  },
+  "CctShopId": {
+    "description": "Auto imported from components/create/templates/CctShopId.vue"
+  },
+  "LazyCctShopId": {
+    "description": "Auto imported from components/create/templates/CctShopId.vue"
+  },
   "CcoBrandCreate": {
     "description": "Auto imported from components/create/organisms/CcoBrandCreate.vue"
   },
@@ -101,30 +125,6 @@
   "LazyCcoShopUrlLink": {
     "description": "Auto imported from components/create/organisms/CcoShopUrlLink.vue"
   },
-  "CctBrandId": {
-    "description": "Auto imported from components/create/templates/CctBrandId.vue"
-  },
-  "LazyCctBrandId": {
-    "description": "Auto imported from components/create/templates/CctBrandId.vue"
-  },
-  "CctBrandIndex": {
-    "description": "Auto imported from components/create/templates/CctBrandIndex.vue"
-  },
-  "LazyCctBrandIndex": {
-    "description": "Auto imported from components/create/templates/CctBrandIndex.vue"
-  },
-  "CctShopIndex": {
-    "description": "Auto imported from components/create/templates/CctShopIndex.vue"
-  },
-  "LazyCctShopIndex": {
-    "description": "Auto imported from components/create/templates/CctShopIndex.vue"
-  },
-  "CctShopId": {
-    "description": "Auto imported from components/create/templates/CctShopId.vue"
-  },
-  "LazyCctShopId": {
-    "description": "Auto imported from components/create/templates/CctShopId.vue"
-  },
   "CcmUploadCreative": {
     "description": "Auto imported from components/create/molecules/CcmUploadCreative.vue"
   },
@@ -209,6 +209,30 @@
   "LazyCgmSlideshowBase": {
     "description": "Auto imported from components/general/molecules/CgmSlideshowBase.vue"
   },
+  "CsaPBox": {
+    "description": "Auto imported from components/shop/atoms/CsaPBox.vue"
+  },
+  "LazyCsaPBox": {
+    "description": "Auto imported from components/shop/atoms/CsaPBox.vue"
+  },
+  "CsaCreativeFill": {
+    "description": "Auto imported from components/shop/atoms/CsaCreativeFill.vue"
+  },
+  "LazyCsaCreativeFill": {
+    "description": "Auto imported from components/shop/atoms/CsaCreativeFill.vue"
+  },
+  "CsaTitle": {
+    "description": "Auto imported from components/shop/atoms/CsaTitle.vue"
+  },
+  "LazyCsaTitle": {
+    "description": "Auto imported from components/shop/atoms/CsaTitle.vue"
+  },
+  "CsaBoard": {
+    "description": "Auto imported from components/shop/atoms/CsaBoard.vue"
+  },
+  "LazyCsaBoard": {
+    "description": "Auto imported from components/shop/atoms/CsaBoard.vue"
+  },
   "CgoUserBrandPermmit": {
     "description": "Auto imported from components/general/organisms/CgoUserBrandPermmit.vue"
   },
@@ -232,18 +256,6 @@
   },
   "LazyCgoUserShopPermmit": {
     "description": "Auto imported from components/general/organisms/CgoUserShopPermmit.vue"
-  },
-  "CsaPBox": {
-    "description": "Auto imported from components/shop/atoms/CsaPBox.vue"
-  },
-  "LazyCsaPBox": {
-    "description": "Auto imported from components/shop/atoms/CsaPBox.vue"
-  },
-  "CsaCreativeFill": {
-    "description": "Auto imported from components/shop/atoms/CsaCreativeFill.vue"
-  },
-  "LazyCsaCreativeFill": {
-    "description": "Auto imported from components/shop/atoms/CsaCreativeFill.vue"
   },
   "CsmShopArea": {
     "description": "Auto imported from components/shop/molecules/CsmShopArea.vue"

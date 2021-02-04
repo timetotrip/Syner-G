@@ -21,6 +21,7 @@
             class="spNews"
           >
             <h3>ニュース</h3>
+            <CsaDivisionBar />
             <p>新商品 Tシャツ発売</p>
             <p>あの有名スノーボーダーとコラボ</p>
             <p>2021年新モデル続々登場</p>
@@ -29,15 +30,6 @@
         </CgmSlideshowElem>
       </div>
     </CsaCreativeFill>
-    <!--
-    <template #background>
-      <CgmSlideshowElem :enumber="0">
-        <CgmCreativeBox
-          :src="cCrePath(storefront.creativeMaps.background)"
-        />
-      </CgmSlideshowElem>
-    </template>
-    -->
   </CgmSlideshowPanel>
 </template>
 <script>
@@ -47,6 +39,7 @@ import CgmSlideshowElem from '@/components/general/molecules/CgmSlideshowElem.vu
 import CsaCreativeFill from '@/components/shop/atoms/CsaCreativeFill.vue'
 import CsaTitle from '@/components/shop/atoms/CsaTitle.vue'
 import CsaBoard from '@/components/shop/atoms/CsaBoard.vue'
+import CsaDivisionBar from '@/components/shop/atoms/CsaDivisionBar.vue'
 const { mapGetters } = require('vuex')
 const cfShops = require('~/classes/cfShops.js')
 export default {
@@ -57,7 +50,8 @@ export default {
     // CgmCreativeBox,
     CsaCreativeFill,
     CsaTitle,
-    CsaBoard
+    CsaBoard,
+    CsaDivisionBar
   },
   props: {
     storefront: {
@@ -104,17 +98,16 @@ export default {
         mix-blend-mode: hard-light;
       }
       .spNews{
-        *{
-          margin: 0;
-        }
         h3{
           width: 100%;
           text-align: center;
           margin-bottom:0.4rem;
-          font-family: "Yusei Magic";
+          font-family: "M PLUS 1p";
+          line-height: 1rem;
         }
         p{
           font-size: 0.8rem;
+          margin: 0;
         }
       }
     }

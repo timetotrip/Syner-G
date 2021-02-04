@@ -44,7 +44,7 @@ module.exports = {
 
   webfontloader: {
     google: {
-      families: ['Yusei Magic', 'M PLUS Rounded 1c']
+      families: ['Yusei Magic', 'M PLUS Rounded 1c:wght@900', 'M PLUS 1p']
     }
   },
 
