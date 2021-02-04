@@ -5,120 +5,6 @@
   "LazyLogo": {
     "description": "Auto imported from components/Logo.vue"
   },
-  "CgaFooterBtn": {
-    "description": "Auto imported from components/general/atoms/CgaFooterBtn.vue"
-  },
-  "LazyCgaFooterBtn": {
-    "description": "Auto imported from components/general/atoms/CgaFooterBtn.vue"
-  },
-  "CgaFooterSheet": {
-    "description": "Auto imported from components/general/atoms/CgaFooterSheet.vue"
-  },
-  "LazyCgaFooterSheet": {
-    "description": "Auto imported from components/general/atoms/CgaFooterSheet.vue"
-  },
-  "CgaPrice": {
-    "description": "Auto imported from components/general/atoms/CgaPrice.vue"
-  },
-  "LazyCgaPrice": {
-    "description": "Auto imported from components/general/atoms/CgaPrice.vue"
-  },
-  "CgmFloatActMenu": {
-    "description": "Auto imported from components/general/molecules/CgmFloatActMenu.vue"
-  },
-  "LazyCgmFloatActMenu": {
-    "description": "Auto imported from components/general/molecules/CgmFloatActMenu.vue"
-  },
-  "CgmFooterBase": {
-    "description": "Auto imported from components/general/molecules/CgmFooterBase.vue"
-  },
-  "LazyCgmFooterBase": {
-    "description": "Auto imported from components/general/molecules/CgmFooterBase.vue"
-  },
-  "CgmHeaderBase": {
-    "description": "Auto imported from components/general/molecules/CgmHeaderBase.vue"
-  },
-  "LazyCgmHeaderBase": {
-    "description": "Auto imported from components/general/molecules/CgmHeaderBase.vue"
-  },
-  "CgmNaviBase": {
-    "description": "Auto imported from components/general/molecules/CgmNaviBase.vue"
-  },
-  "LazyCgmNaviBase": {
-    "description": "Auto imported from components/general/molecules/CgmNaviBase.vue"
-  },
-  "CgmOkCancelDialog": {
-    "description": "Auto imported from components/general/molecules/CgmOkCancelDialog.vue"
-  },
-  "LazyCgmOkCancelDialog": {
-    "description": "Auto imported from components/general/molecules/CgmOkCancelDialog.vue"
-  },
-  "CgmLoading": {
-    "description": "Auto imported from components/general/molecules/CgmLoading.vue"
-  },
-  "LazyCgmLoading": {
-    "description": "Auto imported from components/general/molecules/CgmLoading.vue"
-  },
-  "CgmCreativeBox": {
-    "description": "Auto imported from components/general/molecules/CgmCreativeBox.vue"
-  },
-  "LazyCgmCreativeBox": {
-    "description": "Auto imported from components/general/molecules/CgmCreativeBox.vue"
-  },
-  "CgoUserBrandPermmit": {
-    "description": "Auto imported from components/general/organisms/CgoUserBrandPermmit.vue"
-  },
-  "LazyCgoUserBrandPermmit": {
-    "description": "Auto imported from components/general/organisms/CgoUserBrandPermmit.vue"
-  },
-  "CgoUserOnly": {
-    "description": "Auto imported from components/general/organisms/CgoUserOnly.vue"
-  },
-  "LazyCgoUserOnly": {
-    "description": "Auto imported from components/general/organisms/CgoUserOnly.vue"
-  },
-  "CgoLayoutBase": {
-    "description": "Auto imported from components/general/organisms/CgoLayoutBase.vue"
-  },
-  "LazyCgoLayoutBase": {
-    "description": "Auto imported from components/general/organisms/CgoLayoutBase.vue"
-  },
-  "CgoUserShopPermmit": {
-    "description": "Auto imported from components/general/organisms/CgoUserShopPermmit.vue"
-  },
-  "LazyCgoUserShopPermmit": {
-    "description": "Auto imported from components/general/organisms/CgoUserShopPermmit.vue"
-  },
-  "CcmUploadCreative": {
-    "description": "Auto imported from components/create/molecules/CcmUploadCreative.vue"
-  },
-  "LazyCcmUploadCreative": {
-    "description": "Auto imported from components/create/molecules/CcmUploadCreative.vue"
-  },
-  "CctBrandId": {
-    "description": "Auto imported from components/create/templates/CctBrandId.vue"
-  },
-  "LazyCctBrandId": {
-    "description": "Auto imported from components/create/templates/CctBrandId.vue"
-  },
-  "CctBrandIndex": {
-    "description": "Auto imported from components/create/templates/CctBrandIndex.vue"
-  },
-  "LazyCctBrandIndex": {
-    "description": "Auto imported from components/create/templates/CctBrandIndex.vue"
-  },
-  "CctShopIndex": {
-    "description": "Auto imported from components/create/templates/CctShopIndex.vue"
-  },
-  "LazyCctShopIndex": {
-    "description": "Auto imported from components/create/templates/CctShopIndex.vue"
-  },
-  "CctShopId": {
-    "description": "Auto imported from components/create/templates/CctShopId.vue"
-  },
-  "LazyCctShopId": {
-    "description": "Auto imported from components/create/templates/CctShopId.vue"
-  },
   "CcoBrandCreate": {
     "description": "Auto imported from components/create/organisms/CcoBrandCreate.vue"
   },
@@ -215,17 +101,185 @@
   "LazyCcoShopUrlLink": {
     "description": "Auto imported from components/create/organisms/CcoShopUrlLink.vue"
   },
-  "CsmPBox": {
-    "description": "Auto imported from components/shop/molecules/CsmPBox.vue"
+  "CctBrandId": {
+    "description": "Auto imported from components/create/templates/CctBrandId.vue"
   },
-  "LazyCsmPBox": {
-    "description": "Auto imported from components/shop/molecules/CsmPBox.vue"
+  "LazyCctBrandId": {
+    "description": "Auto imported from components/create/templates/CctBrandId.vue"
   },
-  "CsmStoreFrontBase": {
-    "description": "Auto imported from components/shop/molecules/CsmStoreFrontBase.vue"
+  "CctBrandIndex": {
+    "description": "Auto imported from components/create/templates/CctBrandIndex.vue"
   },
-  "LazyCsmStoreFrontBase": {
-    "description": "Auto imported from components/shop/molecules/CsmStoreFrontBase.vue"
+  "LazyCctBrandIndex": {
+    "description": "Auto imported from components/create/templates/CctBrandIndex.vue"
+  },
+  "CctShopIndex": {
+    "description": "Auto imported from components/create/templates/CctShopIndex.vue"
+  },
+  "LazyCctShopIndex": {
+    "description": "Auto imported from components/create/templates/CctShopIndex.vue"
+  },
+  "CctShopId": {
+    "description": "Auto imported from components/create/templates/CctShopId.vue"
+  },
+  "LazyCctShopId": {
+    "description": "Auto imported from components/create/templates/CctShopId.vue"
+  },
+  "CcmUploadCreative": {
+    "description": "Auto imported from components/create/molecules/CcmUploadCreative.vue"
+  },
+  "LazyCcmUploadCreative": {
+    "description": "Auto imported from components/create/molecules/CcmUploadCreative.vue"
+  },
+  "CgaFooterBtn": {
+    "description": "Auto imported from components/general/atoms/CgaFooterBtn.vue"
+  },
+  "LazyCgaFooterBtn": {
+    "description": "Auto imported from components/general/atoms/CgaFooterBtn.vue"
+  },
+  "CgaFooterSheet": {
+    "description": "Auto imported from components/general/atoms/CgaFooterSheet.vue"
+  },
+  "LazyCgaFooterSheet": {
+    "description": "Auto imported from components/general/atoms/CgaFooterSheet.vue"
+  },
+  "CgaPrice": {
+    "description": "Auto imported from components/general/atoms/CgaPrice.vue"
+  },
+  "LazyCgaPrice": {
+    "description": "Auto imported from components/general/atoms/CgaPrice.vue"
+  },
+  "CgmFloatActMenu": {
+    "description": "Auto imported from components/general/molecules/CgmFloatActMenu.vue"
+  },
+  "LazyCgmFloatActMenu": {
+    "description": "Auto imported from components/general/molecules/CgmFloatActMenu.vue"
+  },
+  "CgmFooterBase": {
+    "description": "Auto imported from components/general/molecules/CgmFooterBase.vue"
+  },
+  "LazyCgmFooterBase": {
+    "description": "Auto imported from components/general/molecules/CgmFooterBase.vue"
+  },
+  "CgmHeaderBase": {
+    "description": "Auto imported from components/general/molecules/CgmHeaderBase.vue"
+  },
+  "LazyCgmHeaderBase": {
+    "description": "Auto imported from components/general/molecules/CgmHeaderBase.vue"
+  },
+  "CgmNaviBase": {
+    "description": "Auto imported from components/general/molecules/CgmNaviBase.vue"
+  },
+  "LazyCgmNaviBase": {
+    "description": "Auto imported from components/general/molecules/CgmNaviBase.vue"
+  },
+  "CgmOkCancelDialog": {
+    "description": "Auto imported from components/general/molecules/CgmOkCancelDialog.vue"
+  },
+  "LazyCgmOkCancelDialog": {
+    "description": "Auto imported from components/general/molecules/CgmOkCancelDialog.vue"
+  },
+  "CgmLoading": {
+    "description": "Auto imported from components/general/molecules/CgmLoading.vue"
+  },
+  "LazyCgmLoading": {
+    "description": "Auto imported from components/general/molecules/CgmLoading.vue"
+  },
+  "CgmCreativeBox": {
+    "description": "Auto imported from components/general/molecules/CgmCreativeBox.vue"
+  },
+  "LazyCgmCreativeBox": {
+    "description": "Auto imported from components/general/molecules/CgmCreativeBox.vue"
+  },
+  "CgmSlideshowPanel": {
+    "description": "Auto imported from components/general/molecules/CgmSlideshowPanel.vue"
+  },
+  "LazyCgmSlideshowPanel": {
+    "description": "Auto imported from components/general/molecules/CgmSlideshowPanel.vue"
+  },
+  "CgmSlideshowElem": {
+    "description": "Auto imported from components/general/molecules/CgmSlideshowElem.vue"
+  },
+  "LazyCgmSlideshowElem": {
+    "description": "Auto imported from components/general/molecules/CgmSlideshowElem.vue"
+  },
+  "CgmSlideshowBase": {
+    "description": "Auto imported from components/general/molecules/CgmSlideshowBase.vue"
+  },
+  "LazyCgmSlideshowBase": {
+    "description": "Auto imported from components/general/molecules/CgmSlideshowBase.vue"
+  },
+  "CgoUserBrandPermmit": {
+    "description": "Auto imported from components/general/organisms/CgoUserBrandPermmit.vue"
+  },
+  "LazyCgoUserBrandPermmit": {
+    "description": "Auto imported from components/general/organisms/CgoUserBrandPermmit.vue"
+  },
+  "CgoUserOnly": {
+    "description": "Auto imported from components/general/organisms/CgoUserOnly.vue"
+  },
+  "LazyCgoUserOnly": {
+    "description": "Auto imported from components/general/organisms/CgoUserOnly.vue"
+  },
+  "CgoLayoutBase": {
+    "description": "Auto imported from components/general/organisms/CgoLayoutBase.vue"
+  },
+  "LazyCgoLayoutBase": {
+    "description": "Auto imported from components/general/organisms/CgoLayoutBase.vue"
+  },
+  "CgoUserShopPermmit": {
+    "description": "Auto imported from components/general/organisms/CgoUserShopPermmit.vue"
+  },
+  "LazyCgoUserShopPermmit": {
+    "description": "Auto imported from components/general/organisms/CgoUserShopPermmit.vue"
+  },
+  "CsaPBox": {
+    "description": "Auto imported from components/shop/atoms/CsaPBox.vue"
+  },
+  "LazyCsaPBox": {
+    "description": "Auto imported from components/shop/atoms/CsaPBox.vue"
+  },
+  "CsaCreativeFill": {
+    "description": "Auto imported from components/shop/atoms/CsaCreativeFill.vue"
+  },
+  "LazyCsaCreativeFill": {
+    "description": "Auto imported from components/shop/atoms/CsaCreativeFill.vue"
+  },
+  "CsmShopArea": {
+    "description": "Auto imported from components/shop/molecules/CsmShopArea.vue"
+  },
+  "LazyCsmShopArea": {
+    "description": "Auto imported from components/shop/molecules/CsmShopArea.vue"
+  },
+  "CsmShopPanel": {
+    "description": "Auto imported from components/shop/molecules/CsmShopPanel.vue"
+  },
+  "LazyCsmShopPanel": {
+    "description": "Auto imported from components/shop/molecules/CsmShopPanel.vue"
+  },
+  "CsmShopPanel1stView": {
+    "description": "Auto imported from components/shop/molecules/CsmShopPanel1stView.vue"
+  },
+  "LazyCsmShopPanel1stView": {
+    "description": "Auto imported from components/shop/molecules/CsmShopPanel1stView.vue"
+  },
+  "CsmShopPanelProductsAll": {
+    "description": "Auto imported from components/shop/molecules/CsmShopPanelProductsAll.vue"
+  },
+  "LazyCsmShopPanelProductsAll": {
+    "description": "Auto imported from components/shop/molecules/CsmShopPanelProductsAll.vue"
+  },
+  "CsmShopPanelSlide": {
+    "description": "Auto imported from components/shop/molecules/CsmShopPanelSlide.vue"
+  },
+  "LazyCsmShopPanelSlide": {
+    "description": "Auto imported from components/shop/molecules/CsmShopPanelSlide.vue"
+  },
+  "CsmShopPanelDefault": {
+    "description": "Auto imported from components/shop/molecules/CsmShopPanelDefault.vue"
+  },
+  "LazyCsmShopPanelDefault": {
+    "description": "Auto imported from components/shop/molecules/CsmShopPanelDefault.vue"
   },
   "CsoFooter": {
     "description": "Auto imported from components/shop/organisms/CsoFooter.vue"
@@ -245,34 +299,40 @@
   "LazyCsoNavi": {
     "description": "Auto imported from components/shop/organisms/CsoNavi.vue"
   },
-  "Cso1stView": {
-    "description": "Auto imported from components/shop/organisms/Cso1stView.vue"
-  },
-  "LazyCso1stView": {
-    "description": "Auto imported from components/shop/organisms/Cso1stView.vue"
-  },
-  "CsoSfProductsAll": {
-    "description": "Auto imported from components/shop/organisms/CsoSfProductsAll.vue"
-  },
-  "LazyCsoSfProductsAll": {
-    "description": "Auto imported from components/shop/organisms/CsoSfProductsAll.vue"
-  },
-  "CsoSFsLogo": {
-    "description": "Auto imported from components/shop/organisms/CsoSFsLogo.vue"
-  },
-  "LazyCsoSFsLogo": {
-    "description": "Auto imported from components/shop/organisms/CsoSFsLogo.vue"
-  },
-  "CsoSFsSlide": {
-    "description": "Auto imported from components/shop/organisms/CsoSFsSlide.vue"
-  },
-  "LazyCsoSFsSlide": {
-    "description": "Auto imported from components/shop/organisms/CsoSFsSlide.vue"
-  },
   "CstShopId": {
     "description": "Auto imported from components/shop/templates/CstShopId.vue"
   },
   "LazyCstShopId": {
     "description": "Auto imported from components/shop/templates/CstShopId.vue"
+  },
+  "Cso1stView": {
+    "description": "Auto imported from components/shop/organisms/bkup/Cso1stView.vue"
+  },
+  "LazyCso1stView": {
+    "description": "Auto imported from components/shop/organisms/bkup/Cso1stView.vue"
+  },
+  "CsoSFsLogo": {
+    "description": "Auto imported from components/shop/organisms/bkup/CsoSFsLogo.vue"
+  },
+  "LazyCsoSFsLogo": {
+    "description": "Auto imported from components/shop/organisms/bkup/CsoSFsLogo.vue"
+  },
+  "CsoSFsSlide": {
+    "description": "Auto imported from components/shop/organisms/bkup/CsoSFsSlide.vue"
+  },
+  "LazyCsoSFsSlide": {
+    "description": "Auto imported from components/shop/organisms/bkup/CsoSFsSlide.vue"
+  },
+  "CsoSfProductsAll": {
+    "description": "Auto imported from components/shop/organisms/bkup/CsoSfProductsAll.vue"
+  },
+  "LazyCsoSfProductsAll": {
+    "description": "Auto imported from components/shop/organisms/bkup/CsoSfProductsAll.vue"
+  },
+  "CsmStoreFrontBase": {
+    "description": "Auto imported from components/shop/organisms/bkup/CsmStoreFrontBase.vue"
+  },
+  "LazyCsmStoreFrontBase": {
+    "description": "Auto imported from components/shop/organisms/bkup/CsmStoreFrontBase.vue"
   }
 }

@@ -29,6 +29,7 @@ let store = {};
   resolveStoreModules(require('..\\store\\xd\\create\\xdcbrand.js'), 'xd/create/xdcbrand.js')
   resolveStoreModules(require('..\\store\\xd\\create\\xdcshop.js'), 'xd/create/xdcshop.js')
   resolveStoreModules(require('..\\store\\xd\\general\\xdgcuser.js'), 'xd/general/xdgcuser.js')
+  resolveStoreModules(require('..\\store\\xd\\general\\xdslideshow.js'), 'xd/general/xdslideshow.js')
   resolveStoreModules(require('..\\store\\xd\\shop\\xdsshop.js'), 'xd/shop/xdsshop.js')
 
   // If the environment supports hot reloading...

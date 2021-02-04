@@ -60,6 +60,7 @@ class CsFront {
     this.type = type
     this.creativeIds = []
     this.creativeMaps = {}
+    this.settings = {}
   }
 
   toObj () {
@@ -67,6 +68,7 @@ class CsFront {
     ret.type = this.type
     ret.creativeIds = this.creativeIds.slice()
     ret.creativeMaps = Object.assign({}, this.creativeMaps)
+    ret.settings = Object.assign({}, this.settings)
     return ret
   }
 
@@ -74,6 +76,7 @@ class CsFront {
     this.type = obj.type
     this.creativeIds = obj.creativeIds.slice()
     this.creativeMaps = Object.assign({}, obj.creativeMaps)
+    this.settings = Object.assign({}, obj.settings)
     return this
   }
 
