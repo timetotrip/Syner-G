@@ -13,7 +13,7 @@
 
 <script>
 import CsoHeader from '@/components/shop/organisms/CsoHeader.vue'
-import CsoNavi from '@/components/shop/organisms/CsoNavi.vue'
+// import CsoNavi from '@/components/shop/organisms/CsoNavi.vue'
 // import CsoFooter from '@/components/shop/organisms/CsoFooter.vue'
 import CgoLayoutBase from '@/components/general/organisms/CgoLayoutBase.vue'
 
@@ -21,7 +21,7 @@ export default {
   name: 'LayoutCreate',
   components: {
     CsoHeader,
-    CsoNavi,
+    // CsoNavi,
     // CsoFooter,
     CgoLayoutBase
   }

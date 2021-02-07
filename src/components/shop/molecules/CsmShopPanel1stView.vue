@@ -5,16 +5,23 @@
   >
     <CsaCreativeFill
       :cid="storefront.creativeMaps.background"
-      :grad="'orange'"
+      :stylesets="['mZoom','cGrad']"
+      :settings="{
+        clGrad1: '#FF8000',
+        clGrad2: '#A0A0A0',
+        mvZoomL: '120%',
+        mvZoomS: '180%',
+        mvAnimeTrans: '60s'
+      }"
       class="spBg"
     >
       <div class="spMain">
-        <CgmSlideshowElem class="spSlide sps--title" :enumber="1" :apdelay="2">
+        <CgmSlideshowElem class="spSlide sps--title" :enumber="1" :apdelay="4">
           <CsaTitle v-if="storefront.settings.title">
             {{ storefront.settings.title }}
           </CsaTitle>
         </CgmSlideshowElem>
-        <CgmSlideshowElem class="spSlide" :enumber="1" :apdelay="4">
+        <CgmSlideshowElem class="spSlide" :enumber="1" :apdelay="6">
           <CsaBoard
             :widthper="80"
             :align="'right'"
@@ -35,7 +42,6 @@
 <script>
 import CgmSlideshowPanel from '@/components/general/molecules/CgmSlideshowPanel.vue'
 import CgmSlideshowElem from '@/components/general/molecules/CgmSlideshowElem.vue'
-// import CgmCreativeBox from '@/components/general/molecules/CgmCreativeBox.vue'
 import CsaCreativeFill from '@/components/shop/atoms/CsaCreativeFill.vue'
 import CsaTitle from '@/components/shop/atoms/CsaTitle.vue'
 import CsaBoard from '@/components/shop/atoms/CsaBoard.vue'
@@ -67,7 +73,7 @@ export default {
     ...mapGetters('xd/shop/xdsshop', ['cCrePath'])
   },
   mounted () {
-    setTimeout(() => { this.$store.dispatch('xd/general/xdslideshow/goNextStep') }, 2000)
+    // setTimeout(() => { this.$store.dispatch('xd/general/xdslideshow/goNextStep') }, 2000)
   }
 }
 </script>

@@ -9,7 +9,6 @@
     }"
     :touchless="true"
     class="slideBase"
-    vertical
     @click="click()"
   >
     <slot />

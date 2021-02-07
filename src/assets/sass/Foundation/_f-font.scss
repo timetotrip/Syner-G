@@ -15,7 +15,7 @@ p{
     transform: rotate(0.028deg);
 }
 html{
-    @include mq(sm){font-size: 14px;line-height: 1.5em;letter-spacing: 0.1em;*{line-height: 1.5em}}
+    @include mq(sp){font-size: 14px;line-height: 1.5em;letter-spacing: 0.1em;*{line-height: 1.5em}}
     @include mq(tb){font-size: 14px;line-height: 1.5em;letter-spacing: 0.1em;*{line-height: 1.5em}}
     @include mq(pc){font-size: 16px;line-height: 1.5em;letter-spacing: 0.2em;*{line-height: 1.5em}}
     @include mq(xl){font-size: 16px;line-height: 1.5em;letter-spacing: 0.2em;*{line-height: 1.5em}}

@@ -1,14 +1,16 @@
 <template>
-  <div
-    :class="[
-      'slideElem',
-      apstyle,
-      isVisible === true ? 'seVis' : 'seInv'
-    ]"
-    :style="delayStyle"
-  >
-    <slot />
-  </div>
+  <transition>
+    <div
+      :class="[
+        'slideElem',
+        apstyle,
+        isVisible === true ? 'seVis' : 'seInv'
+      ]"
+      :style="delayStyle"
+    >
+      <slot />
+    </div>
+  </transition>
 </template>
 <script>
 const { mapGetters } = require('vuex')
@@ -54,15 +56,15 @@ export default {
   &.basicFade{
     opacity: 0;
     transform: translateY(3rem);
-    /*
-    &.seInv{
-      opacity: 0;
-      transform: translateY(3rem);
-    }
-    */
     &.seVis{
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+  &.RtoL{
+    transform: translateX(100%);
+    &.seVis{
+      transform: translateX(0);
     }
   }
 }

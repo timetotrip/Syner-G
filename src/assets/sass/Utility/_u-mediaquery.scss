@@ -2,10 +2,12 @@
 ## MediaQuery
 --------------------------------------------------------------*/
 $breakpoints: (
-    'sm': 'screen and (min-width: 1px) and (max-width:420px)',
+    'sp': 'screen and (min-width: 1px) and (max-width:420px)',
     'tb': 'screen and (min-width: 421px) and (max-width:768px)',
     'pc': 'screen and (min-width: 769px) and (max-width:1200px)',
     'xl': 'screen and (min-width: 1201px)',
+    'SPtoTB': 'screen and (min-width: 1px) and (max-width:768px)',
+    'PCtoXL': 'screen and (min-width: 769px)',
 ) !default;
 
 @mixin mq($breakpoint: md) {

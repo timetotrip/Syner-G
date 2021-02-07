@@ -90,31 +90,24 @@ export default {
     }
   }
 }
+@mixin glow($lsize:0px, $gsize:0px) {
+  filter:
+    drop-shadow(0px 0px 1px var(--shadow-color))
+    drop-shadow(0px 0px 3px var(--shadow-color-light))
+    drop-shadow(0px 0px $lsize var(--shadow-color-light))
+    /*
+    drop-shadow(0px 1px $gsize var(--shadow-color-light))
+    drop-shadow(1px 0px $gsize var(--shadow-color-light))
+    drop-shadow(1px 1px $gsize var(--shadow-color-light)) */;
+}
 @keyframes neon {
-  0%, 60% {
-    filter:
-      drop-shadow(0px 0px 1px var(--shadow-color))
-      drop-shadow(0px 0px 3px var(--shadow-color-light));
-  }
-  40%{
-    filter:
-      drop-shadow(0px 0px 1px var(--shadow-color))
-      drop-shadow(0px 0px 3px var(--shadow-color-light))
-      drop-shadow(0px 0px 1px var(--shadow-color-light));
-  }
-  70% {
-    filter:
-      drop-shadow(0px 0px 1px var(--shadow-color))
-      drop-shadow(0px 0px 3px var(--shadow-color-light))
-      drop-shadow(0px 0px 1px var(--shadow-color-light))
-      drop-shadow(0px 1px 1px var(--shadow-color-light))
-      drop-shadow(1px 0px 1px var(--shadow-color-light))
-      drop-shadow(1px 1px 1px var(--shadow-color-light)) ;
-  }
-  80%,100% {
-    filter:
-      drop-shadow(0px 0px 1px var(--shadow-color))
-      drop-shadow(0px 0px 3px var(--shadow-color-light));
-  }
+  0%   { @include glow(0px, 0px); }
+  /*
+  40%  { @include glow(1px, 0px); }
+  50%  { @include glow(0px, 0px); }
+  80%  { @include glow(0px, 0px); }
+  90%  { @include glow(1px, 1px); }
+  */
+  100% { @include glow(0px, 0px); }
 }
 </style>

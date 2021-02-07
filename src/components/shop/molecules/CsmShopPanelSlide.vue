@@ -1,16 +1,32 @@
 <template>
   <CgmSlideshowPanel :pagenumber="pagenumber">
-    <p>CsmShopPanelSlideのページです</p>
-    <slot />
+    <div class="Slide">
+      <CgmSlideshowElem
+        v-for="(cid, i) in storefront.creativeIds"
+        :key="i"
+        class="slElem"
+        :enumber="1"
+        :apdelay="(i) + 2"
+        :apstyle="'RtoL'"
+      >
+        <CsaCreativeFill
+          :cid="cid"
+          :stylesets="['mSwin']"
+          :class="['slCreative', `slCr--${i}`]"
+        />
+      </CgmSlideshowElem>
+    </div>
   </CgmSlideshowPanel>
 </template>
 <script>
 import CgmSlideshowPanel from '@/components/general/molecules/CgmSlideshowPanel.vue'
+import CsaCreativeFill from '@/components/shop/atoms/CsaCreativeFill.vue'
 const cfShops = require('~/classes/cfShops.js')
 export default {
   name: 'CsmShopPanelSlide',
   components: {
-    CgmSlideshowPanel
+    CgmSlideshowPanel,
+    CsaCreativeFill
   },
   props: {
     storefront: {
@@ -22,10 +38,31 @@ export default {
       default: 0
     }
   },
-  mounted () {
-    // this.$store.dispatch('xd/shop/xdsshop/setCreativesByIds', this.$props.storefront.creativeIds)
+  created () {
+    // setTimeout(() => { this.$store.dispatch('xd/general/xdslideshow/goNextStep') }, 2000)
+    // console.log('CHECK TIMING created')
+  },
+  updated () {
+    // setTimeout(() => { this.$store.dispatch('xd/general/xdslideshow/goNextStep') }, 2000)
+    // console.log('CHECK TIMING UPDATED')
   }
 }
 </script>
 <style scoped lang="scss">
+.Slide{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  @include mq(sp){ flex-direction: column; }
+  @include mq(tb){ flex-direction: column; }
+  @include mq(pc){ flex-direction: row; }
+  @include mq(xl){ flex-direction: row; }
+  .slElem{
+    flex-grow: 1;
+    .slCreative{
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
 </style>
