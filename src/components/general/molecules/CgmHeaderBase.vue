@@ -61,7 +61,6 @@ export default {
 .HeaderBase{
   // position: absolute;
   // background: rgba(211, 211, 211, 0.5);
-  backdrop-filter: blur(5px);
   width: 100%;
   height: 100%;
   display: flex;

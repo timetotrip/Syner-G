@@ -3,7 +3,7 @@
     <v-btn
       v-for="menu in menus"
       :key="menu.key"
-      class="fbsButton"
+      class="fbsButton fbsBtn--grass"
       fab
       dark
       middium
@@ -54,6 +54,27 @@ export default {
   flex-direction: column-reverse;
   .fbsButton{
     margin-top: 1rem;
+    box-shadow: 2px 2px 0px 0px  rgba(0, 0, 0, 0.3);
+    font-size: 1.6rem;
+    .fbsIcon{
+      font-size: 1.6rem;
+      animation: neon 10s infinite both;
+      --shadow-color: rgb(255, 255, 255);
+      --shadow-color-light:  rgba(255, 255, 255, 0.4);
+      color: var(--shadow-color);
+    }
+  }
+  .fbsButton:first-child{
+    .fbsIcon{
+      --shadow-color: rgba(255, 145, 0, 1);
+    }
+  }
+  .fbsButton.fbsBtn--grass{
+    background-color: #00000040;
+    border: 1px rgb(100, 100, 100) solid;
+    backdrop-filter: blur(5px);
+  }
+  .fbsButton.fbsBtn--black{
     background:
       repeating-conic-gradient(
         rgba(0, 0, 0, 0.7) 0,
@@ -69,45 +90,16 @@ export default {
         rgba(0, 0, 0, 1) 3%,
         rgba(0, 0, 0, 1) 5%
       );
-    box-shadow: 2px 2px 0px 0px  rgba(0, 0, 0, 0.3);
-    font-size: 1.6rem;
-    /*
-    animation: neon 3s infinite;
-    --shadow-color: #ffeecd;
-    --shadow-color-light: white;
-    */
-    .fbsIcon{
-      font-size: 1.6rem;
-      animation: neon 10s infinite both;
-      --shadow-color: rgb(255, 255, 255);
-      --shadow-color-light:  rgba(255, 255, 255, 0.4);
-      color: var(--shadow-color);
-    }
-  }
-  .fbsButton:first-child{
-    .fbsIcon{
-      --shadow-color: rgba(255, 145, 0, 1);
-    }
   }
 }
 @mixin glow($lsize:0px, $gsize:0px) {
   filter:
     drop-shadow(0px 0px 1px var(--shadow-color))
     drop-shadow(0px 0px 3px var(--shadow-color-light))
-    drop-shadow(0px 0px $lsize var(--shadow-color-light))
-    /*
-    drop-shadow(0px 1px $gsize var(--shadow-color-light))
-    drop-shadow(1px 0px $gsize var(--shadow-color-light))
-    drop-shadow(1px 1px $gsize var(--shadow-color-light)) */;
+    drop-shadow(0px 0px $lsize var(--shadow-color-light));
 }
 @keyframes neon {
   0%   { @include glow(0px, 0px); }
-  /*
-  40%  { @include glow(1px, 0px); }
-  50%  { @include glow(0px, 0px); }
-  80%  { @include glow(0px, 0px); }
-  90%  { @include glow(1px, 1px); }
-  */
   100% { @include glow(0px, 0px); }
 }
 </style>

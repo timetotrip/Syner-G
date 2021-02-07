@@ -11,7 +11,7 @@
         clGrad2: '#A0A0A0',
         mvZoomL: '120%',
         mvZoomS: '180%',
-        mvAnimeTrans: '60s'
+        bgPosXY: '70% 70%'
       }"
       class="spBg"
     >

@@ -12,6 +12,10 @@
         <CsaCreativeFill
           :cid="cid"
           :stylesets="['mSwin']"
+          :settings="{
+            mvZoomL: `${100+(Math.floor(Math.random() * 80))}%`,
+            bgPosXY: `${10+(Math.floor(Math.random() * 80))}% ${10+(Math.floor(Math.random() * 80))}%`
+          }"
           :class="['slCreative', `slCr--${i}`]"
         />
       </CgmSlideshowElem>

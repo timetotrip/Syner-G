@@ -45,44 +45,58 @@ export default {
       const ret = {
         '--bgurl': `url(${this.cCrePath(this.$props.cid)})`
       }
-      if (this.$props.settings.clGrad1) {
+      if (this.hasSetting('bgPosXY')) {
+        ret['--bgpos'] = this.$props.settings.bgPosXY
+      }
+      if (this.hasSetting('clGrad1')) {
         ret['--cl-grad-1'] = this.$props.settings.clGrad1
       }
-      if (this.$props.settings.clGrad2) {
+      if (this.hasSetting('clGrad2')) {
         ret['--cl-grad-2'] = this.$props.settings.clGrad2
       }
       // X方向 L→大きいとき S→小さいとき
-      if (this.$props.settings.mvZoomL) {
+      if (this.hasSetting('mvZoomL')) {
         ret['--mv-zoom-l'] = this.$props.settings.mvZoomL
-        ret['--mv-zoom-s'] = this.$props.settings.mvZoomL
-        if (this.$props.settings.mvZoomS) {
+        if (this.hasSetting('mvZoomS')) {
           ret['--mv-zoom-s'] = this.$props.settings.mvZoomS
+        } else {
+          ret['--mv-zoom-s'] = this.$props.settings.mvZoomL
         }
       }
-      /* else if (this.$props.settings.mvZoomYL) {
-        // Y方向 L→大きいとき S→小さいとき
-        ret['--mv-zoom-yl'] = this.$props.settings.mvZoomYL
-        ret['--mv-zoom-ys'] = this.$props.settings.mvZoomYL
-        if (this.$props.settings.mvZoomYS) {
-          ret['--mv-zoom-ys'] = this.$props.settings.mvZoomYS
+      /*
+      const animes = {}
+      if (this.aRate) {
+        if (this.hasStyle('mZoom')) { animes.mZoom = 'cfBgZoomY' }
+        if (this.hasStyle('mSwin')) { animes.mZoom = 'cfBgSwinY' }
+      } else {
+        if (this.hasStyle('mZoom')) { animes.mZoom = 'cfBgZoomX' }
+        if (this.hasStyle('mSwin')) { animes.mZoom = 'cfBgSwinX' }
+      }
+      if (animes !== {}) {
+        let tSec = '30s'
+        if (this.hasSetting('mvAnimeTrans')) {
+          tSec = this.$props.settings.mvAnimeTrans
         }
-        ret['--mv-zoom-xl'] = 'auto'
-        ret['--mv-zoom-xs'] = 'auto'
+        let valAnime = ''
+        for (const a in animes) {
+          valAnime = valAnime + `${animes[a]} ${tSec} linear infinite alternate both, `
+        }
+        valAnime = valAnime.slice(0, -2)
+        ret['--mv-anime'] = valAnime
       }
       */
-      if (this.$props.settings.mvAnimeTrans) {
-        ret['--mv-anime-transition'] = this.$props.settings.mvAnimeTrans
-      }
       return ret
     },
     classes () {
       const ret = ['cFill']
-      if (this.$props.stylesets.includes('cGrad')) { ret.push('cfCol--grad') }
-      if (this.$props.stylesets.includes('mZoom')) { ret.push('cfMov--Zoom') }
+      if (this.hasStyle('cGrad')) { ret.push('cfCol--grad') }
+      if (this.hasStyle('mZoom')) { ret.push('cfMov--Zoom') }
+      if (this.hasStyle('mSwin')) { ret.push('cfMov--Swin') }
       /*
+      if (this.$props.stylesets.includes('mZoom')) { ret.push('cfMov--Zoom') }
       if (this.$props.stylesets.includes('mSwin')) { ret.push('cfMov--Swin') }
       */
-      if (this.iaRate > this.daRate) {
+      if (this.aRate()) {
         // X cut Y fit
         ret.push('cf--XcYf')
       } else {
@@ -134,6 +148,15 @@ export default {
       } else {
         this.daRate = this.$refs.divArea.clientWidth / this.$refs.divArea.clientHeight
       }
+    },
+    hasStyle (st) {
+      return this.$props.stylesets.includes(st)
+    },
+    hasSetting (st) {
+      return typeof this.$props.settings[st] !== 'undefined'
+    },
+    aRate (st) {
+      return this.iaRate > this.daRate
     }
   }
 }
@@ -141,34 +164,30 @@ export default {
 <style scoped lang="scss">
 .cFill{
   --bgurl: '';
+  --bgpos: '50% 50%';
   --mv-zoom-l: 100%;
   --mv-zoom-s: auto;
-  --mv-anime-transition: 30s;
+  --mv-anime : none;
 
   position:relative;
   background-image: var(--bgurl);
-  background-position: center;
-
+  background-position: var(--bgpos);
+  // animation: var(--mv-anime);
+  // animation: cfBgZoomX 3s linear infinite alternate both;
 }
 .cFill.cf--XcYf{
   background-size: auto var(--mv-zoom-l);
-  &.cfMov--Swin{
-    animation:cfBgSwigX var(--mv-anime-transition) linear infinite alternate both;
-  }
   &.cfMov--Zoom{
-    animation:cfBgZoomX var(--mv-anime-transition) linear infinite alternate both;
+    animation: cfBgZoomX 30s linear infinite alternate both;
+    // background-size: auto var(--mv-zoom-l);
   }
+  &.cfMov--Swin{animation: cfBgSwigX 30s linear infinite alternate both;}
 }
 .cFill.cf--XfYc{
   background-size: var(--mv-zoom-l) auto;
-  &.cfMov--Swin{
-    animation:cfBgSwigY var(--mv-anime-transition) linear infinite alternate both;
-  }
-  &.cfMov--Zoom{
-    animation:cfBgZoomY var(--mv-anime-transition) linear infinite alternate both;
-  }
+  &.cfMov--Zoom{animation: cfBgZoomY 30s linear infinite alternate both;}
+  &.cfMov--Swin{animation: cfBgSwigY 30s linear infinite alternate both;}
 }
-
 @keyframes cfBgSwigY {
     0% { background-position-y: 100%;}
   100% { background-position-y:   0%;}

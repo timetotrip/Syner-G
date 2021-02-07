@@ -42,6 +42,9 @@ export default {
 </script>
 <style scoped lang="scss">
 .ShopHeader{
+  backdrop-filter: blur(5px);
+  background-color: #00000040;
+  border-bottom: 1px rgb(100, 100, 100) solid;
   .shTitle{
     max-width: 30%;
   }
